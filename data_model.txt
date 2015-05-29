@@ -12,11 +12,11 @@ pitch
     pitch_des : inning_all.game.inning[].top/bottom.atbat[].pitch[].des
     pitch_id : inning_all.game.inning[].top/bottom.atbat[].pitch[].id
     type : inning_all.game.inning[].top/bottom.atbat[].pitch[].type
-    time : inning_all.game.inning[].top/bottom.atbat[].pitch[].tfs
-    timestamp_zulu : inning_all.game.inning[].top/bottom.atbat[].pitch[].tfs_hulu
+    tfs : inning_all.game.inning[].top/bottom.atbat[].pitch[].tfs
+    tfs_zulu : inning_all.game.inning[].top/bottom.atbat[].pitch[].tfs_zulu
     x : inning_all.game.inning[].top/bottom.atbat[].pitch[].x
     y : inning_all.game.inning[].top/bottom.atbat[].pitch[].y
-    event_num : inning_all.game.inning[].top/bottom.atbat[].pitch[].event_num
+    pitch_event_num : inning_all.game.inning[].top/bottom.atbat[].pitch[].event_num
     sv_id : inning_all.game.inning[].top/bottom.atbat[].pitch[].sv_id
     speed_start : inning_all.game.inning[].top/bottom.atbat[].pitch[].start_speed
     speed_end : inning_all.game.inning[].top/bottom.atbat[].pitch[].end_speed
@@ -48,7 +48,7 @@ pitch
     mt : inning_all.game.inning[].top/bottom.atbat[].pitch[].mt
 
 
-atbat DONE
+atbat
     game_pk : boxscore.boxscore.game_pk
     inning : inning_all.game.inning[].num
     inning_part : inning_all.game.inning[].[top/bottom]
@@ -88,10 +88,22 @@ game_actions
     occ_outs : inning_all.game.inning[].top/bottom.action[].o
 
 
-game_hits TODO
+game_runners TODO
 
 
-game (boxscore) DONE
+game_hits
+    game_pk : boxscore.boxscore.game_pk
+    inning : inning_hit.hitchart.hip[].inning
+    description : inning_hit.hitchart.hip[].des
+    pitcher_id : inning_hit.hitchart.hip[].pitcher
+    batter_id : inning_hit.hitchart.hip[].batter
+    team_type : inning_hit.hitchart.hip[].team
+    hit_type : inning_hit.hitchart.hip[].type
+    hit_x : inning_hit.hitchart.hip[].x
+    hit_y : inning_hit.hitchart.hip[].y
+
+
+game (boxscore)
     game_pk : boxscore.boxscore.game_pk
     game_id : boxscore.boxscore.game_id
     stadium_id : boxscore.boxscore.venue_id
@@ -99,7 +111,7 @@ game (boxscore) DONE
     team_id_home : boxscore.boxscore.home_id
     team_id_away : boxscore.boxscore.away_id
 
-game_teams (boxscore) DONE
+game_teams (boxscore)
     game_pk : boxscore.boxscore.game_pk
     role : boxscore.boxscore.[home/away].'home/away'
     team_id : boxscore.boxscore.away_id
@@ -107,7 +119,7 @@ game_teams (boxscore) DONE
     losses : boxscore.boxscore.away_loss
 
 
-game_players DONE
+game_players
     game_pk : boxscore.boxscore.game_pk
     team_id : players.game.team[].player[].team_id
     player_id : players.game.team[].player[].id
@@ -128,7 +140,7 @@ game_players DONE
     p_era : players.game.team[].player[].era (pitchers only)
 
 
-players
+players TODO
     player_id : /pitchers/[].Player.id
     type : /pitchers/[].Player.type
     name_first : /pitchers/[].Player.first_name
@@ -142,7 +154,7 @@ players
     dob : /pitchers/[].Player.dob
 
 
-game_coaches DONE
+game_coaches
     game_pk : boxscore.boxscore.game_pk
     team_id : players.game.team[].player[].team_id
     coach_id : players.game.team[].coach.id

@@ -277,7 +277,84 @@ parse_game_hits <- function(dir_base) {
                         stringsAsFactors = FALSE)
   return(hits_df)
 }
-
+parse_pitches <- function(dir_base) {
+    dir_boxscore <- paste(dir_base, '/boxscore.xml', sep = '')
+    raw_boxscore <- xml(x = dir_boxscore)
+    root_boxscore <- xml_node(x = raw_boxscore, xpath = '//boxscore')
+    game_pk <- xml_attr(x = root_boxscore, name = 'game_pk')
+    
+    dir_inning <- paste(dir_base, '/inning/inning_all.xml', sep = '')
+    raw_inning <- xml(x = dir_inning)
+    root_game <- xml_node(x = raw_inning, xpath = '//game')
+    
+    l_innings <- xml_children(root_game)
+    
+    pitches_df <- data.frame()
+    
+    for (inning in l_innings) {
+        i_num <- xml_attr(x = inning, name = 'num')
+        l_inning_part <- xml_children(inning)
+        for (inning_part in l_inning_part) {
+            i_part <- xml_tag(inning_part)
+            l_atbats <- xml_children(inning_part)
+            l_atbats <- l_atbats[names(l_atbats) == 'atbat']
+            if (length(l_atbats) > 0) {
+                for (atbat in l_atbats) {
+                    l_pitches <- xml_children(atbat)
+                    l_pitches <- l_pitches[names(l_pitches) == 'pitch']
+                    if (length(l_pitches) > 0) {
+                        new_pitches <- data.frame(game_pk = game_pk,
+                                                  play_guid = as.character(lapply(X = l_pitches, FUN = xml_attr, name = 'play_guid')),
+                                                  batter_id = xml_attr(x = atbat, name = 'batter'),
+                                                  pitcher_id = xml_attr(x = atbat, name = 'pitcher'),
+                                                  atbat_num = xml_attr(x = atbat, name = 'num'),
+                                                  event_num = xml_attr(x = atbat, name = 'event_num'),
+                                                  pitch_des = as.character(lapply(X = l_pitches, FUN = xml_attr, name = 'des')),
+                                                  pitch_id = as.character(lapply(X = l_pitches, FUN = xml_attr, name = 'id')),
+                                                  type = as.character(lapply(X = l_pitches, FUN = xml_attr, name = 'type')),
+                                                  tfs = as.character(lapply(X = l_pitches, FUN = xml_attr, name = 'tfs')),
+                                                  tfs_zulu = as.character(lapply(X = l_pitches, FUN = xml_attr, name = 'tfs_zulu')),
+                                                  x = as.character(lapply(X = l_pitches, FUN = xml_attr, name = 'x')),
+                                                  y = as.character(lapply(X = l_pitches, FUN = xml_attr, name = 'y')),
+                                                  pitch_event_num = as.character(lapply(X = l_pitches, FUN = xml_attr, name = 'event_num')),
+                                                  sv_id = as.character(lapply(X = l_pitches, FUN = xml_attr, name = 'sv_id')),
+                                                  speed_start = as.character(lapply(X = l_pitches, FUN = xml_attr, name = 'start_speed')),
+                                                  speed_end = as.character(lapply(X = l_pitches, FUN = xml_attr, name = 'end_speed')),
+                                                  sz_top = as.character(lapply(X = l_pitches, FUN = xml_attr, name = 'sz_top')),
+                                                  sz_bot = as.character(lapply(X = l_pitches, FUN = xml_attr, name = 'sz_bot')),
+                                                  pfx_x = as.character(lapply(X = l_pitches, FUN = xml_attr, name = 'pfx_x')),
+                                                  pfx_z = as.character(lapply(X = l_pitches, FUN = xml_attr, name = 'pfx_z')),
+                                                  px = as.character(lapply(X = l_pitches, FUN = xml_attr, name = 'px')),
+                                                  pz = as.character(lapply(X = l_pitches, FUN = xml_attr, name = 'pz')),
+                                                  x0 = as.character(lapply(X = l_pitches, FUN = xml_attr, name = 'x0')),
+                                                  y0 = as.character(lapply(X = l_pitches, FUN = xml_attr, name = 'y0')),
+                                                  z0 = as.character(lapply(X = l_pitches, FUN = xml_attr, name = 'z0')),
+                                                  vx0 = as.character(lapply(X = l_pitches, FUN = xml_attr, name = 'vx0')),
+                                                  vy0 = as.character(lapply(X = l_pitches, FUN = xml_attr, name = 'vy0')),
+                                                  vz0 = as.character(lapply(X = l_pitches, FUN = xml_attr, name = 'vz0')),
+                                                  ax = as.character(lapply(X = l_pitches, FUN = xml_attr, name = 'ax')),
+                                                  ay = as.character(lapply(X = l_pitches, FUN = xml_attr, name = 'ay')),
+                                                  az = as.character(lapply(X = l_pitches, FUN = xml_attr, name = 'az')),
+                                                  break_y = as.character(lapply(X = l_pitches, FUN = xml_attr, name = 'break_y')),
+                                                  break_angle = as.character(lapply(X = l_pitches, FUN = xml_attr, name = 'break_angle')),
+                                                  break_length = as.character(lapply(X = l_pitches, FUN = xml_attr, name = 'break_length')),
+                                                  pitch_type = as.character(lapply(X = l_pitches, FUN = xml_attr, name = 'pitch_type')),
+                                                  type_confidence = as.character(lapply(X = l_pitches, FUN = xml_attr, name = 'type_confidence')),
+                                                  zone = as.character(lapply(X = l_pitches, FUN = xml_attr, name = 'zone')),
+                                                  nasty = as.character(lapply(X = l_pitches, FUN = xml_attr, name = 'nasty')),
+                                                  spin_dir = as.character(lapply(X = l_pitches, FUN = xml_attr, name = 'spin_dir')),
+                                                  spin_rate = as.character(lapply(X = l_pitches, FUN = xml_attr, name = 'spin_rate')),
+                                                  cc = as.character(lapply(X = l_pitches, FUN = xml_attr, name = 'cc')),
+                                                  mt = as.character(lapply(X = l_pitches, FUN = xml_attr, name = 'mt')),
+                                                  stringsAsFactors = FALSE)
+                        pitches_df <- bind_rows(pitches_df, new_pitches)
+                    }
+                }
+            }
+        }
+    }
+    return(pitches_df)
+}
 
 
 
@@ -305,7 +382,7 @@ df_game_players <- rbind_all(alply(.data = dirs_gid$dirs, .margins = 1, .fun = p
 df_atbats <- rbind_all(alply(.data = dirs_gid$dirs, .margins = 1, .fun = parse_atbats))
 df_game_actions <- rbind_all(alply(.data = dirs_gid$dirs, .margins = 1, .fun = parse_game_actions))
 df_game_hits <- rbind_all(alply(.data = dirs_gid$dirs, .margins = 1, .fun = parse_game_hits))
-
+df_pitches <- rbind_all(alply(.data = dirs_gid$dirs, .margins = 1, .fun = parse_pitches))
 
 
 
