@@ -1,0 +1,14 @@
+Team Logo Assets: http://vizsage.com/apps/baseball/assets/sportslogos/
+
+Feature Engineering
+    Bases: flag for man on each base joinable at the pitch level
+        innings_all <action>
+        game_events b1, b2, b3
+    pitch: time since last pitch, NA for first pitch of atbat
+    pitches_thrown_game: how many pitches thrown, if the pitcher starts to get tired
+    count: B-S count at the time of the pitch
+    count_condition: even, batter ahead, batter behind
+
+
+TODO: test game.game.game_pk for uniqueness across all games, or year only
+XML Parsing Article: http://www.informit.com/articles/article.aspx?p=2215520

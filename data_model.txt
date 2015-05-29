@@ -1,0 +1,265 @@
+table
+    column : sourcefile.root.node.attr
+
+
+pitch
+    game_pk : rawboxscore.boxscore.game_pk OR boxscore.boxscore.game_pk
+    play_guid : inning_all.game.inning[].top/bottom.atbat[].pitch[].play_guid
+    batter_id : inning_all.game.inning[].top/bottom.atbat[].batter
+    pitcher_id : inning_all.game.inning[].top/bottom.atbat[].pitcher
+    atbat_num : inning_all.game.inning[].top/bottom.atbat[].num
+    event_num : inning_all.game.inning[].top/bottom.atbat[].event_num
+    pitch_des : inning_all.game.inning[].top/bottom.atbat[].pitch[].des
+    pitch_id : inning_all.game.inning[].top/bottom.atbat[].pitch[].id
+    type : inning_all.game.inning[].top/bottom.atbat[].pitch[].type
+    time : inning_all.game.inning[].top/bottom.atbat[].pitch[].tfs
+    timestamp_zulu : inning_all.game.inning[].top/bottom.atbat[].pitch[].tfs_hulu
+    x : inning_all.game.inning[].top/bottom.atbat[].pitch[].x
+    y : inning_all.game.inning[].top/bottom.atbat[].pitch[].y
+    event_num : inning_all.game.inning[].top/bottom.atbat[].pitch[].event_num
+    sv_id : inning_all.game.inning[].top/bottom.atbat[].pitch[].sv_id
+    speed_start : inning_all.game.inning[].top/bottom.atbat[].pitch[].start_speed
+    speed_end : inning_all.game.inning[].top/bottom.atbat[].pitch[].end_speed
+    sz_top : inning_all.game.inning[].top/bottom.atbat[].pitch[].sz_top
+    sz_bot : inning_all.game.inning[].top/bottom.atbat[].pitch[].sz_bot
+    pfx_x : inning_all.game.inning[].top/bottom.atbat[].pitch[].pfx_x
+    pfx_z : inning_all.game.inning[].top/bottom.atbat[].pitch[].pfx_z
+    px : inning_all.game.inning[].top/bottom.atbat[].pitch[].px
+    pz : inning_all.game.inning[].top/bottom.atbat[].pitch[].pz
+    x0 : inning_all.game.inning[].top/bottom.atbat[].pitch[].x0
+    y0 : inning_all.game.inning[].top/bottom.atbat[].pitch[].y0
+    z0 : inning_all.game.inning[].top/bottom.atbat[].pitch[].z0
+    vx0 : inning_all.game.inning[].top/bottom.atbat[].pitch[].vx0
+    vy0 : inning_all.game.inning[].top/bottom.atbat[].pitch[].vy0
+    vz0 : inning_all.game.inning[].top/bottom.atbat[].pitch[].vz0
+    ax : inning_all.game.inning[].top/bottom.atbat[].pitch[].ax
+    ay : inning_all.game.inning[].top/bottom.atbat[].pitch[].ay
+    az : inning_all.game.inning[].top/bottom.atbat[].pitch[].az
+    break_y : inning_all.game.inning[].top/bottom.atbat[].pitch[].break_y
+    break_angle : inning_all.game.inning[].top/bottom.atbat[].pitch[].break_angle
+    break_length : inning_all.game.inning[].top/bottom.atbat[].pitch[].break_length
+    pitch_type : inning_all.game.inning[].top/bottom.atbat[].pitch[].pitch_type
+    type_confidence : inning_all.game.inning[].top/bottom.atbat[].pitch[].type_confidence
+    zone : inning_all.game.inning[].top/bottom.atbat[].pitch[].zone
+    nasty : inning_all.game.inning[].top/bottom.atbat[].pitch[].nasty
+    spin_dir : inning_all.game.inning[].top/bottom.atbat[].pitch[].spin_dir
+    spin_rate : inning_all.game.inning[].top/bottom.atbat[].pitch[].spin_rate
+    cc : inning_all.game.inning[].top/bottom.atbat[].pitch[].cc
+    mt : inning_all.game.inning[].top/bottom.atbat[].pitch[].mt
+
+
+atbat DONE
+    game_pk : boxscore.boxscore.game_pk
+    inning : inning_all.game.inning[].num
+    inning_part : inning_all.game.inning[].[top/bottom]
+    batter_id : inning_all.game.inning[].top/bottom.atbat[].batter
+    pitcher_id : inning_all.game.inning[].top/bottom.atbat[].pitcher
+    start_tfs : inning_all.game.inning[].top/bottom.atbat[].start_tfs
+    start_tfs_zulu : inning_all.game.inning[].top/bottom.atbat[].start_tfs_zulu
+    atbat_num : inning_all.game.inning[].top/bottom.atbat[].num
+    event_num : inning_all.game.inning[].top/bottom.atbat[].event_num
+    pitcher_throws : inning_all.game.inning[].top/bottom.atbat[].p_throws
+    batter_height : inning_all.game.inning[].top/bottom.atbat[].batter_height
+    batter_height_inches : inning_all.game.inning[].top/bottom.atbat[].height.(TODO function)
+    batter_stance : inning_all.game.inning[].top/bottom.atbat[].stand
+    play_guid : inning_all.game.inning[].top/bottom.atbat[].play_guid
+    runs_home : inning_all.game.inning[].top/bottom.atbat[].home_team_runs
+    runs_away : inning_all.game.inning[].top/bottom.atbat[].away_team_runs
+    outcome_event : inning_all.game.inning[].top/bottom.atbat[].event
+    outcome_balls : inning_all.game.inning[].top/bottom.atbat[].b
+    outcome_strikes : inning_all.game.inning[].top/bottom.atbat[].s
+    outcome_outs : inning_all.game.inning[].top/bottom.atbat[].o
+
+
+game_actions
+    game_pk : boxscore.boxscore.game_pk
+    inning : inning_all.game.inning[].num
+    inning_part : inning_all.game.inning[].[top/bottom]
+    event : inning_all.game.inning[].top/bottom.action[].event
+    event_num : inning_all.game.inning[].top/bottom.action[].event_num
+    tfs : inning_all.game.inning[].top/bottom.action[].tfs
+    tfs_zulu : inning_all.game.inning[].top/bottom.action[].tfs_zulu
+    player : inning_all.game.inning[].top/bottom.action[].player
+    pitch_num : inning_all.game.inning[].top/bottom.action[].pitch
+    runs_home : inning_all.game.inning[].top/bottom.action[].home_team_runs
+    runs_away : inning_all.game.inning[].top/bottom.action[].away_team_runs
+    occ_balls : inning_all.game.inning[].top/bottom.action[].b
+    occ_strikes : inning_all.game.inning[].top/bottom.action[].s
+    occ_outs : inning_all.game.inning[].top/bottom.action[].o
+
+
+game_hits TODO
+
+
+game (boxscore) DONE
+    game_pk : boxscore.boxscore.game_pk
+    game_id : boxscore.boxscore.game_id
+    stadium_id : boxscore.boxscore.venue_id
+    date : boxscore.boxscore.date.(TODO function)
+    team_id_home : boxscore.boxscore.home_id
+    team_id_away : boxscore.boxscore.away_id
+
+game_teams (boxscore) DONE
+    game_pk : boxscore.boxscore.game_pk
+    role : boxscore.boxscore.[home/away].'home/away'
+    team_id : boxscore.boxscore.away_id
+    wins : boxscore.boxscore.away_wins
+    losses : boxscore.boxscore.away_loss
+
+
+game_players DONE
+    game_pk : boxscore.boxscore.game_pk
+    team_id : players.game.team[].player[].team_id
+    player_id : players.game.team[].player[].id
+    name_first : players.game.team[].player[].first
+    name_last : players.game.team[].player[].last
+    number : players.game.team[].player[].num
+    position : players.game.team[].player[].position
+    game_position : players.game.team[].player[].game_position
+    rl : players.game.team[].player[].rl
+    bat_order : players.game.team[].player[].bat_order
+    bats : players.game.team[].player[].bats
+    status : players.game.team[].player[].status
+    batting_avg : players.game.team[].player[].avg
+    homeruns : players.game.team[].player[].hr
+    rbi : players.game.team[].player[].rbi
+    p_wins : players.game.team[].player[].wins (pitchers only)
+    p_losses : players.game.team[].player[].losses (pitchers_only)
+    p_era : players.game.team[].player[].era (pitchers only)
+
+
+players
+    player_id : /pitchers/[].Player.id
+    type : /pitchers/[].Player.type
+    name_first : /pitchers/[].Player.first_name
+    name_last : /pitchers/[].Player.last_name
+    jersey_num : /pitchers/[].Player.jersey_number
+    height : /pitchers/[].Player.height
+    height_inches : /pitchers/[].Player.height.(TODO function)
+    weight : /pitchers/[].Player.weight
+    bats : /pitchers/[].Player.bats
+    throws : /pitchers/[].Player.throws
+    dob : /pitchers/[].Player.dob
+
+
+game_coaches DONE
+    game_pk : boxscore.boxscore.game_pk
+    team_id : players.game.team[].player[].team_id
+    coach_id : players.game.team[].coach.id
+    position : players.game.team[].coach.position
+    name_first : players.game.team[].coach.first
+    name_last : players.game.team[].coach.last
+    number : players.game.team[].coach.num
+
+
+game_umpires (players) DONE
+    game_pk : boxscore.boxscore.game_pk
+    umpire_id : players.game.umpires.[umpire].id
+    position : players.game.umpires.[umpire].position
+    name_first : players.game.umpires.[umpire].first
+    name_last : players.game.umpires.[umpire].last
+
+
+teams : dim_team.csv DONE
+    team_id
+    file_code
+    league
+    division
+    location_name
+    team_name
+    stadium_id
+
+
+stadiums : dim_stadium.csv DONE
+    stadium_id
+    stadium_name
+    capacity
+    city
+    state
+    surface
+    dome
+    fence_L
+    fence_LC
+    fence_C
+    fence_RC
+    fence_R
+    backstop
+    latitude
+    longitude
+
+
+
+sources: rawboxscore, inning_all, players
+
+
+relation
+    pitch(n) : atbat(1)
+        game_pk = game_pk
+        batter_id = batter_id
+        pitcher_id = pitcher_id
+        atbat_num = atbat_num
+        event_num = event_num
+    atbat(n) : game(1)
+        game_pk = game_pk
+    game_umpires(n) : game(1)
+        game_pk = game_pk
+    game_coaches(n) : game(1)
+        game_pk = game_pk
+    game_players(n) : game(1)
+        game_pk = game_pk
+    game_teams(n) : game(1)
+        game_pk = game_pk
+    game_teams(n) : teams(1)
+        team_id = team_id
+    teams(1) : stadiums(1)
+        stadium_id = stadium_id
+
+
+----------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+DEPRECATED
+
+game_teams (rawboxscore)
+    game_pk : rawboxscore.boxscore.game_pk
+    role : rawboxscore.boxscore.team[].team_flag
+    team_id : rawboxscore.boxscore.team[].id
+    team_code : rawboxscore.boxscore.team[].team_code
+    game_number : rawboxscore.boxscore.team[].(TODO wins + losses + 1)
+    wins : rawboxscore.boxscore.team[].wins
+    losses : rawboxscore.boxscore.team[].losses
+
+
+game (rawboxscore)
+    game_pk : rawboxscore.boxscore.game_pk
+    game_id : rawboxscore.boxscore.game_id
+    stadium_id : rawboxscore.boxscore.venue
+    game_type : rawboxscore.boxscore.game_type
+    date : rawboxscore.boxscore.date.(TODO function)
+    elapsed_time : rawboxscore.boxscore.elapsed_time
+    elapsed_time_minutes : rawboxscore.boxscore.elapsed_time.(TODO function)
+    attendance : rawboxscore.boxscore.attendance
+    weather_report : rawboxscore.boxscore.weather
+    weather_temp : rawboxscore.boxscore.weather.(TODO function)
+    weather_conditions : rawboxscore.boxscore.weather.(TODO function)
+    weather_wind : rawboxscore.boxscore.wind
+    weather_windspeed : rawboxscore.boxscore.wind.(TODO function)
+    team_id_home : rawboxscore.boxscore.team[team_flag='home'].id
+    team_id_away : rawboxscore.boxscore.team[team_flag='away'].id
+
+
+game_umpires (rawboxscore)
+    game_pk : rawboxscore.boxscore.game_pk OR boxscore.boxscore.game_pk
+    umpire_id : rawboxscore.boxscore.umpires.umpire.umpire_id
+    position : rawboxscore.boxscore.umpires.umpire.position
+    name : rawboxscore.boxscore.umpires.umpire.name

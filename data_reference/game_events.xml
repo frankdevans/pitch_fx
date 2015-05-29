@@ -1,0 +1,2166 @@
+<?xml version="1.0" encoding="UTF-8"?><!--Copyright 2015 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt-->
+<game>
+   <inning num="1">
+      <top>
+         <action b="0" s="0" o="0" des="On-field Delay.  " des_es="Retraso en el Terreno"
+                 event="Game Advisory"
+                 event_es="Aviso en el Juego"
+                 tfs="170625"
+                 tfs_zulu="2014-06-01T17:06:25Z"
+                 player="453568"
+                 pitch="0"
+                 event_num="3"
+                 home_team_runs="0"
+                 away_team_runs="0"/>
+         <atbat num="1" b="2" s="3" o="1" start_tfs="170537"
+                start_tfs_zulu="2014-06-01T17:05:37Z"
+                batter="453568"
+                pitcher="458708"
+                des="Charlie Blackmon called out on strikes.  "
+                des_es="Charlie Blackmon se poncha sin tirarle.  "
+                event_num="10"
+                event="Strikeout"
+                event_es="Ponche"
+                home_team_runs="0"
+                away_team_runs="0"
+                b1=""
+                b2=""
+                b3="">
+            <pitch sv_id="140601_130905" des="Foul" des_es="Foul" type="S" start_speed="88.1"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_130947" des="Ball" des_es="Bola mala" type="B" start_speed="88.4"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_131001" des="Ball" des_es="Bola mala" type="B" start_speed="89.3"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_131017" des="Swinging Strike" des_es="Strike tir&#225;ndole"
+                   type="S"
+                   start_speed="80.8"
+                   pitch_type="CH"/>
+            <pitch sv_id="140601_131043" des="Called Strike" des_es="Strike cantado" type="S"
+                   start_speed="89.6"
+                   pitch_type="FF"/>
+         </atbat>
+         <atbat num="2" b="1" s="2" o="1" start_tfs="170756"
+                start_tfs_zulu="2014-06-01T17:07:56Z"
+                batter="150212"
+                pitcher="458708"
+                des="Michael Cuddyer singles on a soft ground ball to third baseman Mike Aviles.  "
+                des_es="Michael Cuddyer pega sencillo con rodado suave a tercera base Mike Aviles.  "
+                event_num="18"
+                event="Single"
+                event_es="Sencillo"
+                home_team_runs="0"
+                away_team_runs="0"
+                b1="150212"
+                b2=""
+                b3="">
+            <pitch sv_id="140601_131118" des="Ball" des_es="Bola mala" type="B" start_speed="90.6"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_131131" des="Swinging Strike" des_es="Strike tir&#225;ndole"
+                   type="S"
+                   start_speed="85.1"
+                   pitch_type="FC"/>
+            <pitch sv_id="140601_131146" des="Foul" des_es="Foul" type="S" start_speed="90.9"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_131205" des="Foul" des_es="Foul" type="S" start_speed="90.7"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_131224" des="In play, no out" des_es="En juego, no out" type="X"
+                   start_speed="85.9"
+                   pitch_type="FC"/>
+         </atbat>
+         <atbat num="3" b="2" s="1" o="2" start_tfs="171008"
+                start_tfs_zulu="2014-06-01T17:10:08Z"
+                batter="471865"
+                pitcher="458708"
+                des="Carlos Gonzalez lines out to left fielder Michael Brantley.  "
+                des_es="Carlos Gonzalez batea l&#237;nea de out a jardinero izquierdo Michael Brantley.  "
+                event_num="28"
+                event="Lineout"
+                event_es="L&#237;nea de Out"
+                home_team_runs="0"
+                away_team_runs="0"
+                b1=""
+                b2=""
+                b3="">
+            <pitch sv_id="140601_131344" des="Called Strike" des_es="Strike cantado" type="S"
+                   start_speed="84.2"
+                   pitch_type="FC"/>
+            <pitch sv_id="140601_131440" des="Ball" des_es="Bola mala" type="B" start_speed="88.1"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_131526" des="Ball" des_es="Bola mala" type="B" start_speed="89.7"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_131553" des="In play, out(s)" des_es="En juego, out(s)" type="X"
+                   start_speed="85.0"
+                   pitch_type="FC"/>
+         </atbat>
+         <atbat num="4" b="2" s="3" o="3" start_tfs="171313"
+                start_tfs_zulu="2014-06-01T17:13:13Z"
+                batter="453064"
+                pitcher="458708"
+                des="Troy Tulowitzki called out on strikes.  "
+                des_es="Troy Tulowitzki se poncha sin tirarle.  "
+                event_num="41"
+                event="Strikeout"
+                event_es="Ponche"
+                home_team_runs="0"
+                away_team_runs="0"
+                b1=""
+                b2=""
+                b3="">
+            <pitch sv_id="140601_131706" des="Called Strike" des_es="Strike cantado" type="S"
+                   start_speed="85.7"
+                   pitch_type="FC"/>
+            <pitch sv_id="140601_131758" des="Ball" des_es="Bola mala" type="B" start_speed="88.9"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_131832" des="Foul" des_es="Foul" type="S" start_speed="85.9"
+                   pitch_type="FC"/>
+            <pitch sv_id="140601_131905" des="Ball" des_es="Bola mala" type="B" start_speed="85.4"
+                   pitch_type="FC"/>
+            <pitch sv_id="140601_131958" des="Foul" des_es="Foul" type="S" start_speed="84.9"
+                   pitch_type="FC"/>
+            <pitch sv_id="140601_132034" des="Foul" des_es="Foul" type="S" start_speed="89.8"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_132111" des="Called Strike" des_es="Strike cantado" type="S"
+                   start_speed="75.6"
+                   pitch_type="CU"/>
+         </atbat>
+      </top>
+      <bottom>
+         <atbat num="5" b="4" s="1" o="0" start_tfs="172035"
+                start_tfs_zulu="2014-06-01T17:20:35Z"
+                batter="456422"
+                pitcher="468504"
+                des="Michael Bourn walks.  "
+                des_es="Michael Bourn recibe base por bolas.  "
+                event_num="51"
+                event="Walk"
+                event_es="Base por Bolas"
+                home_team_runs="0"
+                away_team_runs="0"
+                b1="456422"
+                b2=""
+                b3="">
+            <pitch sv_id="140601_132353" des="Ball" des_es="Bola mala" type="B" start_speed="84.5"
+                   pitch_type="CH"/>
+            <pitch sv_id="140601_132406" des="Called Strike" des_es="Strike cantado" type="S"
+                   start_speed="86.4"
+                   pitch_type="FT"/>
+            <pitch sv_id="140601_132419" des="Ball" des_es="Bola mala" type="B" start_speed="85.2"
+                   pitch_type="FT"/>
+            <pitch sv_id="140601_132432" des="Ball" des_es="Bola mala" type="B" start_speed="85.8"
+                   pitch_type="FT"/>
+            <pitch sv_id="140601_132444" des="Ball" des_es="Bola mala" type="B" start_speed="84.5"
+                   pitch_type="CH"/>
+         </atbat>
+         <action b="0" s="0" o="0"
+                 des="With Asdrubal Cabrera batting, throwing error by Jhoulys Chacin on the pickoff attempt, Michael Bourn to 2nd.  "
+                 des_es="Con Asdrubal Cabrera bateando, error en tiro de Jhoulys Chacin en el intent de viraje, Michael Bourn a 2da.  "
+                 event="Pickoff Error 1B"
+                 event_es="Error en Viraje a 1B"
+                 tfs="172306"
+                 tfs_zulu="2014-06-01T17:23:06Z"
+                 player="456422"
+                 pitch="0"
+                 event_num="56"
+                 home_team_runs="0"
+                 away_team_runs="0"/>
+         <atbat num="6" b="4" s="1" o="0" start_tfs="172155"
+                start_tfs_zulu="2014-06-01T17:21:55Z"
+                batter="452678"
+                pitcher="468504"
+                des="Asdrubal Cabrera walks.  "
+                des_es="Asdrubal Cabrera recibe base por bolas.  "
+                event_num="63"
+                event="Walk"
+                event_es="Base por Bolas"
+                home_team_runs="0"
+                away_team_runs="0"
+                b1="452678"
+                b2="456422"
+                b3="">
+            <pitch sv_id="140601_132618" des="Ball" des_es="Bola mala" type="B" start_speed="85.6"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_132642" des="Ball" des_es="Bola mala" type="B" start_speed="79.3"
+                   pitch_type="CH"/>
+            <pitch sv_id="140601_132708" des="Ball" des_es="Bola mala" type="B" start_speed="87.4"
+                   pitch_type="FT"/>
+            <pitch sv_id="140601_132740" des="Called Strike" des_es="Strike cantado" type="S"
+                   start_speed="86.0"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_132759" des="Ball" des_es="Bola mala" type="B" start_speed="89.0"
+                   pitch_type="FT"/>
+         </atbat>
+         <atbat num="7" b="1" s="1" o="0" start_tfs="172516"
+                start_tfs_zulu="2014-06-01T17:25:16Z"
+                batter="488726"
+                pitcher="468504"
+                des="Michael Brantley singles on a line drive to right fielder Brandon Barnes.   Michael Bourn scores.    Asdrubal Cabrera to 2nd.  "
+                des_es="Michael Brantley pega sencillo con l&#237;nea a jardinero derecho Brandon Barnes.   Michael Bourn anota  Asdrubal Cabrera a 2da.  "
+                event_num="73"
+                event="Single"
+                event_es="Sencillo"
+                score="T"
+                home_team_runs="1"
+                away_team_runs="0"
+                b1="488726"
+                b2="452678"
+                b3=""
+                rbi="1">
+            <pitch sv_id="140601_132852" des="Called Strike" des_es="Strike cantado" type="S"
+                   start_speed="86.5"
+                   pitch_type="FT"/>
+            <pitch sv_id="140601_132911" des="Ball" des_es="Bola mala" type="B" start_speed="86.4"
+                   pitch_type="FT"/>
+            <pitch sv_id="140601_132934" des="In play, run(s)" des_es="En juego, carrera(s)"
+                   type="X"
+                   start_speed="86.0"
+                   pitch_type="FT"/>
+         </atbat>
+         <atbat num="8" b="1" s="3" o="1" start_tfs="172719"
+                start_tfs_zulu="2014-06-01T17:27:19Z"
+                batter="543401"
+                pitcher="468504"
+                des="Jason Kipnis called out on strikes.  "
+                des_es="Jason Kipnis se poncha sin tirarle.  "
+                event_num="82"
+                event="Strikeout"
+                event_es="Ponche"
+                home_team_runs="1"
+                away_team_runs="0"
+                b1=""
+                b2=""
+                b3="">
+            <pitch sv_id="140601_133033" des="Ball" des_es="Bola mala" type="B" start_speed="87.9"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_133056" des="Called Strike" des_es="Strike cantado" type="S"
+                   start_speed="78.4"
+                   pitch_type="CH"/>
+            <pitch sv_id="140601_133116" des="Foul" des_es="Foul" type="S" start_speed="87.5"
+                   pitch_type="FT"/>
+            <pitch sv_id="140601_133150" des="Foul" des_es="Foul" type="S" start_speed="75.4"
+                   pitch_type="CU"/>
+            <pitch sv_id="140601_133238" des="Foul" des_es="Foul" type="S" start_speed="75.2"
+                   pitch_type="CU"/>
+            <pitch sv_id="140601_133309" des="Called Strike" des_es="Strike cantado" type="S"
+                   start_speed="87.3"
+                   pitch_type="FT"/>
+         </atbat>
+         <atbat num="9" b="0" s="1" o="1" start_tfs="173009"
+                start_tfs_zulu="2014-06-01T17:30:09Z"
+                batter="502082"
+                pitcher="468504"
+                des="Lonnie Chisenhall reaches on a fielder's choice, fielded by catcher Jordan Pacheco.   Asdrubal Cabrera to 3rd.    Michael Brantley to 2nd.  "
+                des_es="Lonnie Chisenhall se embasa en jugada de selecci&#243;n, fildeada por receptor Jordan Pacheco.   Asdrubal Cabrera a 3ra.    Michael Brantley a 2da.  "
+                event_num="89"
+                event="Fielders Choice"
+                event_es="Jugada de Selecci&#243;n"
+                home_team_runs="1"
+                away_team_runs="0"
+                b1="502082"
+                b2="488726"
+                b3="452678">
+            <pitch sv_id="140601_133349" des="Foul" des_es="Foul" type="S" start_speed="87.0"
+                   pitch_type="FT"/>
+            <pitch sv_id="140601_133412" des="In play, no out" des_es="En juego, no out" type="X"
+                   start_speed="81.5"
+                   pitch_type="CH"/>
+         </atbat>
+         <action b="0" s="1" o="1" des="Coaching visit to mound.  "
+                 des_es="Visita del Instructor a la Lomita"
+                 event="Game Advisory"
+                 event_es="Aviso en el Juego"
+                 tfs="173221"
+                 tfs_zulu="2014-06-01T17:32:21Z"
+                 player="114739"
+                 pitch="2"
+                 event_num="90"
+                 home_team_runs="1"
+                 away_team_runs="0"/>
+         <atbat num="10" b="4" s="0" o="1" start_tfs="173226"
+                start_tfs_zulu="2014-06-01T17:32:26Z"
+                batter="114739"
+                pitcher="468504"
+                des="Jason Giambi walks.   Asdrubal Cabrera scores.    Michael Brantley to 3rd.    Lonnie Chisenhall to 2nd.  "
+                des_es="Jason Giambi recibe base por bolas.   Asdrubal Cabrera anota  Michael Brantley a 3ra.    Lonnie Chisenhall a 2da.  "
+                event_num="101"
+                event="Walk"
+                event_es="Base por Bolas"
+                score="T"
+                home_team_runs="2"
+                away_team_runs="0"
+                b1="114739"
+                b2="502082"
+                b3="488726"
+                rbi="1">
+            <pitch sv_id="140601_133602" des="Ball" des_es="Bola mala" type="B" start_speed="87.9"
+                   pitch_type="FT"/>
+            <pitch sv_id="140601_133625" des="Ball In Dirt" des_es="Bola por el suelo" type="B"
+                   start_speed="88.5"
+                   pitch_type="FT"/>
+            <pitch sv_id="140601_133654" des="Ball In Dirt" des_es="Bola por el suelo" type="B"
+                   start_speed="88.1"
+                   pitch_type="FT"/>
+            <pitch sv_id="140601_133727" des="Ball" des_es="Bola mala" type="B" start_speed="86.5"
+                   pitch_type="FT"/>
+         </atbat>
+         <atbat num="11" b="0" s="1" o="2" start_tfs="173451"
+                start_tfs_zulu="2014-06-01T17:34:51Z"
+                batter="461815"
+                pitcher="468504"
+                des="David Murphy out on a sacrifice fly to left fielder Carlos Gonzalez.   Michael Brantley scores.  "
+                des_es="David Murphy out con elevado de sacrificio a jardinero izquierdo Carlos Gonzalez.   Michael Brantley anota.  "
+                event_num="108"
+                event="Sac Fly"
+                event_es="Elevado de Sacrificio"
+                score="T"
+                home_team_runs="3"
+                away_team_runs="0"
+                b1=""
+                b2=""
+                b3=""
+                rbi="1">
+            <pitch sv_id="140601_133809" des="Called Strike" des_es="Strike cantado" type="S"
+                   start_speed="71.4"
+                   pitch_type="CU"/>
+            <pitch sv_id="140601_133827" des="In play, run(s)" des_es="En juego, carrera(s)"
+                   type="X"
+                   start_speed="80.5"
+                   pitch_type="CH"/>
+         </atbat>
+         <atbat num="12" b="0" s="3" o="3" start_tfs="173612"
+                start_tfs_zulu="2014-06-01T17:36:12Z"
+                batter="449107"
+                pitcher="468504"
+                des="Mike Aviles strikes out swinging.  "
+                des_es="Mike Aviles se poncha tir&#225;ndole.  "
+                event_num="117"
+                event="Strikeout"
+                event_es="Ponche"
+                home_team_runs="3"
+                away_team_runs="0"
+                b1=""
+                b2=""
+                b3="">
+            <pitch sv_id="140601_133924" des="Called Strike" des_es="Strike cantado" type="S"
+                   start_speed="88.8"
+                   pitch_type="FT"/>
+            <pitch sv_id="140601_133942" des="Foul" des_es="Foul" type="S" start_speed="75.5"
+                   pitch_type="CU"/>
+            <pitch sv_id="140601_134013" des="Foul" des_es="Foul" type="S" start_speed="91.5"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_134047" des="Foul" des_es="Foul" type="S" start_speed="90.5"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_134129" des="Foul" des_es="Foul" type="S" start_speed="79.5"
+                   pitch_type="SL"/>
+            <pitch sv_id="140601_134159" des="Swinging Strike" des_es="Strike tir&#225;ndole"
+                   type="S"
+                   start_speed="79.5"
+                   pitch_type="SL"/>
+         </atbat>
+      </bottom>
+   </inning>
+   <inning num="2">
+      <top>
+         <atbat num="13" b="0" s="2" o="0" start_tfs="174108"
+                start_tfs_zulu="2014-06-01T17:41:08Z"
+                batter="408047"
+                pitcher="458708"
+                des="Justin Morneau reaches on a fielding error by third baseman Mike Aviles.  "
+                des_es="Justin Morneau se embasa por error en fildeo de tercera base Mike Aviles.  "
+                event_num="126"
+                event="Field Error"
+                event_es="Error de Fildeo"
+                home_team_runs="3"
+                away_team_runs="0"
+                b1="408047"
+                b2=""
+                b3="">
+            <pitch sv_id="140601_134427" des="Called Strike" des_es="Strike cantado" type="S"
+                   start_speed="87.5"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_134441" des="Swinging Strike" des_es="Strike tir&#225;ndole"
+                   type="S"
+                   start_speed="74.3"
+                   pitch_type="CU"/>
+            <pitch sv_id="140601_134457" des="In play, no out" des_es="En juego, no out" type="X"
+                   start_speed="89.5"
+                   pitch_type="FF"/>
+         </atbat>
+         <atbat num="14" b="0" s="1" o="0" start_tfs="174226"
+                start_tfs_zulu="2014-06-01T17:42:26Z"
+                batter="572816"
+                pitcher="458708"
+                des="Corey Dickerson homers (7) on a fly ball to right field.    Justin Morneau scores.  "
+                des_es="Corey Dickerson batea jonr&#243;n (7) con elevado por el jard&#237;n derecho.    Justin Morneau anota.  "
+                event_num="134"
+                event="Home Run"
+                event_es="Jonr&#243;n"
+                score="T"
+                home_team_runs="3"
+                away_team_runs="2"
+                b1=""
+                b2=""
+                b3=""
+                rbi="2">
+            <pitch sv_id="140601_134550" des="Called Strike" des_es="Strike cantado" type="S"
+                   start_speed="88.1"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_134622" des="In play, run(s)" des_es="En juego, carrera(s)"
+                   type="X"
+                   start_speed="82.4"
+                   pitch_type="CH"/>
+         </atbat>
+         <atbat num="15" b="0" s="3" o="1" start_tfs="174349"
+                start_tfs_zulu="2014-06-01T17:43:49Z"
+                batter="488681"
+                pitcher="458708"
+                des="Brandon Barnes strikes out swinging.  "
+                des_es="Brandon Barnes se poncha tir&#225;ndole.  "
+                event_num="140"
+                event="Strikeout"
+                event_es="Ponche"
+                home_team_runs="3"
+                away_team_runs="2"
+                b1=""
+                b2=""
+                b3="">
+            <pitch sv_id="140601_134714" des="Swinging Strike" des_es="Strike tir&#225;ndole"
+                   type="S"
+                   start_speed="89.4"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_134732" des="Foul" des_es="Foul" type="S" start_speed="89.4"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_134753" des="Swinging Strike" des_es="Strike tir&#225;ndole"
+                   type="S"
+                   start_speed="86.2"
+                   pitch_type="FC"/>
+         </atbat>
+         <atbat num="16" b="4" s="2" o="1" start_tfs="174510"
+                start_tfs_zulu="2014-06-01T17:45:10Z"
+                batter="457574"
+                pitcher="458708"
+                des="Jordan Pacheco walks.  "
+                des_es="Jordan Pacheco recibe base por bolas.  "
+                event_num="153"
+                event="Walk"
+                event_es="Base por Bolas"
+                home_team_runs="3"
+                away_team_runs="2"
+                b1="457574"
+                b2=""
+                b3="">
+            <pitch sv_id="140601_134825" des="Called Strike" des_es="Strike cantado" type="S"
+                   start_speed="89.6"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_134846" des="Ball" des_es="Bola mala" type="B" start_speed="89.8"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_134906" des="Ball" des_es="Bola mala" type="B" start_speed="86.0"
+                   pitch_type="FC"/>
+            <pitch sv_id="140601_134928" des="Foul" des_es="Foul" type="S" start_speed="88.8"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_134952" des="Foul" des_es="Foul" type="S" start_speed="85.4"
+                   pitch_type="FC"/>
+            <pitch sv_id="140601_135017" des="Foul" des_es="Foul" type="S" start_speed="90.6"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_135039" des="Foul" des_es="Foul" type="S" start_speed="77.6"
+                   pitch_type="CU"/>
+            <pitch sv_id="140601_135104" des="Ball In Dirt" des_es="Bola por el suelo" type="B"
+                   start_speed="77.2"
+                   pitch_type="CU"/>
+            <pitch sv_id="140601_135132" des="Foul" des_es="Foul" type="S" start_speed="85.0"
+                   pitch_type="FC"/>
+            <pitch sv_id="140601_135157" des="Ball" des_es="Bola mala" type="B" start_speed="90.1"
+                   pitch_type="FF"/>
+         </atbat>
+         <atbat num="17" b="0" s="0" o="2" start_tfs="174900"
+                start_tfs_zulu="2014-06-01T17:49:00Z"
+                batter="518934"
+                pitcher="458708"
+                des="DJ LeMahieu out on a sacrifice bunt, pitcher Josh Tomlin to first baseman Lonnie Chisenhall.   Jordan Pacheco to 2nd.  "
+                des_es="DJ LeMahieu out en toque de sacrificio, lanzador Josh Tomlin a primera base Lonnie Chisenhall.   Jordan Pacheco a 2da.  "
+                event_num="158"
+                event="Sac Bunt"
+                event_es="Toque de Sacrificio"
+                home_team_runs="3"
+                away_team_runs="2"
+                b1=""
+                b2="457574"
+                b3="">
+            <pitch sv_id="140601_135241" des="In play, out(s)" des_es="En juego, out(s)" type="X"
+                   start_speed="88.8"
+                   pitch_type="FF"/>
+         </atbat>
+         <atbat num="18" b="1" s="2" o="3" start_tfs="175021"
+                start_tfs_zulu="2014-06-01T17:50:21Z"
+                batter="453568"
+                pitcher="458708"
+                des="Charlie Blackmon grounds out, third baseman Mike Aviles to first baseman Lonnie Chisenhall.  "
+                des_es="Charlie Blackmon batea rodado de out, tercera base Mike Aviles a primera base Lonnie Chisenhall.  "
+                event_num="165"
+                event="Groundout"
+                event_es="Roletazo de Out"
+                home_team_runs="3"
+                away_team_runs="2"
+                b1=""
+                b2=""
+                b3="">
+            <pitch sv_id="140601_135332" des="Ball In Dirt" des_es="Bola por el suelo" type="B"
+                   start_speed="80.6"
+                   pitch_type="CH"/>
+            <pitch sv_id="140601_135403" des="Foul" des_es="Foul" type="S" start_speed="84.9"
+                   pitch_type="FC"/>
+            <pitch sv_id="140601_135437" des="Called Strike" des_es="Strike cantado" type="S"
+                   start_speed="89.2"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_135528" des="In play, out(s)" des_es="En juego, out(s)" type="X"
+                   start_speed="89.8"
+                   pitch_type="FF"/>
+         </atbat>
+      </top>
+      <bottom>
+         <atbat num="19" b="4" s="2" o="0" start_tfs="175441"
+                start_tfs_zulu="2014-06-01T17:54:41Z"
+                batter="435459"
+                pitcher="468504"
+                des="George Kottaras walks.  "
+                des_es="George Kottaras recibe base por bolas.  "
+                event_num="176"
+                event="Walk"
+                event_es="Base por Bolas"
+                home_team_runs="3"
+                away_team_runs="2"
+                b1="435459"
+                b2=""
+                b3="">
+            <pitch sv_id="140601_135756" des="Ball" des_es="Bola mala" type="B" start_speed="87.6"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_135807" des="Called Strike" des_es="Strike cantado" type="S"
+                   start_speed="88.5"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_135821" des="Called Strike" des_es="Strike cantado" type="S"
+                   start_speed="88.3"
+                   pitch_type="FT"/>
+            <pitch sv_id="140601_135836" des="Ball" des_es="Bola mala" type="B" start_speed="89.6"
+                   pitch_type="FT"/>
+            <pitch sv_id="140601_135848" des="Ball" des_es="Bola mala" type="B" start_speed="88.1"
+                   pitch_type="FT"/>
+            <pitch sv_id="140601_135903" des="Ball" des_es="Bola mala" type="B" start_speed="89.2"
+                   pitch_type="FT"/>
+         </atbat>
+         <atbat num="20" b="0" s="2" o="1" start_tfs="175624"
+                start_tfs_zulu="2014-06-01T17:56:24Z"
+                batter="456422"
+                pitcher="468504"
+                des="Michael Bourn grounds out sharply, pitcher Jhoulys Chacin to first baseman Justin Morneau.   George Kottaras to 2nd.  "
+                des_es="Michael Bourn batea rodado de out fuertemente a primera base Justin Morneau en jugada de infield fly.   George Kottaras a 2da.  "
+                event_num="183"
+                event="Groundout"
+                event_es="Roletazo de Out"
+                home_team_runs="3"
+                away_team_runs="2"
+                b1=""
+                b2="435459"
+                b3="">
+            <pitch sv_id="140601_135940" des="Foul" des_es="Foul" type="S" start_speed="87.7"
+                   pitch_type="FT"/>
+            <pitch sv_id="140601_135959" des="Called Strike" des_es="Strike cantado" type="S"
+                   start_speed="87.4"
+                   pitch_type="FT"/>
+            <pitch sv_id="140601_140017" des="In play, out(s)" des_es="En juego, out(s)" type="X"
+                   start_speed="75.9"
+                   pitch_type="CU"/>
+         </atbat>
+         <atbat num="21" b="0" s="2" o="3" start_tfs="175806"
+                start_tfs_zulu="2014-06-01T17:58:06Z"
+                batter="452678"
+                pitcher="468504"
+                des="Asdrubal Cabrera lines into a double play, first baseman Justin Morneau to shortstop Troy Tulowitzki.   George Kottaras doubled off 2nd.  "
+                des_es="Asdrubal Cabrera batea l&#237;nea para doble matanza, primera base Justin Morneau a campo corto Troy Tulowitzki.   George Kottaras doblado 2da.  "
+                event_num="190"
+                event="Double Play"
+                event_es="Doble-Play"
+                home_team_runs="3"
+                away_team_runs="2"
+                b1=""
+                b2=""
+                b3="">
+            <pitch sv_id="140601_140113" des="Called Strike" des_es="Strike cantado" type="S"
+                   start_speed="88.7"
+                   pitch_type="FT"/>
+            <pitch sv_id="140601_140135" des="Called Strike" des_es="Strike cantado" type="S"
+                   start_speed="89.5"
+                   pitch_type="FT"/>
+            <pitch sv_id="140601_140200" des="In play, out(s)" des_es="En juego, out(s)" type="X"
+                   start_speed="88.0"
+                   pitch_type="FT"/>
+         </atbat>
+      </bottom>
+   </inning>
+   <inning num="3">
+      <top>
+         <atbat num="22" b="1" s="1" o="0" start_tfs="180153"
+                start_tfs_zulu="2014-06-01T18:01:53Z"
+                batter="150212"
+                pitcher="458708"
+                des="Michael Cuddyer singles on a line drive to center fielder Michael Bourn.  "
+                des_es="Michael Cuddyer pega sencillo con l&#237;nea a jardinero central Michael Bourn.  "
+                event_num="197"
+                event="Single"
+                event_es="Sencillo"
+                home_team_runs="3"
+                away_team_runs="2"
+                b1="150212"
+                b2=""
+                b3="">
+            <pitch sv_id="140601_140436" des="Swinging Strike" des_es="Strike tir&#225;ndole"
+                   type="S"
+                   start_speed="84.9"
+                   pitch_type="FC"/>
+            <pitch sv_id="140601_140449" des="Ball" des_es="Bola mala" type="B" start_speed="89.6"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_140503" des="In play, no out" des_es="En juego, no out" type="X"
+                   start_speed="88.5"
+                   pitch_type="FF"/>
+         </atbat>
+         <atbat num="23" b="3" s="3" o="1" start_tfs="180231"
+                start_tfs_zulu="2014-06-01T18:02:31Z"
+                batter="471865"
+                pitcher="458708"
+                des="Carlos Gonzalez called out on strikes.  "
+                des_es="Carlos Gonzalez se poncha sin tirarle.  "
+                event_num="211"
+                event="Strikeout"
+                event_es="Ponche"
+                home_team_runs="3"
+                away_team_runs="2"
+                b1=""
+                b2=""
+                b3="">
+            <pitch sv_id="140601_140605" des="Swinging Strike" des_es="Strike tir&#225;ndole"
+                   type="S"
+                   start_speed="76.1"
+                   pitch_type="CU"/>
+            <pitch sv_id="140601_140657" des="Ball" des_es="Bola mala" type="B" start_speed="89.4"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_140723" des="Ball" des_es="Bola mala" type="B" start_speed="75.1"
+                   pitch_type="CU"/>
+            <pitch sv_id="140601_140813" des="Called Strike" des_es="Strike cantado" type="S"
+                   start_speed="85.6"
+                   pitch_type="FC"/>
+            <pitch sv_id="140601_140848" des="Foul" des_es="Foul" type="S" start_speed="89.6"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_140943" des="Ball" des_es="Bola mala" type="B" start_speed="89.3"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_141013" des="Called Strike" des_es="Strike cantado" type="S"
+                   start_speed="74.6"
+                   pitch_type="CU"/>
+         </atbat>
+         <atbat num="24" b="2" s="0" o="1" start_tfs="180722"
+                start_tfs_zulu="2014-06-01T18:07:22Z"
+                batter="453064"
+                pitcher="458708"
+                des="Troy Tulowitzki singles on a sharp ground ball to center fielder Michael Bourn.   Michael Cuddyer to 3rd.    Troy Tulowitzki to 2nd on the throw.  "
+                des_es="Troy Tulowitzki pega sencillo con rodado fuerte a jardinero central Michael Bourn.   Michael Cuddyer a 3ra.    Troy Tulowitzki a 2da con el tiro.  "
+                event_num="220"
+                event="Single"
+                event_es="Sencillo"
+                home_team_runs="3"
+                away_team_runs="2"
+                b1=""
+                b2="453064"
+                b3="150212">
+            <pitch sv_id="140601_141057" des="Ball" des_es="Bola mala" type="B" start_speed="85.2"
+                   pitch_type="FC"/>
+            <pitch sv_id="140601_141126" des="Ball" des_es="Bola mala" type="B" start_speed="75.4"
+                   pitch_type="CU"/>
+            <pitch sv_id="140601_141158" des="In play, no out" des_es="En juego, no out" type="X"
+                   start_speed="85.5"
+                   pitch_type="FC"/>
+         </atbat>
+         <atbat num="25" b="0" s="1" o="2" start_tfs="181104"
+                start_tfs_zulu="2014-06-01T18:11:04Z"
+                batter="408047"
+                pitcher="458708"
+                des="Justin Morneau grounds out, second baseman Jason Kipnis to first baseman Lonnie Chisenhall.   Michael Cuddyer scores.    Troy Tulowitzki to 3rd.  "
+                des_es="Justin Morneau batea rodado de out a primera base Lonnie Chisenhall en jugada de infield fly.   Michael Cuddyer anota  Troy Tulowitzki a 3ra.  "
+                event_num="228"
+                event="Groundout"
+                event_es="Roletazo de Out"
+                score="T"
+                home_team_runs="3"
+                away_team_runs="3"
+                b1=""
+                b2=""
+                b3="453064"
+                rbi="1">
+            <pitch sv_id="140601_141304" des="Swinging Strike" des_es="Strike tir&#225;ndole"
+                   type="S"
+                   start_speed="76.1"
+                   pitch_type="CU"/>
+            <pitch sv_id="140601_141333" des="In play, run(s)" des_es="En juego, carrera(s)"
+                   type="X"
+                   start_speed="85.6"
+                   pitch_type="FC"/>
+         </atbat>
+         <action b="0" s="1" o="2" des="Coaching visit to mound.  "
+                 des_es="Visita del Instructor a la Lomita"
+                 event="Game Advisory"
+                 event_es="Aviso en el Juego"
+                 tfs="181153"
+                 tfs_zulu="2014-06-01T18:11:53Z"
+                 player="572816"
+                 pitch="2"
+                 event_num="229"
+                 home_team_runs="3"
+                 away_team_runs="3"/>
+         <atbat num="26" b="2" s="0" o="3" start_tfs="181153"
+                start_tfs_zulu="2014-06-01T18:11:53Z"
+                batter="572816"
+                pitcher="458708"
+                des="Corey Dickerson flies out to right fielder David Murphy.  "
+                des_es="Corey Dickerson batea elevado de out a jardinero derecho David Murphy.  "
+                event_num="235"
+                event="Flyout"
+                event_es="Elevado de Out"
+                home_team_runs="3"
+                away_team_runs="3"
+                b1=""
+                b2=""
+                b3="">
+            <pitch sv_id="140601_141505" des="Ball" des_es="Bola mala" type="B" start_speed="88.4"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_141533" des="Ball In Dirt" des_es="Bola por el suelo" type="B"
+                   start_speed="84.0"
+                   pitch_type="FC"/>
+            <pitch sv_id="140601_141607" des="In play, out(s)" des_es="En juego, out(s)" type="X"
+                   start_speed="84.8"
+                   pitch_type="FC"/>
+         </atbat>
+      </top>
+      <bottom>
+         <atbat num="27" b="1" s="2" o="0" start_tfs="181527"
+                start_tfs_zulu="2014-06-01T18:15:27Z"
+                batter="488726"
+                pitcher="468504"
+                des="Michael Brantley doubles (13) on a line drive to right fielder Brandon Barnes.  "
+                des_es="Michael Brantley pega doble (13) con l&#237;nea a jardinero derecho Brandon Barnes.  "
+                event_num="244"
+                event="Double"
+                event_es="Doble"
+                home_team_runs="3"
+                away_team_runs="3"
+                b1=""
+                b2="488726"
+                b3="">
+            <pitch sv_id="140601_141842" des="Called Strike" des_es="Strike cantado" type="S"
+                   start_speed="89.1"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_141900" des="Ball" des_es="Bola mala" type="B" start_speed="74.3"
+                   pitch_type="CU"/>
+            <pitch sv_id="140601_141919" des="Foul" des_es="Foul" type="S" start_speed="88.1"
+                   pitch_type="FT"/>
+            <pitch sv_id="140601_141946" des="In play, no out" des_es="En juego, no out" type="X"
+                   start_speed="89.6"
+                   pitch_type="FT"/>
+         </atbat>
+         <atbat num="28" b="1" s="1" o="1" start_tfs="181717"
+                start_tfs_zulu="2014-06-01T18:17:17Z"
+                batter="543401"
+                pitcher="468504"
+                des="Jason Kipnis flies out to center fielder Charlie Blackmon.   Michael Brantley to 3rd.  "
+                des_es="Jason Kipnis batea elevado de out a jardinero central Charlie Blackmon en jugada de infield fly.   Michael Brantley a 3ra.  "
+                event_num="251"
+                event="Flyout"
+                event_es="Elevado de Out"
+                home_team_runs="3"
+                away_team_runs="3"
+                b1=""
+                b2=""
+                b3="488726">
+            <pitch sv_id="140601_142045" des="Called Strike" des_es="Strike cantado" type="S"
+                   start_speed="73.1"
+                   pitch_type="CU"/>
+            <pitch sv_id="140601_142108" des="Ball" des_es="Bola mala" type="B" start_speed="89.6"
+                   pitch_type="FT"/>
+            <pitch sv_id="140601_142130" des="In play, out(s)" des_es="En juego, out(s)" type="X"
+                   start_speed="88.6"
+                   pitch_type="FT"/>
+         </atbat>
+         <atbat num="29" b="3" s="2" o="2" start_tfs="181858"
+                start_tfs_zulu="2014-06-01T18:18:58Z"
+                batter="502082"
+                pitcher="468504"
+                des="Lonnie Chisenhall out on a sacrifice fly to right fielder Brandon Barnes.   Michael Brantley scores.  "
+                des_es="Lonnie Chisenhall out con elevado de sacrificio a jardinero derecho Brandon Barnes.   Michael Brantley anota.  "
+                event_num="262"
+                event="Sac Fly"
+                event_es="Elevado de Sacrificio"
+                score="T"
+                home_team_runs="4"
+                away_team_runs="3"
+                b1=""
+                b2=""
+                b3=""
+                rbi="1">
+            <pitch sv_id="140601_142227" des="Foul" des_es="Foul" type="S" start_speed="83.2"
+                   pitch_type="CH"/>
+            <pitch sv_id="140601_142259" des="Ball" des_es="Bola mala" type="B" start_speed="81.4"
+                   pitch_type="SL"/>
+            <pitch sv_id="140601_142323" des="Foul" des_es="Foul" type="S" start_speed="91.9"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_142407" des="Ball" des_es="Bola mala" type="B" start_speed="91.9"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_142437" des="Ball" des_es="Bola mala" type="B" start_speed="77.7"
+                   pitch_type="SL"/>
+            <pitch sv_id="140601_142506" des="In play, run(s)" des_es="En juego, carrera(s)"
+                   type="X"
+                   start_speed="75.9"
+                   pitch_type="CU"/>
+         </atbat>
+         <atbat num="30" b="2" s="3" o="3" start_tfs="182255"
+                start_tfs_zulu="2014-06-01T18:22:55Z"
+                batter="114739"
+                pitcher="468504"
+                des="Jason Giambi strikes out swinging.  "
+                des_es="Jason Giambi se poncha tir&#225;ndole.  "
+                event_num="270"
+                event="Strikeout"
+                event_es="Ponche"
+                home_team_runs="4"
+                away_team_runs="3"
+                b1=""
+                b2=""
+                b3="">
+            <pitch sv_id="140601_142552" des="Foul" des_es="Foul" type="S" start_speed="91.0"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_142615" des="Called Strike" des_es="Strike cantado" type="S"
+                   start_speed="91.5"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_142631" des="Ball" des_es="Bola mala" type="B" start_speed="90.6"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_142648" des="Ball In Dirt" des_es="Bola por el suelo" type="B"
+                   start_speed="77.2"
+                   pitch_type="CU"/>
+            <pitch sv_id="140601_142712" des="Swinging Strike" des_es="Strike tir&#225;ndole"
+                   type="S"
+                   start_speed="76.5"
+                   pitch_type="CU"/>
+         </atbat>
+      </bottom>
+   </inning>
+   <inning num="4">
+      <top>
+         <atbat num="31" b="3" s="2" o="1" start_tfs="182629"
+                start_tfs_zulu="2014-06-01T18:26:29Z"
+                batter="488681"
+                pitcher="458708"
+                des="Brandon Barnes flies out to right fielder David Murphy.  "
+                des_es="Brandon Barnes batea elevado de out a jardinero derecho David Murphy.  "
+                event_num="280"
+                event="Flyout"
+                event_es="Elevado de Out"
+                home_team_runs="4"
+                away_team_runs="3"
+                b1=""
+                b2=""
+                b3="">
+            <pitch sv_id="140601_142941" des="Ball" des_es="Bola mala" type="B" start_speed="84.3"
+                   pitch_type="FC"/>
+            <pitch sv_id="140601_142955" des="Ball" des_es="Bola mala" type="B" start_speed="84.3"
+                   pitch_type="FC"/>
+            <pitch sv_id="140601_143010" des="Swinging Strike" des_es="Strike tir&#225;ndole"
+                   type="S"
+                   start_speed="89.1"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_143034" des="Ball" des_es="Bola mala" type="B" start_speed="84.8"
+                   pitch_type="FC"/>
+            <pitch sv_id="140601_143052" des="Foul" des_es="Foul" type="S" start_speed="89.7"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_143117" des="In play, out(s)" des_es="En juego, out(s)" type="X"
+                   start_speed="90.1"
+                   pitch_type="FF"/>
+         </atbat>
+         <atbat num="32" b="3" s="1" o="2" start_tfs="182833"
+                start_tfs_zulu="2014-06-01T18:28:33Z"
+                batter="457574"
+                pitcher="458708"
+                des="Jordan Pacheco grounds out, shortstop Asdrubal Cabrera to first baseman Lonnie Chisenhall.  "
+                des_es="Jordan Pacheco batea rodado de out, campo corto Asdrubal Cabrera a primera base Lonnie Chisenhall.  "
+                event_num="288"
+                event="Groundout"
+                event_es="Roletazo de Out"
+                home_team_runs="4"
+                away_team_runs="3"
+                b1=""
+                b2=""
+                b3="">
+            <pitch sv_id="140601_143159" des="Ball" des_es="Bola mala" type="B" start_speed="89.3"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_143219" des="Ball" des_es="Bola mala" type="B" start_speed="89.7"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_143239" des="Ball" des_es="Bola mala" type="B" start_speed="89.7"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_143258" des="Called Strike" des_es="Strike cantado" type="S"
+                   start_speed="89.5"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_143317" des="In play, out(s)" des_es="En juego, out(s)" type="X"
+                   start_speed="89.6"
+                   pitch_type="FF"/>
+         </atbat>
+         <atbat num="33" b="1" s="3" o="3" start_tfs="183037"
+                start_tfs_zulu="2014-06-01T18:30:37Z"
+                batter="518934"
+                pitcher="458708"
+                des="DJ LeMahieu called out on strikes.  "
+                des_es="DJ LeMahieu se poncha sin tirarle.  "
+                event_num="297"
+                event="Strikeout"
+                event_es="Ponche"
+                home_team_runs="4"
+                away_team_runs="3"
+                b1=""
+                b2=""
+                b3="">
+            <pitch sv_id="140601_143358" des="Called Strike" des_es="Strike cantado" type="S"
+                   start_speed="90.0"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_143411" des="Called Strike" des_es="Strike cantado" type="S"
+                   start_speed="77.0"
+                   pitch_type="CU"/>
+            <pitch sv_id="140601_143428" des="Foul" des_es="Foul" type="S" start_speed="90.0"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_143455" des="Ball" des_es="Bola mala" type="B" start_speed="79.5"
+                   pitch_type="CU"/>
+            <pitch sv_id="140601_143509" des="Foul" des_es="Foul" type="S" start_speed="89.3"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_143533" des="Called Strike" des_es="Strike cantado" type="S"
+                   start_speed="89.8"
+                   pitch_type="FF"/>
+         </atbat>
+      </top>
+      <bottom>
+         <atbat num="34" b="3" s="1" o="1" start_tfs="183439"
+                start_tfs_zulu="2014-06-01T18:34:39Z"
+                batter="461815"
+                pitcher="468504"
+                des="David Murphy grounds out to first baseman Justin Morneau.  "
+                des_es="David Murphy batea rodado de out a primera base Justin Morneau.  "
+                event_num="306"
+                event="Groundout"
+                event_es="Roletazo de Out"
+                home_team_runs="4"
+                away_team_runs="3"
+                b1=""
+                b2=""
+                b3="">
+            <pitch sv_id="140601_143800" des="Ball" des_es="Bola mala" type="B" start_speed="71.8"
+                   pitch_type="CU"/>
+            <pitch sv_id="140601_143815" des="Ball" des_es="Bola mala" type="B" start_speed="86.9"
+                   pitch_type="FT"/>
+            <pitch sv_id="140601_143829" des="Called Strike" des_es="Strike cantado" type="S"
+                   start_speed="89.0"
+                   pitch_type="FT"/>
+            <pitch sv_id="140601_143845" des="Ball" des_es="Bola mala" type="B" start_speed="88.5"
+                   pitch_type="FT"/>
+            <pitch sv_id="140601_143901" des="In play, out(s)" des_es="En juego, out(s)" type="X"
+                   start_speed="88.2"
+                   pitch_type="FT"/>
+         </atbat>
+         <atbat num="35" b="0" s="2" o="1" start_tfs="183623"
+                start_tfs_zulu="2014-06-01T18:36:23Z"
+                batter="449107"
+                pitcher="468504"
+                des="Mike Aviles singles on a line drive to left fielder Carlos Gonzalez.  "
+                des_es="Mike Aviles pega sencillo con l&#237;nea a jardinero izquierdo Carlos Gonzalez.  "
+                event_num="314"
+                event="Single"
+                event_es="Sencillo"
+                home_team_runs="4"
+                away_team_runs="3"
+                b1="449107"
+                b2=""
+                b3="">
+            <pitch sv_id="140601_143940" des="Called Strike" des_es="Strike cantado" type="S"
+                   start_speed="90.1"
+                   pitch_type="FT"/>
+            <pitch sv_id="140601_143955" des="Foul" des_es="Foul" type="S" start_speed="91.6"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_144027" des="Foul" des_es="Foul" type="S" start_speed="91.5"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_144052" des="Foul" des_es="Foul" type="S" start_speed="91.6"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_144120" des="In play, no out" des_es="En juego, no out" type="X"
+                   start_speed="79.8"
+                   pitch_type="SL"/>
+         </atbat>
+         <action b="3" s="0" o="1"
+                 des="With George Kottaras batting, Mike Aviles steals (5) 2nd base.  "
+                 des_es="Con George Kottaras bateando, Mike Aviles se roba (5) la 2da base.  "
+                 event="Stolen Base 2B"
+                 event_es="Base Robada 2B"
+                 tfs="184019"
+                 tfs_zulu="2014-06-01T18:40:19Z"
+                 player="449107"
+                 pitch="3"
+                 event_num="321"
+                 home_team_runs="4"
+                 away_team_runs="3"/>
+         <atbat num="36" b="4" s="0" o="1" start_tfs="183848"
+                start_tfs_zulu="2014-06-01T18:38:48Z"
+                batter="435459"
+                pitcher="468504"
+                des="George Kottaras walks.  "
+                des_es="George Kottaras recibe base por bolas.  "
+                event_num="324"
+                event="Walk"
+                event_es="Base por Bolas"
+                home_team_runs="4"
+                away_team_runs="3"
+                b1="435459"
+                b2="449107"
+                b3="">
+            <pitch sv_id="140601_144200" des="Ball In Dirt" des_es="Bola por el suelo" type="B"
+                   start_speed="89.1"
+                   pitch_type="FT"/>
+            <pitch sv_id="140601_144233" des="Ball In Dirt" des_es="Bola por el suelo" type="B"
+                   start_speed="88.9"
+                   pitch_type="FT"/>
+            <pitch sv_id="140601_144300" des="Ball" des_es="Bola mala" type="B" start_speed="86.3"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_144334" des="Ball" des_es="Bola mala" type="B" start_speed="88.4"
+                   pitch_type="FF"/>
+         </atbat>
+         <action b="4" s="0" o="1" des="Coaching visit to mound.  "
+                 des_es="Visita del Instructor a la Lomita"
+                 event="Game Advisory"
+                 event_es="Aviso en el Juego"
+                 tfs="184049"
+                 tfs_zulu="2014-06-01T18:40:49Z"
+                 player="456422"
+                 pitch="4"
+                 event_num="325"
+                 home_team_runs="4"
+                 away_team_runs="3"/>
+         <atbat num="37" b="2" s="1" o="2" start_tfs="184134"
+                start_tfs_zulu="2014-06-01T18:41:34Z"
+                batter="456422"
+                pitcher="468504"
+                des="Michael Bourn flies out to center fielder Charlie Blackmon.  "
+                des_es="Michael Bourn batea elevado de out a jardinero central Charlie Blackmon.  "
+                event_num="332"
+                event="Flyout"
+                event_es="Elevado de Out"
+                home_team_runs="4"
+                away_team_runs="3"
+                b1=""
+                b2=""
+                b3="">
+            <pitch sv_id="140601_144448" des="Foul" des_es="Foul" type="S" start_speed="87.9"
+                   pitch_type="FT"/>
+            <pitch sv_id="140601_144509" des="Ball" des_es="Bola mala" type="B" start_speed="87.4"
+                   pitch_type="FT"/>
+            <pitch sv_id="140601_144529" des="Ball" des_es="Bola mala" type="B" start_speed="87.9"
+                   pitch_type="FT"/>
+            <pitch sv_id="140601_144551" des="In play, out(s)" des_es="En juego, out(s)" type="X"
+                   start_speed="88.8"
+                   pitch_type="FT"/>
+         </atbat>
+         <atbat num="38" b="1" s="1" o="3" start_tfs="184319"
+                start_tfs_zulu="2014-06-01T18:43:19Z"
+                batter="452678"
+                pitcher="468504"
+                des="Asdrubal Cabrera grounds out to first baseman Justin Morneau.  "
+                des_es="Asdrubal Cabrera batea rodado de out a primera base Justin Morneau.  "
+                event_num="338"
+                event="Groundout"
+                event_es="Roletazo de Out"
+                home_team_runs="4"
+                away_team_runs="3"
+                b1=""
+                b2=""
+                b3="">
+            <pitch sv_id="140601_144655" des="Called Strike" des_es="Strike cantado" type="S"
+                   start_speed="89.6"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_144720" des="Ball In Dirt" des_es="Bola por el suelo" type="B"
+                   start_speed="87.4"
+                   pitch_type="FT"/>
+            <pitch sv_id="140601_144755" des="In play, out(s)" des_es="En juego, out(s)" type="X"
+                   start_speed="87.7"
+                   pitch_type="FT"/>
+         </atbat>
+      </bottom>
+   </inning>
+   <inning num="5">
+      <top>
+         <atbat num="39" b="0" s="3" o="1" start_tfs="184715"
+                start_tfs_zulu="2014-06-01T18:47:15Z"
+                batter="453568"
+                pitcher="458708"
+                des="Charlie Blackmon strikes out swinging.  "
+                des_es="Charlie Blackmon se poncha tir&#225;ndole.  "
+                event_num="346"
+                event="Strikeout"
+                event_es="Ponche"
+                home_team_runs="4"
+                away_team_runs="3"
+                b1=""
+                b2=""
+                b3="">
+            <pitch sv_id="140601_145035" des="Missed Bunt" des_es="Toque fallado" type="S"
+                   start_speed="87.2"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_145101" des="Foul" des_es="Foul" type="S" start_speed="88.6"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_145128" des="Swinging Strike" des_es="Strike tir&#225;ndole"
+                   type="S"
+                   start_speed="77.3"
+                   pitch_type="CU"/>
+         </atbat>
+         <atbat num="40" b="2" s="2" o="2" start_tfs="184832"
+                start_tfs_zulu="2014-06-01T18:48:32Z"
+                batter="150212"
+                pitcher="458708"
+                des="Michael Cuddyer grounds out, shortstop Asdrubal Cabrera to first baseman Lonnie Chisenhall.  "
+                des_es="Michael Cuddyer batea rodado de out, campo corto Asdrubal Cabrera a primera base Lonnie Chisenhall.  "
+                event_num="355"
+                event="Groundout"
+                event_es="Roletazo de Out"
+                home_team_runs="4"
+                away_team_runs="3"
+                b1=""
+                b2=""
+                b3="">
+            <pitch sv_id="140601_145158" des="Ball" des_es="Bola mala" type="B" start_speed="76.1"
+                   pitch_type="CU"/>
+            <pitch sv_id="140601_145212" des="Called Strike" des_es="Strike cantado" type="S"
+                   start_speed="84.5"
+                   pitch_type="FC"/>
+            <pitch sv_id="140601_145226" des="Foul" des_es="Foul" type="S" start_speed="84.4"
+                   pitch_type="FC"/>
+            <pitch sv_id="140601_145246" des="Foul" des_es="Foul" type="S" start_speed="89.3"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_145307" des="Ball" des_es="Bola mala" type="B" start_speed="89.9"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_145323" des="In play, out(s)" des_es="En juego, out(s)" type="X"
+                   start_speed="83.6"
+                   pitch_type="FC"/>
+         </atbat>
+         <atbat num="41" b="1" s="1" o="3" start_tfs="185110"
+                start_tfs_zulu="2014-06-01T18:51:10Z"
+                batter="471865"
+                pitcher="458708"
+                des="Carlos Gonzalez grounds out, shortstop Asdrubal Cabrera to first baseman Lonnie Chisenhall.  "
+                des_es="Carlos Gonzalez batea rodado de out, campo corto Asdrubal Cabrera a primera base Lonnie Chisenhall.  "
+                event_num="361"
+                event="Groundout"
+                event_es="Roletazo de Out"
+                home_team_runs="4"
+                away_team_runs="3"
+                b1=""
+                b2=""
+                b3="">
+            <pitch sv_id="140601_145403" des="Swinging Strike" des_es="Strike tir&#225;ndole"
+                   type="S"
+                   start_speed="77.3"
+                   pitch_type="CU"/>
+            <pitch sv_id="140601_145425" des="Ball" des_es="Bola mala" type="B" start_speed="89.2"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_145443" des="In play, out(s)" des_es="En juego, out(s)" type="X"
+                   start_speed="77.3"
+                   pitch_type="CU"/>
+         </atbat>
+      </top>
+      <bottom>
+         <atbat num="42" b="3" s="1" o="1" start_tfs="185219"
+                start_tfs_zulu="2014-06-01T18:52:19Z"
+                batter="488726"
+                pitcher="468504"
+                des="Michael Brantley grounds out, second baseman DJ LeMahieu to first baseman Justin Morneau.  "
+                des_es="Michael Brantley batea rodado de out, segunda base DJ LeMahieu a primera base Justin Morneau.  "
+                event_num="370"
+                event="Groundout"
+                event_es="Roletazo de Out"
+                home_team_runs="4"
+                away_team_runs="3"
+                b1=""
+                b2=""
+                b3="">
+            <pitch sv_id="140601_145717" des="Called Strike" des_es="Strike cantado" type="S"
+                   start_speed="71.1"
+                   pitch_type="CU"/>
+            <pitch sv_id="140601_145738" des="Ball" des_es="Bola mala" type="B" start_speed="73.7"
+                   pitch_type="CU"/>
+            <pitch sv_id="140601_145758" des="Ball" des_es="Bola mala" type="B" start_speed="81.8"
+                   pitch_type="CH"/>
+            <pitch sv_id="140601_145821" des="Ball" des_es="Bola mala" type="B" start_speed="87.0"
+                   pitch_type="FT"/>
+            <pitch sv_id="140601_145842" des="In play, out(s)" des_es="En juego, out(s)" type="X"
+                   start_speed="89.4"
+                   pitch_type="FF"/>
+         </atbat>
+         <atbat num="43" b="2" s="3" o="2" start_tfs="185555"
+                start_tfs_zulu="2014-06-01T18:55:55Z"
+                batter="543401"
+                pitcher="468504"
+                des="Jason Kipnis strikes out swinging.  "
+                des_es="Jason Kipnis se poncha tir&#225;ndole.  "
+                event_num="379"
+                event="Strikeout"
+                event_es="Ponche"
+                home_team_runs="4"
+                away_team_runs="3"
+                b1=""
+                b2=""
+                b3="">
+            <pitch sv_id="140601_145921" des="Called Strike" des_es="Strike cantado" type="S"
+                   start_speed="89.8"
+                   pitch_type="FT"/>
+            <pitch sv_id="140601_145938" des="Foul" des_es="Foul" type="S" start_speed="90.7"
+                   pitch_type="FT"/>
+            <pitch sv_id="140601_150004" des="Ball" des_es="Bola mala" type="B" start_speed="90.3"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_150022" des="Ball" des_es="Bola mala" type="B" start_speed="88.5"
+                   pitch_type="FT"/>
+            <pitch sv_id="140601_150040" des="Foul" des_es="Foul" type="S" start_speed="90.2"
+                   pitch_type="FT"/>
+            <pitch sv_id="140601_150104" des="Swinging Strike" des_es="Strike tir&#225;ndole"
+                   type="S"
+                   start_speed="89.9"
+                   pitch_type="FT"/>
+         </atbat>
+         <atbat num="44" b="1" s="0" o="3" start_tfs="185816"
+                start_tfs_zulu="2014-06-01T18:58:16Z"
+                batter="502082"
+                pitcher="468504"
+                des="Lonnie Chisenhall flies out to left fielder Carlos Gonzalez.  "
+                des_es="Lonnie Chisenhall batea elevado de out a jardinero izquierdo Carlos Gonzalez.  "
+                event_num="384"
+                event="Flyout"
+                event_es="Elevado de Out"
+                home_team_runs="4"
+                away_team_runs="3"
+                b1=""
+                b2=""
+                b3="">
+            <pitch sv_id="140601_150142" des="Ball" des_es="Bola mala" type="B" start_speed="89.0"
+                   pitch_type="FT"/>
+            <pitch sv_id="140601_150155" des="In play, out(s)" des_es="En juego, out(s)" type="X"
+                   start_speed="75.7"
+                   pitch_type="CU"/>
+         </atbat>
+      </bottom>
+   </inning>
+   <inning num="6">
+      <top>
+         <atbat num="45" b="1" s="3" o="1" start_tfs="190116"
+                start_tfs_zulu="2014-06-01T19:01:16Z"
+                batter="453064"
+                pitcher="458708"
+                des="Troy Tulowitzki called out on strikes.  "
+                des_es="Troy Tulowitzki se poncha sin tirarle.  "
+                event_num="393"
+                event="Strikeout"
+                event_es="Ponche"
+                home_team_runs="4"
+                away_team_runs="3"
+                b1=""
+                b2=""
+                b3="">
+            <pitch sv_id="140601_150437" des="Called Strike" des_es="Strike cantado" type="S"
+                   start_speed="75.9"
+                   pitch_type="CU"/>
+            <pitch sv_id="140601_150453" des="Called Strike" des_es="Strike cantado" type="S"
+                   start_speed="88.1"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_150514" des="Ball" des_es="Bola mala" type="B" start_speed="78.3"
+                   pitch_type="CU"/>
+            <pitch sv_id="140601_150540" des="Foul" des_es="Foul" type="S" start_speed="88.5"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_150612" des="Called Strike" des_es="Strike cantado" type="S"
+                   start_speed="83.7"
+                   pitch_type="FC"/>
+         </atbat>
+         <atbat num="46" b="1" s="3" o="2" start_tfs="190316"
+                start_tfs_zulu="2014-06-01T19:03:16Z"
+                batter="408047"
+                pitcher="458708"
+                des="Justin Morneau strikes out swinging, catcher George Kottaras to first baseman Lonnie Chisenhall.  "
+                des_es="Justin Morneau se poncha tir&#225;ndole, receptor George Kottaras a primera base Lonnie Chisenhall.  "
+                event_num="400"
+                event="Strikeout"
+                event_es="Ponche"
+                home_team_runs="4"
+                away_team_runs="3"
+                b1=""
+                b2=""
+                b3="">
+            <pitch sv_id="140601_150647" des="Ball" des_es="Bola mala" type="B" start_speed="89.5"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_150701" des="Swinging Strike" des_es="Strike tir&#225;ndole"
+                   type="S"
+                   start_speed="78.4"
+                   pitch_type="CU"/>
+            <pitch sv_id="140601_150720" des="Foul" des_es="Foul" type="S" start_speed="78.1"
+                   pitch_type="CU"/>
+            <pitch sv_id="140601_150739" des="Swinging Strike (Blocked)"
+                   des_es="Strike tir&#225;ndole (Bloqueado)"
+                   type="S"
+                   start_speed="78.2"
+                   pitch_type="CU"/>
+         </atbat>
+         <action b="0" s="0" o="2" des="Pitching Change: Josh Outman replaces Josh Tomlin.  "
+                 des_es="Cambio de Lanzador: Josh Outman reemplaza a Josh Tomlin.  "
+                 event="Pitching Substitution"
+                 event_es="Cambio de Lanzador"
+                 tfs="190705"
+                 tfs_zulu="2014-06-01T19:07:05Z"
+                 player="489189"
+                 pitch="4"
+                 event_num="402"
+                 home_team_runs="4"
+                 away_team_runs="3"/>
+         <action b="0" s="0" o="2" des="Coaching visit to mound.  "
+                 des_es="Visita del Instructor a la Lomita"
+                 event="Game Advisory"
+                 event_es="Aviso en el Juego"
+                 tfs="190641"
+                 tfs_zulu="2014-06-01T19:06:41Z"
+                 player="572816"
+                 pitch="4"
+                 event_num="403"
+                 home_team_runs="4"
+                 away_team_runs="3"/>
+         <atbat num="47" b="0" s="3" o="3" start_tfs="190750"
+                start_tfs_zulu="2014-06-01T19:07:50Z"
+                batter="572816"
+                pitcher="489189"
+                des="Corey Dickerson strikes out swinging.  "
+                des_es="Corey Dickerson se poncha tir&#225;ndole.  "
+                event_num="409"
+                event="Strikeout"
+                event_es="Ponche"
+                home_team_runs="4"
+                away_team_runs="3"
+                b1=""
+                b2=""
+                b3="">
+            <pitch sv_id="140601_151049" des="Foul" des_es="Foul" type="S" start_speed="89.0"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_151122" des="Called Strike" des_es="Strike cantado" type="S"
+                   start_speed="77.1"
+                   pitch_type="SL"/>
+            <pitch sv_id="140601_151152" des="Swinging Strike" des_es="Strike tir&#225;ndole"
+                   type="S"
+                   start_speed="83.8"
+                   pitch_type="SL"/>
+         </atbat>
+      </top>
+      <bottom>
+         <action b="0" s="0" o="0"
+                 des="Pitching Change: Tommy Kahnle replaces Jhoulys Chacin.  "
+                 des_es="Cambio de Lanzador: Tommy Kahnle reemplaza a Jhoulys Chacin.  "
+                 event="Pitching Substitution"
+                 event_es="Cambio de Lanzador"
+                 tfs="191142"
+                 tfs_zulu="2014-06-01T19:11:42Z"
+                 player="592454"
+                 pitch="3"
+                 event_num="412"
+                 home_team_runs="4"
+                 away_team_runs="3"/>
+         <atbat num="48" b="1" s="0" o="1" start_tfs="191238"
+                start_tfs_zulu="2014-06-01T19:12:38Z"
+                batter="114739"
+                pitcher="592454"
+                des="Jason Giambi grounds out, third baseman Michael Cuddyer to first baseman Justin Morneau.  "
+                des_es="Jason Giambi batea rodado de out, tercera base Michael Cuddyer a primera base Justin Morneau.  "
+                event_num="417"
+                event="Groundout"
+                event_es="Roletazo de Out"
+                home_team_runs="4"
+                away_team_runs="3"
+                b1=""
+                b2=""
+                b3="">
+            <pitch sv_id="140601_151521" des="Ball" des_es="Bola mala" type="B" start_speed="94.1"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_151537" des="In play, out(s)" des_es="En juego, out(s)" type="X"
+                   start_speed="94.7"
+                   pitch_type="FF"/>
+         </atbat>
+         <atbat num="49" b="0" s="1" o="1" start_tfs="191303"
+                start_tfs_zulu="2014-06-01T19:13:03Z"
+                batter="461815"
+                pitcher="592454"
+                des="David Murphy singles on a line drive to center fielder Charlie Blackmon.  "
+                des_es="David Murphy pega sencillo con l&#237;nea a jardinero central Charlie Blackmon.  "
+                event_num="422"
+                event="Single"
+                event_es="Sencillo"
+                home_team_runs="4"
+                away_team_runs="3"
+                b1="461815"
+                b2=""
+                b3="">
+            <pitch sv_id="140601_151613" des="Called Strike" des_es="Strike cantado" type="S"
+                   start_speed="93.4"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_151629" des="In play, no out" des_es="En juego, no out" type="X"
+                   start_speed="94.6"
+                   pitch_type="FF"/>
+         </atbat>
+         <action b="0" s="0" o="1"
+                 des="With Mike Aviles batting, throwing error by Tommy Kahnle on the pickoff attempt, David Murphy to 2nd.  "
+                 des_es="Con Mike Aviles bateando, error en tiro de Tommy Kahnle en el intent de viraje, David Murphy a 2da.  "
+                 event="Pickoff Error 1B"
+                 event_es="Error en Viraje a 1B"
+                 tfs="191449"
+                 tfs_zulu="2014-06-01T19:14:49Z"
+                 player="461815"
+                 pitch="0"
+                 event_num="427"
+                 home_team_runs="4"
+                 away_team_runs="3"/>
+         <atbat num="50" b="0" s="0" o="2" start_tfs="191347"
+                start_tfs_zulu="2014-06-01T19:13:47Z"
+                batter="449107"
+                pitcher="592454"
+                des="Mike Aviles flies out to center fielder Charlie Blackmon.  "
+                des_es="Mike Aviles batea elevado de out a jardinero central Charlie Blackmon.  "
+                event_num="430"
+                event="Flyout"
+                event_es="Elevado de Out"
+                home_team_runs="4"
+                away_team_runs="3"
+                b1=""
+                b2="461815"
+                b3="">
+            <pitch sv_id="140601_151756" des="In play, out(s)" des_es="En juego, out(s)" type="X"
+                   start_speed="93.5"
+                   pitch_type="FF"/>
+         </atbat>
+         <atbat num="51" b="2" s="0" o="3" start_tfs="191509"
+                start_tfs_zulu="2014-06-01T19:15:09Z"
+                batter="435459"
+                pitcher="592454"
+                des="George Kottaras grounds out, second baseman DJ LeMahieu to first baseman Justin Morneau.  "
+                des_es="George Kottaras batea rodado de out, segunda base DJ LeMahieu a primera base Justin Morneau.  "
+                event_num="436"
+                event="Groundout"
+                event_es="Roletazo de Out"
+                home_team_runs="4"
+                away_team_runs="3"
+                b1=""
+                b2=""
+                b3="">
+            <pitch sv_id="140601_151844" des="Ball" des_es="Bola mala" type="B" start_speed="94.2"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_151908" des="Ball" des_es="Bola mala" type="B" start_speed="94.0"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_151935" des="In play, out(s)" des_es="En juego, out(s)" type="X"
+                   start_speed="93.9"
+                   pitch_type="FF"/>
+         </atbat>
+      </bottom>
+   </inning>
+   <inning num="7">
+      <top>
+         <action b="0" s="0" o="0" des="Pitching Change: Bryan Shaw replaces Josh Outman.  "
+                 des_es="Cambio de Lanzador: Bryan Shaw reemplaza a Josh Outman.  "
+                 event="Pitching Substitution"
+                 event_es="Cambio de Lanzador"
+                 tfs="191836"
+                 tfs_zulu="2014-06-01T19:18:36Z"
+                 player="543766"
+                 pitch="3"
+                 event_num="440"
+                 home_team_runs="4"
+                 away_team_runs="3"/>
+         <atbat num="52" b="1" s="1" o="0" start_tfs="191942"
+                start_tfs_zulu="2014-06-01T19:19:42Z"
+                batter="488681"
+                pitcher="543766"
+                des="Brandon Barnes doubles (8) on a line drive to right fielder David Murphy.  "
+                des_es="Brandon Barnes pega doble (8) con l&#237;nea a jardinero derecho David Murphy.  "
+                event_num="446"
+                event="Double"
+                event_es="Doble"
+                home_team_runs="4"
+                away_team_runs="3"
+                b1=""
+                b2="488681"
+                b3="">
+            <pitch sv_id="140601_152320" des="Ball" des_es="Bola mala" type="B" start_speed="91.7"
+                   pitch_type="FC"/>
+            <pitch sv_id="140601_152341" des="Called Strike" des_es="Strike cantado" type="S"
+                   start_speed="91.0"
+                   pitch_type="FC"/>
+            <pitch sv_id="140601_152358" des="In play, no out" des_es="En juego, no out" type="X"
+                   start_speed="91.9"
+                   pitch_type="FC"/>
+         </atbat>
+         <atbat num="53" b="4" s="2" o="0" start_tfs="192117"
+                start_tfs_zulu="2014-06-01T19:21:17Z"
+                batter="457574"
+                pitcher="543766"
+                des="Jordan Pacheco walks.  "
+                des_es="Jordan Pacheco recibe base por bolas.  "
+                event_num="456"
+                event="Walk"
+                event_es="Base por Bolas"
+                home_team_runs="4"
+                away_team_runs="3"
+                b1="457574"
+                b2=""
+                b3="">
+            <pitch sv_id="140601_152454" des="Swinging Strike" des_es="Strike tir&#225;ndole"
+                   type="S"
+                   start_speed="91.3"
+                   pitch_type="FC"/>
+            <pitch sv_id="140601_152525" des="Ball" des_es="Bola mala" type="B" start_speed="79.4"
+                   pitch_type="SL"/>
+            <pitch sv_id="140601_152552" des="Ball" des_es="Bola mala" type="B" start_speed="78.4"
+                   pitch_type="SL"/>
+            <pitch sv_id="140601_152618" des="Foul" des_es="Foul" type="S" start_speed="92.0"
+                   pitch_type="FC"/>
+            <pitch sv_id="140601_152654" des="Foul" des_es="Foul" type="S" start_speed="91.8"
+                   pitch_type="FC"/>
+            <pitch sv_id="140601_152727" des="Ball In Dirt" des_es="Bola por el suelo" type="B"
+                   start_speed="80.4"
+                   pitch_type="SL"/>
+            <pitch sv_id="140601_152759" des="Ball" des_es="Bola mala" type="B" start_speed="91.8"
+                   pitch_type="FC"/>
+         </atbat>
+         <atbat num="54" b="0" s="1" o="1" start_tfs="192512"
+                start_tfs_zulu="2014-06-01T19:25:12Z"
+                batter="518934"
+                pitcher="543766"
+                des="DJ LeMahieu out on a sacrifice bunt, pitcher Bryan Shaw to second baseman Jason Kipnis.   Brandon Barnes to 3rd.    Jordan Pacheco to 2nd.  "
+                des_es="DJ LeMahieu out en toque de sacrificio, lanzador Bryan Shaw a segunda base Jason Kipnis.   Brandon Barnes a 3ra.    Jordan Pacheco a 2da.  "
+                event_num="463"
+                event="Sac Bunt"
+                event_es="Toque de Sacrificio"
+                home_team_runs="4"
+                away_team_runs="3"
+                b1=""
+                b2="457574"
+                b3="488681">
+            <pitch sv_id="140601_152852" des="Foul Tip" des_es="Foul atr&#225;s" type="S"
+                   start_speed="91.1"
+                   pitch_type="FC"/>
+            <pitch sv_id="140601_152944" des="In play, out(s)" des_es="En juego, out(s)" type="X"
+                   start_speed="92.0"
+                   pitch_type="FC"/>
+         </atbat>
+         <atbat num="55" b="0" s="1" o="2" start_tfs="192722"
+                start_tfs_zulu="2014-06-01T19:27:22Z"
+                batter="453568"
+                pitcher="543766"
+                des="Charlie Blackmon out on a sacrifice fly to center fielder Michael Bourn.   Brandon Barnes scores.    Jordan Pacheco to 3rd.  "
+                des_es="Charlie Blackmon out con elevado de sacrificio a jardinero central Michael Bourn.   Brandon Barnes anota  Jordan Pacheco a 3ra.  "
+                event_num="471"
+                event="Sac Fly"
+                event_es="Elevado de Sacrificio"
+                score="T"
+                home_team_runs="4"
+                away_team_runs="4"
+                b1=""
+                b2=""
+                b3="457574"
+                rbi="1">
+            <pitch sv_id="140601_153050" des="Foul" des_es="Foul" type="S" start_speed="93.3"
+                   pitch_type="FC"/>
+            <pitch sv_id="140601_153121" des="In play, run(s)" des_es="En juego, carrera(s)"
+                   type="X"
+                   start_speed="79.6"
+                   pitch_type="SL"/>
+         </atbat>
+         <atbat num="56" b="3" s="1" o="3" start_tfs="192919"
+                start_tfs_zulu="2014-06-01T19:29:19Z"
+                batter="150212"
+                pitcher="543766"
+                des="Michael Cuddyer lines out to right fielder David Murphy.  "
+                des_es="Michael Cuddyer batea l&#237;nea de out a jardinero derecho David Murphy.  "
+                event_num="479"
+                event="Lineout"
+                event_es="L&#237;nea de Out"
+                home_team_runs="4"
+                away_team_runs="4"
+                b1=""
+                b2=""
+                b3="">
+            <pitch sv_id="140601_153232" des="Ball" des_es="Bola mala" type="B" start_speed="79.4"
+                   pitch_type="SL"/>
+            <pitch sv_id="140601_153247" des="Ball" des_es="Bola mala" type="B" start_speed="93.5"
+                   pitch_type="FC"/>
+            <pitch sv_id="140601_153302" des="Swinging Strike" des_es="Strike tir&#225;ndole"
+                   type="S"
+                   start_speed="79.7"
+                   pitch_type="SL"/>
+            <pitch sv_id="140601_153319" des="Ball" des_es="Bola mala" type="B" start_speed="79.5"
+                   pitch_type="SL"/>
+            <pitch sv_id="140601_153340" des="In play, out(s)" des_es="En juego, out(s)" type="X"
+                   start_speed="92.3"
+                   pitch_type="FC"/>
+         </atbat>
+      </top>
+      <bottom>
+         <action b="0" s="0" o="0" des="Pitching Change: Rex Brothers replaces Tommy Kahnle.  "
+                 des_es="Cambio de Lanzador: Rex Brothers reemplaza a Tommy Kahnle.  "
+                 event="Pitching Substitution"
+                 event_es="Cambio de Lanzador"
+                 tfs="193304"
+                 tfs_zulu="2014-06-01T19:33:04Z"
+                 player="571521"
+                 pitch="5"
+                 event_num="483"
+                 home_team_runs="4"
+                 away_team_runs="4"/>
+         <atbat num="57" b="2" s="3" o="1" start_tfs="193435"
+                start_tfs_zulu="2014-06-01T19:34:35Z"
+                batter="456422"
+                pitcher="571521"
+                des="Michael Bourn called out on strikes.  "
+                des_es="Michael Bourn se poncha sin tirarle.  "
+                event_num="491"
+                event="Strikeout"
+                event_es="Ponche"
+                home_team_runs="4"
+                away_team_runs="4"
+                b1=""
+                b2=""
+                b3="">
+            <pitch sv_id="140601_153755" des="Called Strike" des_es="Strike cantado" type="S"
+                   start_speed="92.4"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_153811" des="Swinging Strike" des_es="Strike tir&#225;ndole"
+                   type="S"
+                   start_speed="84.6"
+                   pitch_type="SL"/>
+            <pitch sv_id="140601_153828" des="Ball" des_es="Bola mala" type="B" start_speed="88.3"
+                   pitch_type="SL"/>
+            <pitch sv_id="140601_153848" des="Ball" des_es="Bola mala" type="B" start_speed="91.5"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_153906" des="Called Strike" des_es="Strike cantado" type="S"
+                   start_speed="90.6"
+                   pitch_type="FF"/>
+         </atbat>
+         <atbat num="58" b="0" s="0" o="2" start_tfs="193628"
+                start_tfs_zulu="2014-06-01T19:36:28Z"
+                batter="452678"
+                pitcher="571521"
+                des="Asdrubal Cabrera flies out to center fielder Charlie Blackmon.  "
+                des_es="Asdrubal Cabrera batea elevado de out a jardinero central Charlie Blackmon.  "
+                event_num="495"
+                event="Flyout"
+                event_es="Elevado de Out"
+                home_team_runs="4"
+                away_team_runs="4"
+                b1=""
+                b2=""
+                b3="">
+            <pitch sv_id="140601_153949" des="In play, out(s)" des_es="En juego, out(s)" type="X"
+                   start_speed="92.2"
+                   pitch_type="FF"/>
+         </atbat>
+         <atbat num="59" b="2" s="3" o="3" start_tfs="193724"
+                start_tfs_zulu="2014-06-01T19:37:24Z"
+                batter="488726"
+                pitcher="571521"
+                des="Michael Brantley strikes out swinging.  "
+                des_es="Michael Brantley se poncha tir&#225;ndole.  "
+                event_num="503"
+                event="Strikeout"
+                event_es="Ponche"
+                home_team_runs="4"
+                away_team_runs="4"
+                b1=""
+                b2=""
+                b3="">
+            <pitch sv_id="140601_154039" des="Called Strike" des_es="Strike cantado" type="S"
+                   start_speed="83.5"
+                   pitch_type="SL"/>
+            <pitch sv_id="140601_154100" des="Ball" des_es="Bola mala" type="B" start_speed="92.3"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_154123" des="Called Strike" des_es="Strike cantado" type="S"
+                   start_speed="90.7"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_154148" des="Ball" des_es="Bola mala" type="B" start_speed="87.0"
+                   pitch_type="SL"/>
+            <pitch sv_id="140601_154214" des="Swinging Strike" des_es="Strike tir&#225;ndole"
+                   type="S"
+                   start_speed="86.2"
+                   pitch_type="SL"/>
+         </atbat>
+      </bottom>
+   </inning>
+   <inning num="8">
+      <top>
+         <atbat num="60" b="0" s="0" o="0" start_tfs="194123"
+                start_tfs_zulu="2014-06-01T19:41:23Z"
+                batter="471865"
+                pitcher="543766"
+                des="Carlos Gonzalez singles on a bunt ground ball to pitcher Bryan Shaw.  "
+                des_es="Carlos Gonzalez pega sencillo con rodado con toque a lanzador Bryan Shaw.  "
+                event_num="508"
+                event="Single"
+                event_es="Sencillo"
+                home_team_runs="4"
+                away_team_runs="4"
+                b1="471865"
+                b2=""
+                b3="">
+            <pitch sv_id="140601_154451" des="In play, no out" des_es="En juego, no out" type="X"
+                   start_speed="91.4"
+                   pitch_type="FC"/>
+         </atbat>
+         <atbat num="61" b="2" s="1" o="1" start_tfs="194216"
+                start_tfs_zulu="2014-06-01T19:42:16Z"
+                batter="453064"
+                pitcher="543766"
+                des="Troy Tulowitzki grounds out softly, shortstop Asdrubal Cabrera to first baseman Lonnie Chisenhall.   Carlos Gonzalez to 2nd.  "
+                des_es="Troy Tulowitzki batea rodado de out suavemente a primera base Lonnie Chisenhall en jugada de infield fly.   Carlos Gonzalez a 2da.  "
+                event_num="516"
+                event="Groundout"
+                event_es="Roletazo de Out"
+                home_team_runs="4"
+                away_team_runs="4"
+                b1=""
+                b2="471865"
+                b3="">
+            <pitch sv_id="140601_154545" des="Ball" des_es="Bola mala" type="B" start_speed="79.0"
+                   pitch_type="SL"/>
+            <pitch sv_id="140601_154607" des="Ball" des_es="Bola mala" type="B" start_speed="90.0"
+                   pitch_type="FC"/>
+            <pitch sv_id="140601_154626" des="Called Strike" des_es="Strike cantado" type="S"
+                   start_speed="91.7"
+                   pitch_type="FC"/>
+            <pitch sv_id="140601_154647" des="In play, out(s)" des_es="En juego, out(s)" type="X"
+                   start_speed="92.3"
+                   pitch_type="FC"/>
+         </atbat>
+         <action b="0" s="0" o="1"
+                 des="Pitching Change: Marc Rzepczynski replaces Bryan Shaw.  "
+                 des_es="Cambio de Lanzador: Marc Rzepczynski reemplaza a Bryan Shaw.  "
+                 event="Pitching Substitution"
+                 event_es="Cambio de Lanzador"
+                 tfs="194437"
+                 tfs_zulu="2014-06-01T19:44:37Z"
+                 player="519240"
+                 pitch="4"
+                 event_num="518"
+                 home_team_runs="4"
+                 away_team_runs="4"/>
+         <action b="0" s="0" o="1" des="Coaching visit to mound.  "
+                 des_es="Visita del Instructor a la Lomita"
+                 event="Game Advisory"
+                 event_es="Aviso en el Juego"
+                 tfs="194419"
+                 tfs_zulu="2014-06-01T19:44:19Z"
+                 player="408047"
+                 pitch="4"
+                 event_num="519"
+                 home_team_runs="4"
+                 away_team_runs="4"/>
+         <atbat num="62" b="2" s="1" o="2" start_tfs="194633"
+                start_tfs_zulu="2014-06-01T19:46:33Z"
+                batter="408047"
+                pitcher="519240"
+                des="Justin Morneau grounds out, shortstop Asdrubal Cabrera to first baseman Lonnie Chisenhall.   Carlos Gonzalez to 3rd.  "
+                des_es="Justin Morneau batea rodado de out a primera base Lonnie Chisenhall en jugada de infield fly.   Carlos Gonzalez a 3ra.  "
+                event_num="527"
+                event="Groundout"
+                event_es="Roletazo de Out"
+                home_team_runs="4"
+                away_team_runs="4"
+                b1=""
+                b2=""
+                b3="471865">
+            <pitch sv_id="140601_155009" des="Ball" des_es="Bola mala" type="B" start_speed="85.5"
+                   pitch_type="SL"/>
+            <pitch sv_id="140601_155032" des="Ball" des_es="Bola mala" type="B" start_speed="90.8"
+                   pitch_type="SI"/>
+            <pitch sv_id="140601_155056" des="Foul" des_es="Foul" type="S" start_speed="91.9"
+                   pitch_type="SI"/>
+            <pitch sv_id="140601_155123" des="In play, out(s)" des_es="En juego, out(s)" type="X"
+                   start_speed="84.8"
+                   pitch_type="SL"/>
+         </atbat>
+         <atbat num="63" b="3" s="2" o="3" start_tfs="194856"
+                start_tfs_zulu="2014-06-01T19:48:56Z"
+                batter="572816"
+                pitcher="519240"
+                des="Corey Dickerson grounds out, shortstop Asdrubal Cabrera to first baseman Lonnie Chisenhall.  "
+                des_es="Corey Dickerson batea rodado de out, campo corto Asdrubal Cabrera a primera base Lonnie Chisenhall.  "
+                event_num="536"
+                event="Groundout"
+                event_es="Roletazo de Out"
+                home_team_runs="4"
+                away_team_runs="4"
+                b1=""
+                b2=""
+                b3="">
+            <pitch sv_id="140601_155216" des="Ball" des_es="Bola mala" type="B" start_speed="93.6"
+                   pitch_type="SI"/>
+            <pitch sv_id="140601_155239" des="Called Strike" des_es="Strike cantado" type="S"
+                   start_speed="86.3"
+                   pitch_type="SL"/>
+            <pitch sv_id="140601_155302" des="Ball In Dirt" des_es="Bola por el suelo" type="B"
+                   start_speed="86.2"
+                   pitch_type="SL"/>
+            <pitch sv_id="140601_155334" des="Ball" des_es="Bola mala" type="B" start_speed="85.3"
+                   pitch_type="SL"/>
+            <pitch sv_id="140601_155401" des="Called Strike" des_es="Strike cantado" type="S"
+                   start_speed="92.5"
+                   pitch_type="SI"/>
+            <pitch sv_id="140601_155436" des="In play, out(s)" des_es="En juego, out(s)" type="X"
+                   start_speed="86.8"
+                   pitch_type="SL"/>
+         </atbat>
+      </top>
+      <bottom>
+         <action b="0" s="0" o="0" des="Pitching Change: Boone Logan replaces Rex Brothers.  "
+                 des_es="Cambio de Lanzador: Boone Logan reemplaza a Rex Brothers.  "
+                 event="Pitching Substitution"
+                 event_es="Cambio de Lanzador"
+                 tfs="195241"
+                 tfs_zulu="2014-06-01T19:52:41Z"
+                 player="457429"
+                 pitch="6"
+                 event_num="540"
+                 home_team_runs="4"
+                 away_team_runs="4"/>
+         <atbat num="64" b="0" s="1" o="1" start_tfs="195429"
+                start_tfs_zulu="2014-06-01T19:54:29Z"
+                batter="543401"
+                pitcher="457429"
+                des="Jason Kipnis flies out to center fielder Charlie Blackmon.  "
+                des_es="Jason Kipnis batea elevado de out a jardinero central Charlie Blackmon.  "
+                event_num="545"
+                event="Flyout"
+                event_es="Elevado de Out"
+                home_team_runs="4"
+                away_team_runs="4"
+                b1=""
+                b2=""
+                b3="">
+            <pitch sv_id="140601_155809" des="Called Strike" des_es="Strike cantado" type="S"
+                   start_speed="80.2"
+                   pitch_type="SL"/>
+            <pitch sv_id="140601_155828" des="In play, out(s)" des_es="En juego, out(s)" type="X"
+                   start_speed="81.5"
+                   pitch_type="SL"/>
+         </atbat>
+         <atbat num="65" b="0" s="0" o="2" start_tfs="195546"
+                start_tfs_zulu="2014-06-01T19:55:46Z"
+                batter="502082"
+                pitcher="457429"
+                des="Lonnie Chisenhall flies out to center fielder Charlie Blackmon.  "
+                des_es="Lonnie Chisenhall batea elevado de out a jardinero central Charlie Blackmon.  "
+                event_num="549"
+                event="Flyout"
+                event_es="Elevado de Out"
+                home_team_runs="4"
+                away_team_runs="4"
+                b1=""
+                b2=""
+                b3="">
+            <pitch sv_id="140601_155913" des="In play, out(s)" des_es="En juego, out(s)" type="X"
+                   start_speed="92.4"
+                   pitch_type="FF"/>
+         </atbat>
+         <action b="0" s="0" o="2"
+                 des="Offensive Substitution: Pinch-hitter Ryan Raburn replaces Jason Giambi.  "
+                 des_es="Sustituci&#243;n a la ofensiva: bateador emergente Ryan Raburn reemplaza a Jason Giambi.  "
+                 event="Offensive Sub"
+                 event_es="Cambio Defensivo"
+                 tfs="195649"
+                 tfs_zulu="2014-06-01T19:56:49Z"
+                 player="430605"
+                 pitch="1"
+                 event_num="551"
+                 home_team_runs="4"
+                 away_team_runs="4"/>
+         <atbat num="66" b="2" s="2" o="2" start_tfs="195704"
+                start_tfs_zulu="2014-06-01T19:57:04Z"
+                batter="430605"
+                pitcher="457429"
+                des="Ryan Raburn singles on a sharp ground ball to left fielder Carlos Gonzalez.  "
+                des_es="Ryan Raburn pega sencillo con rodado fuerte a jardinero izquierdo Carlos Gonzalez.  "
+                event_num="559"
+                event="Single"
+                event_es="Sencillo"
+                home_team_runs="4"
+                away_team_runs="4"
+                b1="430605"
+                b2=""
+                b3="">
+            <pitch sv_id="140601_160006" des="Ball" des_es="Bola mala" type="B" start_speed="92.5"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_160026" des="Called Strike" des_es="Strike cantado" type="S"
+                   start_speed="82.2"
+                   pitch_type="SL"/>
+            <pitch sv_id="140601_160045" des="Ball" des_es="Bola mala" type="B" start_speed="92.5"
+                   pitch_type="FT"/>
+            <pitch sv_id="140601_160114" des="Swinging Strike" des_es="Strike tir&#225;ndole"
+                   type="S"
+                   start_speed="81.8"
+                   pitch_type="SL"/>
+            <pitch sv_id="140601_160141" des="In play, no out" des_es="En juego, no out" type="X"
+                   start_speed="82.7"
+                   pitch_type="SL"/>
+         </atbat>
+         <atbat num="67" b="1" s="1" o="3" start_tfs="195858"
+                start_tfs_zulu="2014-06-01T19:58:58Z"
+                batter="461815"
+                pitcher="457429"
+                des="David Murphy grounds out to first baseman Justin Morneau.  "
+                des_es="David Murphy batea rodado de out a primera base Justin Morneau.  "
+                event_num="565"
+                event="Groundout"
+                event_es="Roletazo de Out"
+                home_team_runs="4"
+                away_team_runs="4"
+                b1=""
+                b2=""
+                b3="">
+            <pitch sv_id="140601_160226" des="Ball" des_es="Bola mala" type="B" start_speed="81.5"
+                   pitch_type="SL"/>
+            <pitch sv_id="140601_160255" des="Swinging Strike" des_es="Strike tir&#225;ndole"
+                   type="S"
+                   start_speed="82.4"
+                   pitch_type="SL"/>
+            <pitch sv_id="140601_160319" des="In play, out(s)" des_es="En juego, out(s)" type="X"
+                   start_speed="80.5"
+                   pitch_type="SL"/>
+         </atbat>
+      </bottom>
+   </inning>
+   <inning num="9">
+      <top>
+         <action b="0" s="0" o="0"
+                 des="Ryan Raburn remains in the game as the designated hitter.  "
+                 des_es="Ryan Raburn permanece en el juego como el bateador designado.  "
+                 event="Defensive Switch"
+                 event_es="Cambio Defensivo"
+                 tfs="200126"
+                 tfs_zulu="2014-06-01T20:01:26Z"
+                 player="430605"
+                 pitch="3"
+                 event_num="569"
+                 home_team_runs="4"
+                 away_team_runs="4"/>
+         <action b="0" s="0" o="0"
+                 des="Pitching Change: Scott Atchison replaces Marc Rzepczynski.  "
+                 des_es="Cambio de Lanzador: Scott Atchison reemplaza a Marc Rzepczynski.  "
+                 event="Pitching Substitution"
+                 event_es="Cambio de Lanzador"
+                 tfs="200126"
+                 tfs_zulu="2014-06-01T20:01:26Z"
+                 player="425786"
+                 pitch="3"
+                 event_num="571"
+                 home_team_runs="4"
+                 away_team_runs="4"/>
+         <atbat num="68" b="2" s="3" o="1" start_tfs="200249"
+                start_tfs_zulu="2014-06-01T20:02:49Z"
+                batter="488681"
+                pitcher="425786"
+                des="Brandon Barnes called out on strikes.  "
+                des_es="Brandon Barnes se poncha sin tirarle.  "
+                event_num="579"
+                event="Strikeout"
+                event_es="Ponche"
+                home_team_runs="4"
+                away_team_runs="4"
+                b1=""
+                b2=""
+                b3="">
+            <pitch sv_id="140601_160609" des="Ball" des_es="Bola mala" type="B" start_speed="91.8"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_160622" des="Foul" des_es="Foul" type="S" start_speed="88.4"
+                   pitch_type="SL"/>
+            <pitch sv_id="140601_160643" des="Ball" des_es="Bola mala" type="B" start_speed="92.8"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_160656" des="Swinging Strike" des_es="Strike tir&#225;ndole"
+                   type="S"
+                   start_speed="88.0"
+                   pitch_type="SL"/>
+            <pitch sv_id="140601_160714" des="Called Strike" des_es="Strike cantado" type="S"
+                   start_speed="93.8"
+                   pitch_type="FF"/>
+         </atbat>
+         <atbat num="69" b="2" s="3" o="2" start_tfs="200423"
+                start_tfs_zulu="2014-06-01T20:04:23Z"
+                batter="457574"
+                pitcher="425786"
+                des="Jordan Pacheco strikes out swinging.  "
+                des_es="Jordan Pacheco se poncha tir&#225;ndole.  "
+                event_num="587"
+                event="Strikeout"
+                event_es="Ponche"
+                home_team_runs="4"
+                away_team_runs="4"
+                b1=""
+                b2=""
+                b3="">
+            <pitch sv_id="140601_160749" des="Ball" des_es="Bola mala" type="B" start_speed="92.5"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_160806" des="Foul" des_es="Foul" type="S" start_speed="91.0"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_160839" des="Called Strike" des_es="Strike cantado" type="S"
+                   start_speed="89.7"
+                   pitch_type="SL"/>
+            <pitch sv_id="140601_160900" des="Ball" des_es="Bola mala" type="B" start_speed="89.3"
+                   pitch_type="SL"/>
+            <pitch sv_id="140601_160923" des="Swinging Strike" des_es="Strike tir&#225;ndole"
+                   type="S"
+                   start_speed="89.1"
+                   pitch_type="SL"/>
+         </atbat>
+         <atbat num="70" b="0" s="1" o="2" start_tfs="200635"
+                start_tfs_zulu="2014-06-01T20:06:35Z"
+                batter="518934"
+                pitcher="425786"
+                des="DJ LeMahieu doubles (7) on a sharp line drive to right fielder David Murphy.  "
+                des_es="DJ LeMahieu pega doble (7) con l&#237;nea fuerte a jardinero derecho David Murphy.  "
+                event_num="592"
+                event="Double"
+                event_es="Doble"
+                home_team_runs="4"
+                away_team_runs="4"
+                b1=""
+                b2="518934"
+                b3="">
+            <pitch sv_id="140601_160958" des="Foul" des_es="Foul" type="S" start_speed="89.0"
+                   pitch_type="SL"/>
+            <pitch sv_id="140601_161017" des="In play, no out" des_es="En juego, no out" type="X"
+                   start_speed="93.4"
+                   pitch_type="FF"/>
+         </atbat>
+         <action b="0" s="1" o="2" des="Coaching visit to mound.  "
+                 des_es="Visita del Instructor a la Lomita"
+                 event="Game Advisory"
+                 event_es="Aviso en el Juego"
+                 tfs="200748"
+                 tfs_zulu="2014-06-01T20:07:48Z"
+                 player="453568"
+                 pitch="2"
+                 event_num="593"
+                 home_team_runs="4"
+                 away_team_runs="4"/>
+         <atbat num="71" b="2" s="3" o="3" start_tfs="200847"
+                start_tfs_zulu="2014-06-01T20:08:47Z"
+                batter="453568"
+                pitcher="425786"
+                des="Charlie Blackmon strikes out swinging.  "
+                des_es="Charlie Blackmon se poncha tir&#225;ndole.  "
+                event_num="601"
+                event="Strikeout"
+                event_es="Ponche"
+                home_team_runs="4"
+                away_team_runs="4"
+                b1=""
+                b2=""
+                b3="">
+            <pitch sv_id="140601_161216" des="Swinging Strike (Blocked)"
+                   des_es="Strike tir&#225;ndole (Bloqueado)"
+                   type="S"
+                   start_speed="87.4"
+                   pitch_type="SL"/>
+            <pitch sv_id="140601_161246" des="Ball" des_es="Bola mala" type="B" start_speed="92.9"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_161309" des="Foul" des_es="Foul" type="S" start_speed="87.6"
+                   pitch_type="SL"/>
+            <pitch sv_id="140601_161344" des="Ball" des_es="Bola mala" type="B" start_speed="93.5"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_161407" des="Swinging Strike" des_es="Strike tir&#225;ndole"
+                   type="S"
+                   start_speed="89.4"
+                   pitch_type="SL"/>
+         </atbat>
+      </top>
+      <bottom>
+         <action b="0" s="0" o="0" des="Pitching Change: Adam Ottavino replaces Boone Logan.  "
+                 des_es="Cambio de Lanzador: Adam Ottavino reemplaza a Boone Logan.  "
+                 event="Pitching Substitution"
+                 event_es="Cambio de Lanzador"
+                 tfs="201159"
+                 tfs_zulu="2014-06-01T20:11:59Z"
+                 player="493603"
+                 pitch="5"
+                 event_num="605"
+                 home_team_runs="4"
+                 away_team_runs="4"/>
+         <atbat num="72" b="1" s="1" o="0" start_tfs="201333"
+                start_tfs_zulu="2014-06-01T20:13:33Z"
+                batter="449107"
+                pitcher="493603"
+                des="Mike Aviles singles on a line drive to center fielder Charlie Blackmon.  "
+                des_es="Mike Aviles pega sencillo con l&#237;nea a jardinero central Charlie Blackmon.  "
+                event_num="611"
+                event="Single"
+                event_es="Sencillo"
+                home_team_runs="4"
+                away_team_runs="4"
+                b1="449107"
+                b2=""
+                b3="">
+            <pitch sv_id="140601_161655" des="Called Strike" des_es="Strike cantado" type="S"
+                   start_speed="93.3"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_161712" des="Ball" des_es="Bola mala" type="B" start_speed="93.9"
+                   pitch_type="FF"/>
+            <pitch sv_id="140601_161731" des="In play, no out" des_es="En juego, no out" type="X"
+                   start_speed="93.3"
+                   pitch_type="FF"/>
+         </atbat>
+         <atbat num="73" b="0" s="0" o="1" start_tfs="201449"
+                start_tfs_zulu="2014-06-01T20:14:49Z"
+                batter="435459"
+                pitcher="493603"
+                des="George Kottaras out on a sacrifice bunt, pitcher Adam Ottavino to second baseman DJ LeMahieu.   Mike Aviles to 2nd.  "
+                des_es="George Kottaras out en toque de sacrificio, lanzador Adam Ottavino a segunda base DJ LeMahieu.   Mike Aviles a 2da.  "
+                event_num="616"
+                event="Sac Bunt"
+                event_es="Toque de Sacrificio"
+                home_team_runs="4"
+                away_team_runs="4"
+                b1=""
+                b2="449107"
+                b3="">
+            <pitch sv_id="140601_161812" des="In play, out(s)" des_es="En juego, out(s)" type="X"
+                   start_speed="94.3"
+                   pitch_type="FF"/>
+         </atbat>
+         <atbat num="74" b="0" s="1" o="1" start_tfs="201603"
+                start_tfs_zulu="2014-06-01T20:16:03Z"
+                batter="456422"
+                pitcher="493603"
+                des="Michael Bourn homers (2) on a fly ball to right field.    Mike Aviles scores.  "
+                des_es="Michael Bourn batea jonr&#243;n (2) con elevado por el jard&#237;n derecho.    Mike Aviles anota.  "
+                event_num="624"
+                event="Home Run"
+                event_es="Jonr&#243;n"
+                score="T"
+                home_team_runs="6"
+                away_team_runs="4"
+                b1=""
+                b2=""
+                b3=""
+                rbi="2">
+            <pitch sv_id="140601_161934" des="Called Strike" des_es="Strike cantado" type="S"
+                   start_speed="80.6"
+                   pitch_type="SL"/>
+            <pitch sv_id="140601_161959" des="In play, run(s)" des_es="En juego, carrera(s)"
+                   type="X"
+                   start_speed="92.9"
+                   pitch_type="FF"/>
+         </atbat>
+      </bottom>
+   </inning>
+   <atBat pid="456422"/>
+   <deck pid="452678"/>
+   <hole pid="488726"/>
+</game>

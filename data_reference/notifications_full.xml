@@ -1,0 +1,81 @@
+<!--Copyright 2015 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt-->
+<notifications modified_date="2015-02-28T16:46:48Z">
+    <game id="2014/06/01/colmlb-clemlb-1" gameday="2014_06_01_colmlb_clemlb_1">
+        <notification inning="1" top="Y" ab="1" pitch="0" seq="1" batter="453568" pitcher="458708" pbp="" uid="-1845147899">
+            <type category="lineups" away="115" home="114" start_time="01:05 PM"/>
+        </notification>
+        <notification inning="1" top="Y" ab="1" pitch="0" seq="2" batter="453568" pitcher="458708" pbp="" uid="-1845147868">
+            <player id="468504"/>
+            <player id="458708"/>
+            <player id="453568"/>
+            <player id="150212"/>
+            <player id="471865"/>
+            <type category="game start" home_pitcher="458708" away_pitcher="468504" batter="453568" batter_avg=".315" on_deck="150212" on_deck_avg=".311" in_hole="471865" in_hole_avg=".258"/>
+        </notification>
+        <notification inning="3" top="N" ab="30" pitch="0" seq="2" away_team_runs="3" home_team_runs="4" outs="3" batter="488681" pitcher="458708" uid="-398572849" pbp="">
+            <player id="458708"/>
+            <player id="468504"/>
+            <player id="488681"/>
+            <player id="457574"/>
+            <player id="518934"/>
+            <type category="end inning" home_pitcher="458708" away_pitcher="468504" batter="488681" batter_avg=".310" on_deck="457574" on_deck_avg=".243" in_hole="518934" in_hole_avg=".280"/>
+        </notification>
+        <notification inning="5" top="N" ab="44" pitch="0" seq="1" away_team_runs="3" home_team_runs="4" outs="3" batter="453064" pitcher="458708" uid="1304511983" pbp="">
+            <player id="458708"/>
+            <player id="468504"/>
+            <player id="453064"/>
+            <player id="408047"/>
+            <player id="572816"/>
+            <type category="end inning" home_pitcher="458708" away_pitcher="468504" batter="453064" batter_avg=".352" on_deck="408047" on_deck_avg=".308" in_hole="572816" in_hole_avg=".341"/>
+            </notification>
+        <notification inning="6" top="N" ab="51" pitch="0" seq="2" away_team_runs="3" home_team_runs="4" outs="3" batter="488681" pitcher="489189" uid="309176883" pbp="">
+            <player id="489189"/><player id="592454"/><player id="488681"/><player id="457574"/><player id="518934"/>
+            <type category="end inning" home_pitcher="489189" away_pitcher="592454" batter="488681" batter_avg=".310" on_deck="457574" on_deck_avg=".243" in_hole="518934" in_hole_avg=".280"/>
+            </notification>
+        <notification inning="9" top="N" ab="74" pitch="2" seq="2" away_team_runs="4" home_team_runs="6" outs="1" pbp="" uid="1074244499">
+            <player id="425786"/><player id="493603"/>
+            <type category="end game" winning_team="114" losing_team="115" winning_pitcher="425786" winning_pitcher_win="1" winning_pitcher_loss="0" losing_pitcher="493603" losing_pitcher_win="0" losing_pitcher_loss="2"/>
+        </notification>
+    </game>
+    <team id="115" code="col">
+        <notification inning="2" top="Y" ab="14" pitch="0" seq="1" away_team_runs="2" home_team_runs="3" outs="0" batter="488681" pitcher="458708" pbp="Corey Dickerson homers (7) on a fly ball to right field.    Justin Morneau scores.  " uid="-906654466">
+            <player id="408047"/><player id="572816"/>
+            <type category="score"/><type category="homerun" batter="572816"/>
+        </notification>
+        <notification inning="2" top="Y" ab="18" pitch="0" seq="1" away_team_runs="2" home_team_runs="3" outs="2" batter="453568" pitcher="458708" pbp="" uid="1445241712"><player id="453568"/><type category="runner in scoring position" batter="453568" avg=".309"/></notification>
+        <notification inning="3" top="Y" ab="25" pitch="0" seq="1" away_team_runs="2" home_team_runs="3" outs="1" batter="408047" pitcher="458708" pbp="" uid="449906581"><player id="408047"/><type category="runner in scoring position" batter="408047" avg=".302"/></notification>
+        <notification inning="3" top="Y" ab="25" pitch="0" seq="1" away_team_runs="3" home_team_runs="3" outs="2" batter="572816" pitcher="458708" pbp="Justin Morneau grounds out, second baseman Jason Kipnis to first baseman Lonnie Chisenhall.   Michael Cuddyer scores.    Troy Tulowitzki to 3rd.  " uid="1147272401"><player id="150212"/><type category="lead change" lead_type="tie" lead_team="115" trail_team="114"/><type category="score"/></notification>
+        <notification inning="3" top="Y" ab="26" pitch="0" seq="2" away_team_runs="3" home_team_runs="3" outs="2" batter="572816" pitcher="458708" pbp="" uid="478535763"><player id="572816"/><type category="runner in scoring position" batter="572816" avg=".337"/></notification>
+        <notification inning="6" top="N" ab="48" pitch="0" seq="1" away_team_runs="3" home_team_runs="4" outs="0" batter="114739" pitcher="592454" pbp="Pitching Change: Tommy Kahnle replaces Jhoulys Chacin.  " uid="-105193788"><player id="592454"/><player id="468504"/><type category="pitching change" relief_pitcher="592454" era="2.20" win="2" loss="1" save="0" bat_order="0" leaving_pitcher="468504"/></notification>
+        <notification inning="7" top="Y" ab="53" pitch="0" seq="1" away_team_runs="3" home_team_runs="4" outs="0" batter="457574" pitcher="543766" pbp="" uid="162321182"><player id="457574"/><type category="runner in scoring position" batter="457574" avg=".236"/></notification>
+        <notification inning="7" top="Y" ab="55" pitch="0" seq="1" away_team_runs="3" home_team_runs="4" outs="1" batter="453568" pitcher="543766" pbp="" uid="219579484"><player id="453568"/><type category="runner in scoring position" batter="453568" avg=".309"/></notification>
+        <notification inning="7" top="Y" ab="55" pitch="0" seq="1" away_team_runs="4" home_team_runs="4" outs="2" batter="150212" pitcher="543766" pbp="Charlie Blackmon out on a sacrifice fly to center fielder Michael Bourn.   Brandon Barnes scores.    Jordan Pacheco to 3rd.  " uid="1765990458"><player id="488681"/><type category="lead change" lead_type="tie" lead_team="115" trail_team="114"/><type category="score"/></notification>
+        <notification inning="7" top="Y" ab="56" pitch="0" seq="2" away_team_runs="4" home_team_runs="4" outs="2" batter="150212" pitcher="543766" pbp="" uid="248208666"><player id="150212"/><type category="runner in scoring position" batter="150212" avg=".318"/></notification>
+        <notification inning="7" top="N" ab="57" pitch="0" seq="3" away_team_runs="4" home_team_runs="4" outs="0" batter="456422" pitcher="571521" pbp="Pitching Change: Rex Brothers replaces Tommy Kahnle.  " uid="1944625089"><player id="571521"/><player id="592454"/><type category="pitching change" relief_pitcher="571521" era="3.70" win="2" loss="3" save="0" bat_order="0" leaving_pitcher="592454"/></notification>
+        <notification inning="8" top="Y" ab="62" pitch="0" seq="1" away_team_runs="4" home_team_runs="4" outs="1" batter="408047" pitcher="519240" pbp="" uid="-775755647"><player id="408047"/><type category="runner in scoring position" batter="408047" avg=".302"/></notification>
+        <notification inning="8" top="Y" ab="63" pitch="0" seq="1" away_team_runs="4" home_team_runs="4" outs="2" batter="572816" pitcher="519240" pbp="" uid="-747126496"><player id="572816"/><type category="runner in scoring position" batter="572816" avg=".337"/></notification>
+        <notification inning="8" top="N" ab="64" pitch="0" seq="2" away_team_runs="4" home_team_runs="4" outs="0" batter="543401" pitcher="457429" pbp="Pitching Change: Boone Logan replaces Rex Brothers.  " uid="-919312458"><player id="457429"/><player id="571521"/><type category="pitching change" relief_pitcher="457429" era="5.79" win="1" loss="1" save="0" bat_order="0" leaving_pitcher="571521"/></notification>
+        <notification inning="9" top="Y" ab="71" pitch="0" seq="1" away_team_runs="4" home_team_runs="4" outs="2" batter="453568" pitcher="425786" pbp="" uid="-1713832476"><player id="453568"/><type category="runner in scoring position" batter="453568" avg=".309"/></notification>
+        <notification inning="9" top="N" ab="72" pitch="0" seq="2" away_team_runs="4" home_team_runs="4" outs="0" batter="449107" pitcher="493603" pbp="Pitching Change: Adam Ottavino replaces Boone Logan.  " uid="-682825601"><player id="493603"/><player id="457429"/><type category="pitching change" relief_pitcher="493603" era="1.80" win="0" loss="1" save="0" bat_order="0" leaving_pitcher="457429"/></notification></team><team id="114" code="cle">
+        <notification inning="1" top="N" ab="7" pitch="0" seq="1" away_team_runs="0" home_team_runs="0" outs="0" batter="488726" pitcher="468504" pbp="" uid="630549802"><player id="488726"/><type category="runner in scoring position" batter="488726" avg=".307"/></notification>
+        <notification inning="1" top="N" ab="7" pitch="0" seq="1" away_team_runs="0" home_team_runs="1" outs="0" batter="543401" pitcher="468504" pbp="Michael Brantley singles on a line drive to right fielder Brandon Barnes.   Michael Bourn scores.    Asdrubal Cabrera to 2nd.  " uid="-1753001803"><player id="456422"/><type category="lead change" lead_type="lead" lead_team="114" trail_team="115"/><type category="score"/></notification>
+        <notification inning="1" top="N" ab="8" pitch="0" seq="2" away_team_runs="0" home_team_runs="1" outs="0" batter="543401" pitcher="468504" pbp="" uid="659178984"><player id="543401"/><type category="runner in scoring position" batter="543401" avg=".226"/></notification>
+        <notification inning="1" top="N" ab="10" pitch="0" seq="1" away_team_runs="0" home_team_runs="1" outs="1" batter="114739" pitcher="468504" pbp="" uid="1420322476"><player id="114739"/><type category="runner in scoring position" batter="114739" avg=".143"/><type category="bases loaded" batter="114739" avg=".143"/></notification>
+        <notification inning="1" top="N" ab="10" pitch="0" seq="1" away_team_runs="0" home_team_runs="2" outs="1" batter="461815" pitcher="468504" pbp="Jason Giambi walks.   Asdrubal Cabrera scores.    Michael Brantley to 3rd.    Lonnie Chisenhall to 2nd.  " uid="-983860000"><player id="452678"/><type category="score"/></notification>
+        <notification inning="1" top="N" ab="11" pitch="0" seq="2" away_team_runs="0" home_team_runs="2" outs="1" batter="461815" pitcher="468504" pbp="" uid="1448951658"><player id="461815"/><type category="runner in scoring position" batter="461815" avg=".270"/><type category="bases loaded" batter="461815" avg=".270"/></notification>
+        <notification inning="1" top="N" ab="11" pitch="0" seq="1" away_team_runs="0" home_team_runs="3" outs="2" batter="449107" pitcher="468504" pbp="David Murphy out on a sacrifice fly to left fielder Carlos Gonzalez.   Michael Brantley scores.  " uid="-1231412268"><player id="488726"/><type category="score"/></notification>
+        <notification inning="1" top="N" ab="12" pitch="0" seq="2" away_team_runs="0" home_team_runs="3" outs="2" batter="449107" pitcher="468504" pbp="" uid="1477580809"><player id="449107"/><type category="runner in scoring position" batter="449107" avg=".286"/></notification>
+        <notification inning="2" top="N" ab="21" pitch="0" seq="1" away_team_runs="2" home_team_runs="3" outs="1" batter="452678" pitcher="468504" pbp="" uid="539503949"><player id="452678"/><type category="runner in scoring position" batter="452678" avg=".242"/></notification>
+        <notification inning="3" top="N" ab="28" pitch="0" seq="1" away_team_runs="3" home_team_runs="3" outs="0" batter="543401" pitcher="468504" pbp="" uid="-1057043353"><player id="543401"/><type category="runner in scoring position" batter="543401" avg=".226"/></notification>
+        <notification inning="3" top="N" ab="29" pitch="0" seq="1" away_team_runs="3" home_team_runs="3" outs="1" batter="502082" pitcher="468504" pbp="" uid="-1028414202"><player id="502082"/><type category="runner in scoring position" batter="502082" avg=".361"/></notification>
+        <notification inning="3" top="N" ab="29" pitch="0" seq="1" away_team_runs="3" home_team_runs="4" outs="2" batter="114739" pitcher="468504" pbp="Lonnie Chisenhall out on a sacrifice fly to right fielder Brandon Barnes.   Michael Brantley scores.  " uid="123299216"><player id="488726"/><type category="lead change" lead_type="lead" lead_team="114" trail_team="115"/><type category="score"/></notification>
+        <notification inning="4" top="N" ab="37" pitch="0" seq="1" away_team_runs="3" home_team_runs="4" outs="1" batter="456422" pitcher="468504" pbp="" uid="-1995120182"><player id="456422"/><type category="runner in scoring position" batter="456422" avg=".288"/></notification>
+        <notification inning="6" top="Y" ab="47" pitch="0" seq="1" away_team_runs="3" home_team_runs="4" outs="2" batter="572816" pitcher="489189" pbp="Pitching Change: Josh Outman replaces Josh Tomlin.  " uid="1332065344"><player id="489189"/><player id="458708"/><type category="pitching change" relief_pitcher="489189" era="2.95" win="4" loss="0" save="0" bat_order="0" leaving_pitcher="458708"/></notification>
+        <notification inning="6" top="N" ab="51" pitch="0" seq="1" away_team_runs="3" home_team_runs="4" outs="2" batter="435459" pitcher="592454" pbp="" uid="309176852"><player id="435459"/><type category="runner in scoring position" batter="435459" avg=".500"/></notification>
+        <notification inning="7" top="Y" ab="52" pitch="0" seq="1" away_team_runs="3" home_team_runs="4" outs="0" batter="488681" pitcher="543766" pbp="Pitching Change: Bryan Shaw replaces Josh Outman.  " uid="1773209735"><player id="543766"/><player id="489189"/><type category="pitching change" relief_pitcher="543766" era="1.37" win="2" loss="1" save="2" bat_order="0" leaving_pitcher="489189"/></notification>
+        <notification inning="8" top="Y" ab="62" pitch="0" seq="1" away_team_runs="4" home_team_runs="4" outs="1" batter="408047" pitcher="519240" pbp="Pitching Change: Marc Rzepczynski replaces Bryan Shaw.  " uid="712750382"><player id="519240"/><player id="543766"/><type category="pitching change" relief_pitcher="519240" era="3.20" win="0" loss="1" save="0" bat_order="0" leaving_pitcher="543766"/></notification>
+        <notification inning="8" top="N" ab="66" pitch="0" seq="1" away_team_runs="4" home_team_runs="4" outs="2" batter="114739" pitcher="430605" pbp="Offensive Substitution: Pinch-hitter Ryan Raburn replaces Jason Giambi.  " uid="1908481520"><player id="430605"/><player id="114739"/><type category="pinch hitter" batter="430605" avg=".217" bat_order="601" leaving_batter="114739"/></notification>
+        <notification inning="9" top="Y" ab="68" pitch="0" seq="1" away_team_runs="4" home_team_runs="4" outs="0" batter="488681" pitcher="425786" pbp="Pitching Change: Scott Atchison replaces Marc Rzepczynski.  " uid="-35300388"><player id="425786"/><player id="519240"/><type category="pitching change" relief_pitcher="425786" era="2.59" win="1" loss="0" save="1" bat_order="0" leaving_pitcher="519240"/></notification>
+        <notification inning="9" top="N" ab="74" pitch="0" seq="1" away_team_runs="4" home_team_runs="4" outs="1" batter="456422" pitcher="493603" pbp="" uid="1074184886"><player id="456422"/><type category="runner in scoring position" batter="456422" avg=".288"/></notification>
+    </team>
+</notifications>
