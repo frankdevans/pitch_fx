@@ -88,7 +88,21 @@ game_actions
     occ_outs : inning_all.game.inning[].top/bottom.action[].o
 
 
-game_runners TODO
+game_runners
+    game_pk : boxscore.boxscore.game_pk
+    batter_id : inning_all.game.inning[].top/bottom.atbat[].batter
+    pitcher_id : inning_all.game.inning[].top/bottom.atbat[].pitcher
+    atbat_num : inning_all.game.inning[].top/bottom.atbat[].num
+    event_num : inning_all.game.inning[].top/bottom.atbat[].event_num
+    runner_id : inning_all.game.inning[].top/bottom.atbat[].runner[].id
+    base_start : inning_all.game.inning[].top/bottom.atbat[].runner[].start
+    base_end : inning_all.game.inning[].top/bottom.atbat[].runner[].end
+    event : inning_all.game.inning[].top/bottom.atbat[].runner[].event
+    event_num : inning_all.game.inning[].top/bottom.atbat[].runner[].event_num
+    flag_score : inning_all.game.inning[].top/bottom.atbat[].runner[].score
+    flag_rbi : inning_all.game.inning[].top/bottom.atbat[].runner[].rbi
+    flag_earned : inning_all.game.inning[].top/bottom.atbat[].runner[].earned
+
 
 
 game_hits

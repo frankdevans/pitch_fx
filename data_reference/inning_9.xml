@@ -138,11 +138,20 @@
             <pitch des="In play, out(s)" des_es="En juego, out(s)" id="613" type="X" tfs="201503" tfs_zulu="2014-06-01T20:15:03Z" x="139.06" y="144.20" event_num="613" on_1b="449107" sv_id="140601_161812" play_guid="" start_speed="94.3" end_speed="88.5" sz_top="3.34" sz_bot="1.56" pfx_x="-4.4" pfx_z="2.3" px="-1.276" pz="2.623" x0="-2.666" y0="50.0" z0="5.674" vx0="5.402" vy0="-138.173" vz0="-3.381" ax="-8.676" ay="24.892" az="-27.567" break_y="23.9" break_angle="15.4" break_length="6.0" pitch_type="FF" type_confidence=".906" zone="11" nasty="66" spin_dir="242.031" spin_rate="1031.423"  cc="" mt=""/>
             <runner id="449107" start="1B" end="2B" event="Sac Bunt" event_num="616"/>
         </atbat>
-        <atbat num="74" b="0" s="1" o="1" start_tfs="201603" start_tfs_zulu="2014-06-01T20:16:03Z" batter="456422" stand="L" b_height="5-10" pitcher="493603" p_throws="R" des="Michael Bourn homers (2) on a fly ball to right field.    Mike Aviles scores.  " des_es="Michael Bourn batea jonr&#243;n (2) con elevado por el jard&#237;n derecho.    Mike Aviles anota.  " event_num="624"
-                                                event="Home Run" event_es="Jonr&#243;n" score="T" home_team_runs="6" away_team_runs="4">
+        <atbat num="74" b="0" s="1" o="1" start_tfs="201603" start_tfs_zulu="2014-06-01T20:16:03Z" batter="456422" stand="L" b_height="5-10" pitcher="493603" p_throws="R" des="Michael Bourn homers (2) on a fly ball to right field.    Mike Aviles scores.  " des_es="Michael Bourn batea jonr&#243;n (2) con elevado por el jard&#237;n derecho.    Mike Aviles anota.  " event_num="624"event="Home Run" event_es="Jonr&#243;n" score="T" home_team_runs="6" away_team_runs="4">
             <pitch des="Called Strike" des_es="Strike cantado" id="618" type="S" tfs="201625" tfs_zulu="2014-06-01T20:16:25Z" x="121.89" y="156.29" event_num="618" on_2b="449107" sv_id="140601_161934" play_guid="" start_speed="80.6" end_speed="75.6" sz_top="3.23" sz_bot="1.48" pfx_x="6.71" pfx_z="-6.82" px="-0.732" pz="2.153" x0="-3.153" y0="50.0" z0="5.947" vx0="3.623" vy0="-118.196" vz0="0.054" ax="9.567" ay="20.995" az="-41.819" break_y="23.9" break_angle="-13.5" break_length="12.2" pitch_type="SL" type_confidence=".905" zone="13" nasty="74" spin_dir="44.766" spin_rate="1667.480"  cc="" mt=""/>
             <pitch des="In play, run(s)" des_es="En juego, carrera(s)" id="619" type="X" tfs="201650" tfs_zulu="2014-06-01T20:16:50Z" x="88.41" y="139.88" event_num="619" on_2b="449107" sv_id="140601_161959" play_guid="" start_speed="92.9" end_speed="86.8" sz_top="3.21" sz_bot="1.48" pfx_x="-3.46" pfx_z="7.06" px="0.287" pz="2.766" x0="-2.613" y0="50.0" z0="5.621" vx0="9.055" vy0="-135.878" vz0="-4.258" ax="-6.586" ay="24.911" az="-18.674" break_y="23.9" break_angle="14.4" break_length="4.3" pitch_type="FF" type_confidence=".905" zone="3" nasty="35" spin_dir="206.004" spin_rate="1603.788"  cc="" mt=""/>
-            <runner id="449107" start="2B" end="" event="Home Run" event_num="624" score="T" rbi="T" earned="T"/><runner id="456422" start="" end="" event="Home Run" event_num="624" score="T" rbi="T" earned="T"/>
+            <runner 
+				id="449107" 
+				start="2B" 
+				end="" 
+				event="Home Run" 
+				event_num="624" 
+				score="T" 
+				rbi="T" 
+				earned="T"
+			/>
+			<runner id="456422" start="" end="" event="Home Run" event_num="624" score="T" rbi="T" earned="T"/>
         </atbat>
     </bottom>
 </inning>

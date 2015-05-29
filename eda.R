@@ -1,7 +1,7 @@
 library(rvest)
 library(dplyr)
 
-# TODO: parse runner events within atbats (leverage pitches parser)
+
 
 
 
@@ -399,7 +399,56 @@ parse_pitches <- function(dir_base) {
 }
 parse_pitches(dir_base = './data/day_01/gid_2014_06_01_colmlb_clemlb_1')
 
-
+# Parse game_runners
+parse_game_runners <- function(dir_base) {
+    dir_boxscore <- paste(dir_base, '/boxscore.xml', sep = '')
+    raw_boxscore <- xml(x = dir_boxscore)
+    root_boxscore <- xml_node(x = raw_boxscore, xpath = '//boxscore')
+    game_pk <- xml_attr(x = root_boxscore, name = 'game_pk')
+    
+    dir_inning <- paste(dir_base, '/inning/inning_all.xml', sep = '')
+    raw_inning <- xml(x = dir_inning)
+    root_game <- xml_node(x = raw_inning, xpath = '//game')
+    
+    l_innings <- xml_children(root_game)
+    
+    runners_df <- data.frame()
+    
+    for (inning in l_innings) {
+        i_num <- xml_attr(x = inning, name = 'num')
+        l_inning_part <- xml_children(inning)
+        for (inning_part in l_inning_part) {
+            i_part <- xml_tag(inning_part)
+            l_atbats <- xml_children(inning_part)
+            l_atbats <- l_atbats[names(l_atbats) == 'atbat']
+            if (length(l_atbats) > 0) {
+                for (atbat in l_atbats) {
+                    l_runners <- xml_children(atbat)
+                    l_runners <- l_runners[names(l_runners) == 'runner']
+                    if (length(l_runners) > 0) {
+                        new_runners <- data.frame(game_pk = game_pk,
+                                                  batter_id = xml_attr(x = atbat, name = 'batter'),
+                                                  pitcher_id = xml_attr(x = atbat, name = 'pitcher'),
+                                                  atbat_num = xml_attr(x = atbat, name = 'num'),
+                                                  event_num = xml_attr(x = atbat, name = 'event_num'),
+                                                  runner_id = as.character(lapply(X = l_runners, FUN = xml_attr, name = 'id')),
+                                                  base_start = as.character(lapply(X = l_runners, FUN = xml_attr, name = 'start')),
+                                                  base_end = as.character(lapply(X = l_runners, FUN = xml_attr, name = 'end')),
+                                                  event = as.character(lapply(X = l_runners, FUN = xml_attr, name = 'event')),
+                                                  event_num = as.character(lapply(X = l_runners, FUN = xml_attr, name = 'event_num')),
+                                                  flag_score = as.character(lapply(X = l_runners, FUN = xml_attr, name = 'score')),
+                                                  flag_rbi = as.character(lapply(X = l_runners, FUN = xml_attr, name = 'rbi')),
+                                                  flag_earned = as.character(lapply(X = l_runners, FUN = xml_attr, name = 'earned')),
+                                                  stringsAsFactors = FALSE)
+                        runners_df <- bind_rows(runners_df, new_runners)
+                    }
+                }
+            }
+        }
+    }
+    return(runners_df)
+}
+parse_game_runners(dir_base = './data/day_01/gid_2014_06_01_colmlb_clemlb_1')
 
 
 
