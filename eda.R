@@ -66,8 +66,7 @@ parse_game_umpires <- function(dir_base) {
     root_umpires <- xml_node(x = raw_players, xpath = '//game/umpires')
     
     l_umpires <- xml_children(root_umpires)
-    gu_df <- data.frame(game_pk = rep(x = xml_attr(x = root_boxscore, name = 'game_pk'),
-                                      times = length(l_umpires)),
+    gu_df <- data.frame(game_pk = xml_attr(x = root_boxscore, name = 'game_pk'),
                         umpire_id = as.character(lapply(X = l_umpires, FUN = xml_attr, name = 'id')),
                         position = as.character(lapply(X = l_umpires, FUN = xml_attr, name = 'position')),
                         name_first = as.character(lapply(X = l_umpires, FUN = xml_attr, name = 'first')),
@@ -96,8 +95,7 @@ parse_game_coaches <- function(dir_base) {
     l_coaches_t1 <- xml_children(root_t1)
     l_coaches_t1 <- l_coaches_t1[names(l_coaches_t1) == 'coach']
     
-    df_t1 <- data.frame(game_pk = rep(x = xml_attr(x = root_boxscore, name = 'game_pk'),
-                                      times = length(l_coaches_t1)),
+    df_t1 <- data.frame(game_pk = xml_attr(x = root_boxscore, name = 'game_pk'),
                         team_type = xml_attr(x = root_t1, name = 'type'),
                         coach_id = as.character(lapply(X = l_coaches_t1, FUN = xml_attr, name = 'id')),
                         position = as.character(lapply(X = l_coaches_t1, FUN = xml_attr, name = 'position')),
@@ -111,8 +109,7 @@ parse_game_coaches <- function(dir_base) {
     l_coaches_t2 <- xml_children(root_t2)
     l_coaches_t2 <- l_coaches_t2[names(l_coaches_t2) == 'coach']
     
-    df_t2 <- data.frame(game_pk = rep(x = xml_attr(x = root_boxscore, name = 'game_pk'),
-                                      times = length(l_coaches_t2)),
+    df_t2 <- data.frame(game_pk = xml_attr(x = root_boxscore, name = 'game_pk'),
                         team_type = xml_attr(x = root_t2, name = 'type'),
                         coach_id = as.character(lapply(X = l_coaches_t2, FUN = xml_attr, name = 'id')),
                         position = as.character(lapply(X = l_coaches_t2, FUN = xml_attr, name = 'position')),
@@ -145,8 +142,7 @@ parse_game_players <- function(dir_base) {
     l_players_t1 <- xml_children(root_t1)
     l_players_t1 <- l_players_t1[names(l_players_t1) == 'player']
     
-    df_t1 <- data.frame(game_pk = rep(x = xml_attr(x = root_boxscore, name = 'game_pk'),
-                                      times = length(l_players_t1)),
+    df_t1 <- data.frame(game_pk = xml_attr(x = root_boxscore, name = 'game_pk'),
                         team_id = as.character(lapply(X = l_players_t1, FUN = xml_attr, name = 'team_id')),
                         player_id = as.character(lapply(X = l_players_t1, FUN = xml_attr, name = 'id')),
                         name_first = as.character(lapply(X = l_players_t1, FUN = xml_attr, name = 'first')),
@@ -171,8 +167,7 @@ parse_game_players <- function(dir_base) {
     l_players_t2 <- xml_children(root_t2)
     l_players_t2 <- l_players_t2[names(l_players_t2) == 'player']
     
-    df_t2 <- data.frame(game_pk = rep(x = xml_attr(x = root_boxscore, name = 'game_pk'),
-                                      times = length(l_players_t2)),
+    df_t2 <- data.frame(game_pk = xml_attr(x = root_boxscore, name = 'game_pk'),
                         team_id = as.character(lapply(X = l_players_t2, FUN = xml_attr, name = 'team_id')),
                         player_id = as.character(lapply(X = l_players_t2, FUN = xml_attr, name = 'id')),
                         name_first = as.character(lapply(X = l_players_t2, FUN = xml_attr, name = 'first')),
