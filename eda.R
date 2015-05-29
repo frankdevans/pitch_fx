@@ -1,50 +1,12 @@
 library(rvest)
 library(dplyr)
 
+# TODO: replace all rep() calls in DF creation for game_pk
 
-# Parse game_actions
-dir_base <- './data/day_01/gid_2014_06_01_colmlb_clemlb_1'
 
-dir_boxscore <- paste(dir_base, '/boxscore.xml', sep = '')
-raw_boxscore <- xml(x = dir_boxscore)
-root_boxscore <- xml_node(x = raw_boxscore, xpath = '//boxscore')
 
-dir_inning <- paste(dir_base, '/inning/inning_all.xml', sep = '')
-raw_inning <- xml(x = dir_inning)
-root_game <- xml_node(x = raw_inning, xpath = '//game')
 
-l_innings <- xml_children(root_game)
 
-actions_df <- data.frame()
-
-for (inning in l_innings) {
-  i_num <- xml_attr(x = inning, name = 'num')
-  l_inning_part <- xml_children(inning)
-  for (inning_part in l_inning_part) {
-    i_part <- xml_tag(inning_part)
-    l_atbats <- xml_children(inning_part)
-    l_atbats <- l_atbats[names(l_atbats) == 'action']
-    print(length(l_atbats))
-    if (length(l_atbats) > 0) {
-      new_actions <- data.frame(game_pk = xml_attr(x = root_boxscore, name = 'game_pk'),
-                                inning = i_num,
-                                inning_part = i_part,
-                                event = as.character(lapply(X = l_atbats, FUN = xml_attr, name = 'event')),
-                                event_num = as.character(lapply(X = l_atbats, FUN = xml_attr, name = 'event_num')),
-                                tfs = as.character(lapply(X = l_atbats, FUN = xml_attr, name = 'tfs')),
-                                tfs_zulu = as.character(lapply(X = l_atbats, FUN = xml_attr, name = 'tfs_zulu')),
-                                player_id = as.character(lapply(X = l_atbats, FUN = xml_attr, name = 'player')),
-                                pitch_num = as.character(lapply(X = l_atbats, FUN = xml_attr, name = 'pitch')),
-                                runs_home = as.character(lapply(X = l_atbats, FUN = xml_attr, name = 'home_team_runs')),
-                                runs_away = as.character(lapply(X = l_atbats, FUN = xml_attr, name = 'away_team_runs')),
-                                occ_balls = as.character(lapply(X = l_atbats, FUN = xml_attr, name = 'b')),
-                                occ_strikes = as.character(lapply(X = l_atbats, FUN = xml_attr, name = 's')),
-                                occ_outs = as.character(lapply(X = l_atbats, FUN = xml_attr, name = 'o')),
-                                stringsAsFactors = FALSE)
-      actions_df <- bind_rows(actions_df, new_actions)
-    }
-  }
-}
 
 
 
@@ -292,6 +254,77 @@ parse_atbats <- function(dir_base) {
     return(atbat_df)
 }
 parse_atbats(dir_base = './data/day_01/gid_2014_06_01_colmlb_clemlb_1')
+
+# Parse game_actions
+parse_game_actions <- function(dir_base) {
+  dir_boxscore <- paste(dir_base, '/boxscore.xml', sep = '')
+  raw_boxscore <- xml(x = dir_boxscore)
+  root_boxscore <- xml_node(x = raw_boxscore, xpath = '//boxscore')
+  
+  dir_inning <- paste(dir_base, '/inning/inning_all.xml', sep = '')
+  raw_inning <- xml(x = dir_inning)
+  root_game <- xml_node(x = raw_inning, xpath = '//game')
+  
+  l_innings <- xml_children(root_game)
+  
+  actions_df <- data.frame()
+  
+  for (inning in l_innings) {
+    i_num <- xml_attr(x = inning, name = 'num')
+    l_inning_part <- xml_children(inning)
+    for (inning_part in l_inning_part) {
+      i_part <- xml_tag(inning_part)
+      l_atbats <- xml_children(inning_part)
+      l_atbats <- l_atbats[names(l_atbats) == 'action']
+      if (length(l_atbats) > 0) {
+        new_actions <- data.frame(game_pk = xml_attr(x = root_boxscore, name = 'game_pk'),
+                                  inning = i_num,
+                                  inning_part = i_part,
+                                  event = as.character(lapply(X = l_atbats, FUN = xml_attr, name = 'event')),
+                                  event_num = as.character(lapply(X = l_atbats, FUN = xml_attr, name = 'event_num')),
+                                  tfs = as.character(lapply(X = l_atbats, FUN = xml_attr, name = 'tfs')),
+                                  tfs_zulu = as.character(lapply(X = l_atbats, FUN = xml_attr, name = 'tfs_zulu')),
+                                  player_id = as.character(lapply(X = l_atbats, FUN = xml_attr, name = 'player')),
+                                  pitch_num = as.character(lapply(X = l_atbats, FUN = xml_attr, name = 'pitch')),
+                                  runs_home = as.character(lapply(X = l_atbats, FUN = xml_attr, name = 'home_team_runs')),
+                                  runs_away = as.character(lapply(X = l_atbats, FUN = xml_attr, name = 'away_team_runs')),
+                                  occ_balls = as.character(lapply(X = l_atbats, FUN = xml_attr, name = 'b')),
+                                  occ_strikes = as.character(lapply(X = l_atbats, FUN = xml_attr, name = 's')),
+                                  occ_outs = as.character(lapply(X = l_atbats, FUN = xml_attr, name = 'o')),
+                                  stringsAsFactors = FALSE)
+        actions_df <- bind_rows(actions_df, new_actions)
+      }
+    }
+  }
+  return(actions_df)
+}
+parse_game_actions(dir_base = './data/day_01/gid_2014_06_01_colmlb_clemlb_1')
+
+# Parse game_hits
+parse_game_hits <- function(dir_base) {
+  dir_boxscore <- paste(dir_base, '/boxscore.xml', sep = '')
+  raw_boxscore <- xml(x = dir_boxscore)
+  root_boxscore <- xml_node(x = raw_boxscore, xpath = '//boxscore')
+  
+  dir_hit <- paste(dir_base, '/inning/inning_hit.xml', sep = '')
+  raw_hit <- xml(x = dir_hit)
+  root_hit <- xml_node(x = raw_hit, xpath = '//hitchart')
+  
+  l_hits <- xml_children(root_hit)
+  hits_df <- data.frame(game_pk = xml_attr(x = root_boxscore, name = 'game_pk'),
+                        inning = as.character(lapply(X = l_hits, FUN = xml_attr, name = 'inning')),
+                        description = as.character(lapply(X = l_hits, FUN = xml_attr, name = 'des')),
+                        pitcher_id = as.character(lapply(X = l_hits, FUN = xml_attr, name = 'pitcher')),
+                        batter_id = as.character(lapply(X = l_hits, FUN = xml_attr, name = 'batter')),
+                        team_type = as.character(lapply(X = l_hits, FUN = xml_attr, name = 'team')),
+                        hit_type = as.character(lapply(X = l_hits, FUN = xml_attr, name = 'type')),
+                        hit_x = as.character(lapply(X = l_hits, FUN = xml_attr, name = 'x')),
+                        hit_y = as.character(lapply(X = l_hits, FUN = xml_attr, name = 'y')),
+                        stringsAsFactors = FALSE)
+  return(hits_df)
+}
+parse_game_hits(dir_base = './data/day_01/gid_2014_06_01_colmlb_clemlb_1')
+
 
 
 
