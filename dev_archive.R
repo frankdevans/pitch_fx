@@ -44,3 +44,28 @@ data.frame(id = xmlGetAttr(node = children[['stadium']], name = 'id'),
 
 data.frame(xmlAttrs(children[['stadium']]))
 xmlToDataFrame(children[[1]], colClasses = 'character')
+
+
+# Helper: parse single atbat (game_pk, i_num, i_part, l_atbats)
+parse_single_atbat <- function(game_pk, i_num, i_part, l_atbats) {
+    df_atbat <- data.frame(game_pk = game_pk,
+                           inning = i_num,
+                           inning_part = i_part,
+                           batter_id = as.character(lapply(X = l_atbats, FUN = xml_attr, name = 'batter')),
+                           pitcher_id = as.character(lapply(X = l_atbats, FUN = xml_attr, name = 'pitcher')),
+                           start_tfs = as.character(lapply(X = l_atbats, FUN = xml_attr, name = 'start_tfs')),
+                           start_tfs_zulu = as.character(lapply(X = l_atbats, FUN = xml_attr, name = 'start_tfs_zulu')),
+                           atbat_num = as.character(lapply(X = l_atbats, FUN = xml_attr, name = 'num')),
+                           event_num = as.character(lapply(X = l_atbats, FUN = xml_attr, name = 'event_num')),
+                           pitcher_throws = as.character(lapply(X = l_atbats, FUN = xml_attr, name = 'p_throws')),
+                           batter_height = as.character(lapply(X = l_atbats, FUN = xml_attr, name = 'b_height')),
+                           batter_stance = as.character(lapply(X = l_atbats, FUN = xml_attr, name = 'stand')),
+                           runs_home = as.character(lapply(X = l_atbats, FUN = xml_attr, name = 'home_team_runs')),
+                           runs_away = as.character(lapply(X = l_atbats, FUN = xml_attr, name = 'away_team_runs')),
+                           outcome_event = as.character(lapply(X = l_atbats, FUN = xml_attr, name = 'event')),
+                           outcome_balls = as.character(lapply(X = l_atbats, FUN = xml_attr, name = 'b')),
+                           outcome_strikes = as.character(lapply(X = l_atbats, FUN = xml_attr, name = 's')),
+                           outcome_outs = as.character(lapply(X = l_atbats, FUN = xml_attr, name = 'o')),
+                           stringsAsFactors = FALSE)
+    return(df_atbat)
+}
