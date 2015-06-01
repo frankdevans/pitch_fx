@@ -1,0 +1,31 @@
+TABLE : dim_stadiums
+
+stadium_id [int]: integer id of stadium, linkable to dim_teams and PitchFX (venue_id).
+
+stadium_name [chr]: Friendly name of the stadium itself
+
+capacity [int]: maximum number of spectators that can fit in the stadium
+
+city [chr]: Name of the city where the stadium is located.
+
+state [chr]: State Postal code of the stadium
+
+surface [chr]: type of playing surface for field, one of [grass, AstroTurf]
+
+dome [chr]: indicator if the stadium has a dome, and if so what type, one of [none, retractable, fixed]
+
+fence_L [float]: distance from home plate to Left Field fence in meters
+
+fence_LC [float]: distance from home plate to Left-Center Field fence in meters
+
+fence_C [float]: distance from home plate to Center Field fence in meters
+
+fence_RC [float]: distance from home plate to Right-Center Field fence in meters
+
+fence_R [float]: distance from home plate to Right Field fence in meters
+
+backstop [float]: distance from home plate to backstop in meters
+
+latitude [float]: latitude component of the geo-location of the stadium
+
+longitude [float]: longitude component of the geo-location of the stadium

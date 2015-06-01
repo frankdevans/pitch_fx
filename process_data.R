@@ -5,7 +5,20 @@ library(dplyr)
 
 
 
-# Parse Functions
+# Functions
+check_files <- function(dir_base) {
+    v_files <- list.files(path = dir_base, recursive = TRUE, include.dirs = FALSE)
+    
+    df_flags <- data.frame(dir_base = dir_base,
+                           dir_inning = (sum(str_detect(string = list.dirs(path = dir_base), 
+                                                        pattern = '/inning')) > 0),
+                           flag_boxscore = (sum(str_detect(string = v_files, pattern = 'boxscore.xml')) > 0),
+                           flag_players = (sum(str_detect(string = v_files, pattern = 'players.xml')) > 0),
+                           flag_inning_all = (sum(str_detect(string = v_files, pattern = 'inning_all.xml')) > 0),
+                           flag_inning_hit = (sum(str_detect(string = v_files, pattern = 'inning_hit.xml')) > 0),
+                           stringsAsFactors = FALSE)
+    return(df_flags)
+}
 parse_game <- function(dir_base) {
     dir_boxscore <- paste(dir_base, '/boxscore.xml', sep = '')
     raw <- xml(x = dir_boxscore)
@@ -406,31 +419,39 @@ parse_game_runners <- function(dir_base) {
 
 
 
-
-
 # Get Directory Vectors
 dirs <- list.dirs(path = './data', recursive = TRUE, full.names = TRUE)
 split_dirs <- str_split(string = dirs, pattern = '/')
-dirs_df <- tbl_df(data.frame(dirs = dirs,
-                             last_dir = as.character(lapply(X = split_dirs, FUN = tail, n = 1)),
-                             stringsAsFactors = FALSE))
-dirs_gid <- dirs_df %>%
+dirs_gid <- data_frame(dirs = dirs,
+                       last_dir = as.character(lapply(X = split_dirs, FUN = tail, n = 1)),
+                       stringsAsFactors = FALSE) %>%
     filter(str_detect(string = last_dir, pattern = 'gid') == TRUE) %>%
     select(-(last_dir))
 
+# TODO: produce df of missing data before mutating gid df
+
+dirs_gid <- rbind_all(alply(.data = dirs_gid$dirs, .margins = 1, .fun = check_files)) %>%
+    filter(dir_inning, flag_boxscore, flag_players, flag_inning_all, flag_inning_hit)
 
 
-# Unit Tests
-df_game <- rbind_all(alply(.data = dirs_gid$dirs, .margins = 1, .fun = parse_game))
-df_game_teams <- rbind_all(alply(.data = dirs_gid$dirs, .margins = 1, .fun = parse_game_teams))
-df_game_umpires <- rbind_all(alply(.data = dirs_gid$dirs, .margins = 1, .fun = parse_game_umpires))
-df_game_coaches <- rbind_all(alply(.data = dirs_gid$dirs, .margins = 1, .fun = parse_game_coaches))
-df_game_players <- rbind_all(alply(.data = dirs_gid$dirs, .margins = 1, .fun = parse_game_players))
-df_atbats <- rbind_all(alply(.data = dirs_gid$dirs, .margins = 1, .fun = parse_atbats))
-df_game_actions <- rbind_all(alply(.data = dirs_gid$dirs, .margins = 1, .fun = parse_game_actions))
-df_game_hits <- rbind_all(alply(.data = dirs_gid$dirs, .margins = 1, .fun = parse_game_hits))
-df_pitches <- rbind_all(alply(.data = dirs_gid$dirs, .margins = 1, .fun = parse_pitches))
-df_game_runners <- rbind_all(alply(.data = dirs_gid$dirs, .margins = 1, .fun = parse_game_runners))
+
+
+
+# TODO: convert data.frame to data_frame calls, remove any tbl_df calls
+
+
+# Make Tables
+df_game <- rbind_all(alply(.data = dirs_gid$dir_base, .margins = 1, .fun = parse_game))
+df_game_teams <- rbind_all(alply(.data = dirs_gid$dir_base, .margins = 1, .fun = parse_game_teams))
+df_game_umpires <- rbind_all(alply(.data = dirs_gid$dir_base, .margins = 1, .fun = parse_game_umpires))
+df_game_coaches <- rbind_all(alply(.data = dirs_gid$dir_base, .margins = 1, .fun = parse_game_coaches))
+df_game_players <- rbind_all(alply(.data = dirs_gid$dir_base, .margins = 1, .fun = parse_game_players))
+df_atbats <- rbind_all(alply(.data = dirs_gid$dir_base, .margins = 1, .fun = parse_atbats))
+df_game_actions <- rbind_all(alply(.data = dirs_gid$dir_base, .margins = 1, .fun = parse_game_actions))
+# TODO: work out bug in game_hits 201406 data
+df_game_hits <- rbind_all(alply(.data = dirs_gid$dir_base, .margins = 1, .fun = parse_game_hits))
+df_pitches <- rbind_all(alply(.data = dirs_gid$dir_base, .margins = 1, .fun = parse_pitches))
+df_game_runners <- rbind_all(alply(.data = dirs_gid$dir_base, .margins = 1, .fun = parse_game_runners))
 
 
 

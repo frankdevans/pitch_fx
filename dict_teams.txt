@@ -1,0 +1,18 @@
+TABLE : dim_teams
+
+team_id [int] : id of MLB team, globally unique across all MLB teams, linkable to PitchFX data
+    through the team_id or team.id data item.
+
+file_code [chr] : letter code that signifies each team, globally unique across all MLB teams,
+    linkable to PitchFX data via team_code data item, alternate to team_id
+
+league [chr] : name of MLB league of team, one of [american, national]
+
+division [chr] : name of division of each team, one of [east, west, central]
+
+location_name [chr] : Team location name, typically the city or state of team identification.
+
+team_name [chr] : Team name, can be combined with location name
+
+stadium_id [int] : globally unique ID of the stadium that each team plays in during home games,
+    linkable to dim_stadium and PitchFX data (stadium_id, venue.id, venue_id)

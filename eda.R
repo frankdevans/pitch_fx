@@ -1,9 +1,6 @@
 library(rvest)
 library(dplyr)
-
-
-
-
+library(stringr)
 
 
 
@@ -449,6 +446,25 @@ parse_game_runners <- function(dir_base) {
     return(runners_df)
 }
 parse_game_runners(dir_base = './data/day_01/gid_2014_06_01_colmlb_clemlb_1')
+
+# Check for all necessary files to parse
+check_files <- function(dir_base) {
+    v_files <- list.files(path = dir_base, recursive = TRUE, include.dirs = FALSE)
+    
+    df_flags <- data.frame(dir_base = dir_base,
+                           dir_inning = (sum(str_detect(string = list.dirs(path = dir_base), 
+                                                        pattern = '/inning')) > 0),
+                           flag_boxscore = (sum(str_detect(string = v_files, pattern = 'boxscore.xml')) > 0),
+                           flag_players = (sum(str_detect(string = v_files, pattern = 'players.xml')) > 0),
+                           flag_inning_all = (sum(str_detect(string = v_files, pattern = 'inning_all.xml')) > 0),
+                           flag_inning_hit = (sum(str_detect(string = v_files, pattern = 'inning_hit.xml')) > 0))
+    return(df_flags)
+}
+check_files(dir_base = './data/day_01/gid_2014_06_01_colmlb_clemlb_1')
+check_files(dir_base = './data/day_01/gid_2014_06_01_pitmlb_lanmlb_1')
+check_files(dir_base = './data/day_01/gid_2014_06_01_kcamlb_tormlb_1')
+
+
 
 
 
