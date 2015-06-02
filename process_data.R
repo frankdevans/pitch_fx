@@ -269,26 +269,30 @@ parse_game_actions <- function(dir_base) {
   return(actions_df)
 }
 parse_game_hits <- function(dir_base) {
-  dir_boxscore <- paste(dir_base, '/boxscore.xml', sep = '')
-  raw_boxscore <- xml(x = dir_boxscore)
-  root_boxscore <- xml_node(x = raw_boxscore, xpath = '//boxscore')
-  
-  dir_hit <- paste(dir_base, '/inning/inning_hit.xml', sep = '')
-  raw_hit <- xml(x = dir_hit)
-  root_hit <- xml_node(x = raw_hit, xpath = '//hitchart')
-  
-  l_hits <- xml_children(root_hit)
-  hits_df <- data.frame(game_pk = xml_attr(x = root_boxscore, name = 'game_pk'),
-                        inning = as.character(lapply(X = l_hits, FUN = xml_attr, name = 'inning')),
-                        description = as.character(lapply(X = l_hits, FUN = xml_attr, name = 'des')),
-                        pitcher_id = as.character(lapply(X = l_hits, FUN = xml_attr, name = 'pitcher')),
-                        batter_id = as.character(lapply(X = l_hits, FUN = xml_attr, name = 'batter')),
-                        team_type = as.character(lapply(X = l_hits, FUN = xml_attr, name = 'team')),
-                        hit_type = as.character(lapply(X = l_hits, FUN = xml_attr, name = 'type')),
-                        hit_x = as.character(lapply(X = l_hits, FUN = xml_attr, name = 'x')),
-                        hit_y = as.character(lapply(X = l_hits, FUN = xml_attr, name = 'y')),
-                        stringsAsFactors = FALSE)
-  return(hits_df)
+    dir_boxscore <- paste(dir_base, '/boxscore.xml', sep = '')
+    raw_boxscore <- xml(x = dir_boxscore)
+    root_boxscore <- xml_node(x = raw_boxscore, xpath = '//boxscore')
+    
+    dir_hit <- paste(dir_base, '/inning/inning_hit.xml', sep = '')
+    raw_hit <- xml(x = dir_hit)
+    root_hit <- xml_node(x = raw_hit, xpath = '//hitchart')
+    
+    hits_df <- data.frame()
+    l_hits <- xml_children(root_hit)
+    if (length(l_hits) > 0) {
+        hits_df <- data.frame(game_pk = xml_attr(x = root_boxscore, name = 'game_pk'),
+                              inning = as.character(lapply(X = l_hits, FUN = xml_attr, name = 'inning')),
+                              description = as.character(lapply(X = l_hits, FUN = xml_attr, name = 'des')),
+                              pitcher_id = as.character(lapply(X = l_hits, FUN = xml_attr, name = 'pitcher')),
+                              batter_id = as.character(lapply(X = l_hits, FUN = xml_attr, name = 'batter')),
+                              team_type = as.character(lapply(X = l_hits, FUN = xml_attr, name = 'team')),
+                              hit_type = as.character(lapply(X = l_hits, FUN = xml_attr, name = 'type')),
+                              hit_x = as.character(lapply(X = l_hits, FUN = xml_attr, name = 'x')),
+                              hit_y = as.character(lapply(X = l_hits, FUN = xml_attr, name = 'y')),
+                              stringsAsFactors = FALSE)
+    }
+    
+    return(hits_df)
 }
 parse_pitches <- function(dir_base) {
     dir_boxscore <- paste(dir_base, '/boxscore.xml', sep = '')
@@ -420,7 +424,7 @@ parse_game_runners <- function(dir_base) {
 
 
 # Get Directory Vectors
-dirs <- list.dirs(path = './data', recursive = TRUE, full.names = TRUE)
+dirs <- list.dirs(path = '.', recursive = TRUE, full.names = TRUE)
 split_dirs <- str_split(string = dirs, pattern = '/')
 dirs_gid <- data_frame(dirs = dirs,
                        last_dir = as.character(lapply(X = split_dirs, FUN = tail, n = 1)),
@@ -437,9 +441,6 @@ dirs_gid <- rbind_all(alply(.data = dirs_gid$dirs, .margins = 1, .fun = check_fi
 
 
 
-# TODO: convert data.frame to data_frame calls, remove any tbl_df calls
-
-
 # Make Tables
 df_game <- rbind_all(alply(.data = dirs_gid$dir_base, .margins = 1, .fun = parse_game))
 df_game_teams <- rbind_all(alply(.data = dirs_gid$dir_base, .margins = 1, .fun = parse_game_teams))
@@ -448,7 +449,6 @@ df_game_coaches <- rbind_all(alply(.data = dirs_gid$dir_base, .margins = 1, .fun
 df_game_players <- rbind_all(alply(.data = dirs_gid$dir_base, .margins = 1, .fun = parse_game_players))
 df_atbats <- rbind_all(alply(.data = dirs_gid$dir_base, .margins = 1, .fun = parse_atbats))
 df_game_actions <- rbind_all(alply(.data = dirs_gid$dir_base, .margins = 1, .fun = parse_game_actions))
-# TODO: work out bug in game_hits 201406 data
 df_game_hits <- rbind_all(alply(.data = dirs_gid$dir_base, .margins = 1, .fun = parse_game_hits))
 df_pitches <- rbind_all(alply(.data = dirs_gid$dir_base, .margins = 1, .fun = parse_pitches))
 df_game_runners <- rbind_all(alply(.data = dirs_gid$dir_base, .margins = 1, .fun = parse_game_runners))

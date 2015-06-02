@@ -300,19 +300,25 @@ parse_game_hits <- function(dir_base) {
   raw_hit <- xml(x = dir_hit)
   root_hit <- xml_node(x = raw_hit, xpath = '//hitchart')
   
+  hits_df <- data.frame()
   l_hits <- xml_children(root_hit)
-  hits_df <- data.frame(game_pk = xml_attr(x = root_boxscore, name = 'game_pk'),
-                        inning = as.character(lapply(X = l_hits, FUN = xml_attr, name = 'inning')),
-                        description = as.character(lapply(X = l_hits, FUN = xml_attr, name = 'des')),
-                        pitcher_id = as.character(lapply(X = l_hits, FUN = xml_attr, name = 'pitcher')),
-                        batter_id = as.character(lapply(X = l_hits, FUN = xml_attr, name = 'batter')),
-                        team_type = as.character(lapply(X = l_hits, FUN = xml_attr, name = 'team')),
-                        hit_type = as.character(lapply(X = l_hits, FUN = xml_attr, name = 'type')),
-                        hit_x = as.character(lapply(X = l_hits, FUN = xml_attr, name = 'x')),
-                        hit_y = as.character(lapply(X = l_hits, FUN = xml_attr, name = 'y')),
-                        stringsAsFactors = FALSE)
+  if (length(l_hits) > 0) {
+      hits_df <- data.frame(game_pk = xml_attr(x = root_boxscore, name = 'game_pk'),
+                            inning = as.character(lapply(X = l_hits, FUN = xml_attr, name = 'inning')),
+                            description = as.character(lapply(X = l_hits, FUN = xml_attr, name = 'des')),
+                            pitcher_id = as.character(lapply(X = l_hits, FUN = xml_attr, name = 'pitcher')),
+                            batter_id = as.character(lapply(X = l_hits, FUN = xml_attr, name = 'batter')),
+                            team_type = as.character(lapply(X = l_hits, FUN = xml_attr, name = 'team')),
+                            hit_type = as.character(lapply(X = l_hits, FUN = xml_attr, name = 'type')),
+                            hit_x = as.character(lapply(X = l_hits, FUN = xml_attr, name = 'x')),
+                            hit_y = as.character(lapply(X = l_hits, FUN = xml_attr, name = 'y')),
+                            stringsAsFactors = FALSE)
+  }
+  
   return(hits_df)
 }
+parse_game_hits(dir_base = './gid_2014_06_09_atlmlb_colmlb_1')
+parse_game_hits(dir_base = './gid_2014_06_09_nyamlb_kcamlb_1')
 parse_game_hits(dir_base = './data/day_01/gid_2014_06_01_colmlb_clemlb_1')
 
 # Parse pitches
