@@ -9,7 +9,7 @@ library(dplyr)
 check_files <- function(dir_base) {
     v_files <- list.files(path = dir_base, recursive = TRUE, include.dirs = FALSE)
     
-    df_flags <- data.frame(dir_base = dir_base,
+    df_flags <- data_frame(dir_base = dir_base,
                            dir_inning = (sum(str_detect(string = list.dirs(path = dir_base), 
                                                         pattern = '/inning')) > 0),
                            flag_boxscore = (sum(str_detect(string = v_files, pattern = 'boxscore.xml')) > 0),
@@ -23,7 +23,7 @@ parse_game <- function(dir_base) {
     dir_boxscore <- paste(dir_base, '/boxscore.xml', sep = '')
     raw <- xml(x = dir_boxscore)
     root <- xml_node(x = raw, xpath = '//boxscore')
-    game_df <- data.frame(game_pk = xml_attr(x = root, name = 'game_pk'),
+    game_df <- data_frame(game_pk = xml_attr(x = root, name = 'game_pk'),
                           game_id = xml_attr(x = root, name = 'game_id'),
                           stadium_id = xml_attr(x = root, name = 'venue_id'),
                           date = xml_attr(x = root, name = 'date'),
@@ -36,13 +36,13 @@ parse_game_teams <- function(dir_base) {
     dir_boxscore <- paste(dir_base, '/boxscore.xml', sep = '')
     raw <- xml(x = dir_boxscore)
     root <- xml_node(x = raw, xpath = '//boxscore')
-    home_df <- data.frame(game_pk = xml_attr(x = root, name = 'game_pk'),
+    home_df <- data_frame(game_pk = xml_attr(x = root, name = 'game_pk'),
                           role = 'home',
                           team_id = xml_attr(x = root, name = 'home_id'),
                           wins = xml_attr(x = root, name = 'home_wins'),
                           losses = xml_attr(x = root, name = 'home_loss'),
                           stringsAsFactors = FALSE)
-    away_df <- data.frame(game_pk = xml_attr(x = root, name = 'game_pk'),
+    away_df <- data_frame(game_pk = xml_attr(x = root, name = 'game_pk'),
                           role = 'away',
                           team_id = xml_attr(x = root, name = 'away_id'),
                           wins = xml_attr(x = root, name = 'away_wins'),
@@ -61,7 +61,7 @@ parse_game_umpires <- function(dir_base) {
     root_umpires <- xml_node(x = raw_players, xpath = '//game/umpires')
     
     l_umpires <- xml_children(root_umpires)
-    gu_df <- data.frame(game_pk = xml_attr(x = root_boxscore, name = 'game_pk'),
+    gu_df <- data_frame(game_pk = xml_attr(x = root_boxscore, name = 'game_pk'),
                         umpire_id = as.character(lapply(X = l_umpires, FUN = xml_attr, name = 'id')),
                         position = as.character(lapply(X = l_umpires, FUN = xml_attr, name = 'position')),
                         name_first = as.character(lapply(X = l_umpires, FUN = xml_attr, name = 'first')),
@@ -87,7 +87,7 @@ parse_game_coaches <- function(dir_base) {
     l_coaches_t1 <- xml_children(root_t1)
     l_coaches_t1 <- l_coaches_t1[names(l_coaches_t1) == 'coach']
     
-    df_t1 <- data.frame(game_pk = xml_attr(x = root_boxscore, name = 'game_pk'),
+    df_t1 <- data_frame(game_pk = xml_attr(x = root_boxscore, name = 'game_pk'),
                         team_type = xml_attr(x = root_t1, name = 'type'),
                         coach_id = as.character(lapply(X = l_coaches_t1, FUN = xml_attr, name = 'id')),
                         position = as.character(lapply(X = l_coaches_t1, FUN = xml_attr, name = 'position')),
@@ -101,7 +101,7 @@ parse_game_coaches <- function(dir_base) {
     l_coaches_t2 <- xml_children(root_t2)
     l_coaches_t2 <- l_coaches_t2[names(l_coaches_t2) == 'coach']
     
-    df_t2 <- data.frame(game_pk = xml_attr(x = root_boxscore, name = 'game_pk'),
+    df_t2 <- data_frame(game_pk = xml_attr(x = root_boxscore, name = 'game_pk'),
                         team_type = xml_attr(x = root_t2, name = 'type'),
                         coach_id = as.character(lapply(X = l_coaches_t2, FUN = xml_attr, name = 'id')),
                         position = as.character(lapply(X = l_coaches_t2, FUN = xml_attr, name = 'position')),
@@ -131,7 +131,7 @@ parse_game_players <- function(dir_base) {
     l_players_t1 <- xml_children(root_t1)
     l_players_t1 <- l_players_t1[names(l_players_t1) == 'player']
     
-    df_t1 <- data.frame(game_pk = xml_attr(x = root_boxscore, name = 'game_pk'),
+    df_t1 <- data_frame(game_pk = xml_attr(x = root_boxscore, name = 'game_pk'),
                         team_id = as.character(lapply(X = l_players_t1, FUN = xml_attr, name = 'team_id')),
                         player_id = as.character(lapply(X = l_players_t1, FUN = xml_attr, name = 'id')),
                         name_first = as.character(lapply(X = l_players_t1, FUN = xml_attr, name = 'first')),
@@ -156,7 +156,7 @@ parse_game_players <- function(dir_base) {
     l_players_t2 <- xml_children(root_t2)
     l_players_t2 <- l_players_t2[names(l_players_t2) == 'player']
     
-    df_t2 <- data.frame(game_pk = xml_attr(x = root_boxscore, name = 'game_pk'),
+    df_t2 <- data_frame(game_pk = xml_attr(x = root_boxscore, name = 'game_pk'),
                         team_id = as.character(lapply(X = l_players_t2, FUN = xml_attr, name = 'team_id')),
                         player_id = as.character(lapply(X = l_players_t2, FUN = xml_attr, name = 'id')),
                         name_first = as.character(lapply(X = l_players_t2, FUN = xml_attr, name = 'first')),
@@ -190,7 +190,7 @@ parse_atbats <- function(dir_base) {
     root_game <- xml_node(x = raw_inning, xpath = '//game')
     
     l_innings <- xml_children(root_game)
-    atbat_df <- data.frame()
+    atbat_df <- data_frame()
     
     for (inning in l_innings) {
         i_num <- xml_attr(x = inning, name = 'num')
@@ -200,7 +200,7 @@ parse_atbats <- function(dir_base) {
             l_atbats <- xml_children(inning_part)
             l_atbats <- l_atbats[names(l_atbats) == 'atbat']
             if (length(l_atbats) > 0) {
-                new_atbat <- data.frame(game_pk = game_pk,
+                new_atbat <- data_frame(game_pk = game_pk,
                                         inning = i_num,
                                         inning_part = i_part,
                                         batter_id = as.character(lapply(X = l_atbats, FUN = xml_attr, name = 'batter')),
@@ -237,7 +237,7 @@ parse_game_actions <- function(dir_base) {
   
   l_innings <- xml_children(root_game)
   
-  actions_df <- data.frame()
+  actions_df <- data_frame()
   
   for (inning in l_innings) {
     i_num <- xml_attr(x = inning, name = 'num')
@@ -247,7 +247,7 @@ parse_game_actions <- function(dir_base) {
       l_atbats <- xml_children(inning_part)
       l_atbats <- l_atbats[names(l_atbats) == 'action']
       if (length(l_atbats) > 0) {
-        new_actions <- data.frame(game_pk = xml_attr(x = root_boxscore, name = 'game_pk'),
+        new_actions <- data_frame(game_pk = xml_attr(x = root_boxscore, name = 'game_pk'),
                                   inning = i_num,
                                   inning_part = i_part,
                                   event = as.character(lapply(X = l_atbats, FUN = xml_attr, name = 'event')),
@@ -277,10 +277,10 @@ parse_game_hits <- function(dir_base) {
     raw_hit <- xml(x = dir_hit)
     root_hit <- xml_node(x = raw_hit, xpath = '//hitchart')
     
-    hits_df <- data.frame()
+    hits_df <- data_frame()
     l_hits <- xml_children(root_hit)
     if (length(l_hits) > 0) {
-        hits_df <- data.frame(game_pk = xml_attr(x = root_boxscore, name = 'game_pk'),
+        hits_df <- data_frame(game_pk = xml_attr(x = root_boxscore, name = 'game_pk'),
                               inning = as.character(lapply(X = l_hits, FUN = xml_attr, name = 'inning')),
                               description = as.character(lapply(X = l_hits, FUN = xml_attr, name = 'des')),
                               pitcher_id = as.character(lapply(X = l_hits, FUN = xml_attr, name = 'pitcher')),
@@ -306,7 +306,7 @@ parse_pitches <- function(dir_base) {
     
     l_innings <- xml_children(root_game)
     
-    pitches_df <- data.frame()
+    pitches_df <- data_frame()
     
     for (inning in l_innings) {
         i_num <- xml_attr(x = inning, name = 'num')
@@ -320,7 +320,7 @@ parse_pitches <- function(dir_base) {
                     l_pitches <- xml_children(atbat)
                     l_pitches <- l_pitches[names(l_pitches) == 'pitch']
                     if (length(l_pitches) > 0) {
-                        new_pitches <- data.frame(game_pk = game_pk,
+                        new_pitches <- data_frame(game_pk = game_pk,
                                                   play_guid = as.character(lapply(X = l_pitches, FUN = xml_attr, name = 'play_guid')),
                                                   batter_id = xml_attr(x = atbat, name = 'batter'),
                                                   pitcher_id = xml_attr(x = atbat, name = 'pitcher'),
@@ -384,7 +384,7 @@ parse_game_runners <- function(dir_base) {
     
     l_innings <- xml_children(root_game)
     
-    runners_df <- data.frame()
+    runners_df <- data_frame()
     
     for (inning in l_innings) {
         i_num <- xml_attr(x = inning, name = 'num')
@@ -398,7 +398,7 @@ parse_game_runners <- function(dir_base) {
                     l_runners <- xml_children(atbat)
                     l_runners <- l_runners[names(l_runners) == 'runner']
                     if (length(l_runners) > 0) {
-                        new_runners <- data.frame(game_pk = game_pk,
+                        new_runners <- data_frame(game_pk = game_pk,
                                                   batter_id = xml_attr(x = atbat, name = 'batter'),
                                                   pitcher_id = xml_attr(x = atbat, name = 'pitcher'),
                                                   atbat_num = xml_attr(x = atbat, name = 'num'),
