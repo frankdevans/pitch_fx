@@ -5,6 +5,7 @@ library(dplyr)
 
 
 
+
 # Functions
 check_files <- function(dir_base) {
     v_files <- list.files(path = dir_base, recursive = TRUE, include.dirs = FALSE)
@@ -452,7 +453,6 @@ df_game_actions <- rbind_all(alply(.data = dirs_gid$dir_base, .margins = 1, .fun
 df_game_hits <- rbind_all(alply(.data = dirs_gid$dir_base, .margins = 1, .fun = parse_game_hits))
 df_pitches <- rbind_all(alply(.data = dirs_gid$dir_base, .margins = 1, .fun = parse_pitches))
 df_game_runners <- rbind_all(alply(.data = dirs_gid$dir_base, .margins = 1, .fun = parse_game_runners))
-
 
 
 
