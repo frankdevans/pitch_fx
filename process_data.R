@@ -16,8 +16,7 @@ check_files <- function(dir_base) {
                            flag_boxscore = (sum(str_detect(string = v_files, pattern = 'boxscore.xml')) > 0),
                            flag_players = (sum(str_detect(string = v_files, pattern = 'players.xml')) > 0),
                            flag_inning_all = (sum(str_detect(string = v_files, pattern = 'inning_all.xml')) > 0),
-                           flag_inning_hit = (sum(str_detect(string = v_files, pattern = 'inning_hit.xml')) > 0),
-                           stringsAsFactors = FALSE)
+                           flag_inning_hit = (sum(str_detect(string = v_files, pattern = 'inning_hit.xml')) > 0))
     return(df_flags)
 }
 parse_game <- function(dir_base) {
@@ -29,8 +28,7 @@ parse_game <- function(dir_base) {
                           stadium_id = xml_attr(x = root, name = 'venue_id'),
                           date = xml_attr(x = root, name = 'date'),
                           team_id_home = xml_attr(x = root, name = 'home_id'),
-                          team_id_away = xml_attr(x = root, name = 'away_id'),
-                          stringsAsFactors = FALSE)
+                          team_id_away = xml_attr(x = root, name = 'away_id'))
     return(game_df)
 }
 parse_game_teams <- function(dir_base) {
@@ -41,14 +39,12 @@ parse_game_teams <- function(dir_base) {
                           role = 'home',
                           team_id = xml_attr(x = root, name = 'home_id'),
                           wins = xml_attr(x = root, name = 'home_wins'),
-                          losses = xml_attr(x = root, name = 'home_loss'),
-                          stringsAsFactors = FALSE)
+                          losses = xml_attr(x = root, name = 'home_loss'))
     away_df <- data_frame(game_pk = xml_attr(x = root, name = 'game_pk'),
                           role = 'away',
                           team_id = xml_attr(x = root, name = 'away_id'),
                           wins = xml_attr(x = root, name = 'away_wins'),
-                          losses = xml_attr(x = root, name = 'away_loss'),
-                          stringsAsFactors = FALSE)
+                          losses = xml_attr(x = root, name = 'away_loss'))
     game_teams_df <- rbind_all(list(home_df, away_df))
     return(game_teams_df)
 }
@@ -66,8 +62,7 @@ parse_game_umpires <- function(dir_base) {
                         umpire_id = as.character(lapply(X = l_umpires, FUN = xml_attr, name = 'id')),
                         position = as.character(lapply(X = l_umpires, FUN = xml_attr, name = 'position')),
                         name_first = as.character(lapply(X = l_umpires, FUN = xml_attr, name = 'first')),
-                        name_last = as.character(lapply(X = l_umpires, FUN = xml_attr, name = 'last')),
-                        stringsAsFactors = FALSE)
+                        name_last = as.character(lapply(X = l_umpires, FUN = xml_attr, name = 'last')))
     return(gu_df)
 }
 parse_game_coaches <- function(dir_base) {
@@ -94,8 +89,7 @@ parse_game_coaches <- function(dir_base) {
                         position = as.character(lapply(X = l_coaches_t1, FUN = xml_attr, name = 'position')),
                         name_first = as.character(lapply(X = l_coaches_t1, FUN = xml_attr, name = 'first')),
                         name_last = as.character(lapply(X = l_coaches_t1, FUN = xml_attr, name = 'last')),
-                        number = as.character(lapply(X = l_coaches_t1, FUN = xml_attr, name = 'num')),
-                        stringsAsFactors = FALSE)
+                        number = as.character(lapply(X = l_coaches_t1, FUN = xml_attr, name = 'num')))
     
     # Team 2
     root_t2 <- xml_node(x = l_game[['team2']], xpath = '.')
@@ -108,8 +102,7 @@ parse_game_coaches <- function(dir_base) {
                         position = as.character(lapply(X = l_coaches_t2, FUN = xml_attr, name = 'position')),
                         name_first = as.character(lapply(X = l_coaches_t2, FUN = xml_attr, name = 'first')),
                         name_last = as.character(lapply(X = l_coaches_t2, FUN = xml_attr, name = 'last')),
-                        number = as.character(lapply(X = l_coaches_t2, FUN = xml_attr, name = 'num')),
-                        stringsAsFactors = FALSE)
+                        number = as.character(lapply(X = l_coaches_t2, FUN = xml_attr, name = 'num')))
     
     df_coaches <- rbind_all(list(df_t1, df_t2))
     return(df_coaches)
@@ -149,8 +142,7 @@ parse_game_players <- function(dir_base) {
                         rbi = as.character(lapply(X = l_players_t1, FUN = xml_attr, name = 'rbi')),
                         p_wins = as.character(lapply(X = l_players_t1, FUN = xml_attr, name = 'wins')),
                         p_losses = as.character(lapply(X = l_players_t1, FUN = xml_attr, name = 'losses')),
-                        p_era = as.character(lapply(X = l_players_t1, FUN = xml_attr, name = 'era')),
-                        stringsAsFactors = FALSE)
+                        p_era = as.character(lapply(X = l_players_t1, FUN = xml_attr, name = 'era')))
     
     # Team 2
     root_t2 <- xml_node(x = l_game[['team2']], xpath = '.')
@@ -174,8 +166,7 @@ parse_game_players <- function(dir_base) {
                         rbi = as.character(lapply(X = l_players_t2, FUN = xml_attr, name = 'rbi')),
                         p_wins = as.character(lapply(X = l_players_t2, FUN = xml_attr, name = 'wins')),
                         p_losses = as.character(lapply(X = l_players_t2, FUN = xml_attr, name = 'losses')),
-                        p_era = as.character(lapply(X = l_players_t2, FUN = xml_attr, name = 'era')),
-                        stringsAsFactors = FALSE)
+                        p_era = as.character(lapply(X = l_players_t2, FUN = xml_attr, name = 'era')))
     
     df_players <- rbind_all(list(df_t1, df_t2))
     return(df_players)
@@ -218,8 +209,7 @@ parse_atbats <- function(dir_base) {
                                         outcome_event = as.character(lapply(X = l_atbats, FUN = xml_attr, name = 'event')),
                                         outcome_balls = as.character(lapply(X = l_atbats, FUN = xml_attr, name = 'b')),
                                         outcome_strikes = as.character(lapply(X = l_atbats, FUN = xml_attr, name = 's')),
-                                        outcome_outs = as.character(lapply(X = l_atbats, FUN = xml_attr, name = 'o')),
-                                        stringsAsFactors = FALSE)
+                                        outcome_outs = as.character(lapply(X = l_atbats, FUN = xml_attr, name = 'o')))
                 atbat_df <- bind_rows(atbat_df, new_atbat)
             }
             
@@ -261,8 +251,7 @@ parse_game_actions <- function(dir_base) {
                                   runs_away = as.character(lapply(X = l_atbats, FUN = xml_attr, name = 'away_team_runs')),
                                   occ_balls = as.character(lapply(X = l_atbats, FUN = xml_attr, name = 'b')),
                                   occ_strikes = as.character(lapply(X = l_atbats, FUN = xml_attr, name = 's')),
-                                  occ_outs = as.character(lapply(X = l_atbats, FUN = xml_attr, name = 'o')),
-                                  stringsAsFactors = FALSE)
+                                  occ_outs = as.character(lapply(X = l_atbats, FUN = xml_attr, name = 'o')))
         actions_df <- bind_rows(actions_df, new_actions)
       }
     }
@@ -289,8 +278,7 @@ parse_game_hits <- function(dir_base) {
                               team_type = as.character(lapply(X = l_hits, FUN = xml_attr, name = 'team')),
                               hit_type = as.character(lapply(X = l_hits, FUN = xml_attr, name = 'type')),
                               hit_x = as.character(lapply(X = l_hits, FUN = xml_attr, name = 'x')),
-                              hit_y = as.character(lapply(X = l_hits, FUN = xml_attr, name = 'y')),
-                              stringsAsFactors = FALSE)
+                              hit_y = as.character(lapply(X = l_hits, FUN = xml_attr, name = 'y')))
     }
     
     return(hits_df)
@@ -363,8 +351,7 @@ parse_pitches <- function(dir_base) {
                                                   spin_dir = as.character(lapply(X = l_pitches, FUN = xml_attr, name = 'spin_dir')),
                                                   spin_rate = as.character(lapply(X = l_pitches, FUN = xml_attr, name = 'spin_rate')),
                                                   cc = as.character(lapply(X = l_pitches, FUN = xml_attr, name = 'cc')),
-                                                  mt = as.character(lapply(X = l_pitches, FUN = xml_attr, name = 'mt')),
-                                                  stringsAsFactors = FALSE)
+                                                  mt = as.character(lapply(X = l_pitches, FUN = xml_attr, name = 'mt')))
                         pitches_df <- bind_rows(pitches_df, new_pitches)
                     }
                 }
@@ -411,8 +398,7 @@ parse_game_runners <- function(dir_base) {
                                                   event_num = as.character(lapply(X = l_runners, FUN = xml_attr, name = 'event_num')),
                                                   flag_score = as.character(lapply(X = l_runners, FUN = xml_attr, name = 'score')),
                                                   flag_rbi = as.character(lapply(X = l_runners, FUN = xml_attr, name = 'rbi')),
-                                                  flag_earned = as.character(lapply(X = l_runners, FUN = xml_attr, name = 'earned')),
-                                                  stringsAsFactors = FALSE)
+                                                  flag_earned = as.character(lapply(X = l_runners, FUN = xml_attr, name = 'earned')))
                         runners_df <- bind_rows(runners_df, new_runners)
                     }
                 }
@@ -425,11 +411,10 @@ parse_game_runners <- function(dir_base) {
 
 
 # Get Directory Vectors
-dirs <- list.dirs(path = '.', recursive = TRUE, full.names = TRUE)
+dirs <- list.dirs(path = './data', recursive = TRUE, full.names = TRUE)
 split_dirs <- str_split(string = dirs, pattern = '/')
 dirs_gid <- data_frame(dirs = dirs,
-                       last_dir = as.character(lapply(X = split_dirs, FUN = tail, n = 1)),
-                       stringsAsFactors = FALSE) %>%
+                       last_dir = as.character(lapply(X = split_dirs, FUN = tail, n = 1))) %>%
     filter(str_detect(string = last_dir, pattern = 'gid') == TRUE) %>%
     select(-(last_dir))
 
@@ -456,14 +441,29 @@ df_game_runners <- rbind_all(alply(.data = dirs_gid$dir_base, .margins = 1, .fun
 
 
 
+# Write Tables - Year Level
+write.table(x = df_game, file = './data_parsed/game.csv', 
+            sep = '|', row.names = FALSE, quote = FALSE)
+write.table(x = df_game_teams, file = './data_parsed/game_teams.csv', 
+            sep = '|', row.names = FALSE, quote = FALSE)
+write.table(x = df_game_umpires, file = './data_parsed/game_umpires.csv', 
+            sep = '|', row.names = FALSE, quote = FALSE)
+write.table(x = df_game_coaches, file = './data_parsed/game_coaches.csv', 
+            sep = '|', row.names = FALSE, quote = FALSE)
+write.table(x = df_game_players, file = './data_parsed/game_players.csv', 
+            sep = '|', row.names = FALSE, quote = FALSE)
+write.table(x = df_game_actions, file = './data_parsed/game_actions.csv', 
+            sep = '|', row.names = FALSE, quote = FALSE)
+write.table(x = df_game_hits, file = './data_parsed/game_hits.csv', 
+            sep = '|', row.names = FALSE, quote = FALSE)
+write.table(x = df_game_runners, file = './data_parsed/game_runners.csv', 
+            sep = '|', row.names = FALSE, quote = FALSE)
 
-
-
-
-
-
-
-
+# Write Tables - Month Level
+write.table(x = df_atbats, file = './data_parsed/atbats.csv', 
+            sep = '|', row.names = FALSE, quote = FALSE)
+write.table(x = df_pitches, file = './data_parsed/pitches.csv', 
+            sep = '|', row.names = FALSE, quote = FALSE)
 
 
 
