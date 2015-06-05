@@ -227,6 +227,12 @@ relation
         event_num = event_num
     atbat(n) : game(1)
         game_pk = game_pk
+    game_hits(n) : game(1)
+        game_pk = game_pk
+    game_runners(n) : game(1)
+        game_pk = game_pk
+    game_actions(n) : game(1)
+        game_pk = game_pk
     game_umpires(n) : game(1)
         game_pk = game_pk
     game_coaches(n) : game(1)
