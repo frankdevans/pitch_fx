@@ -65,6 +65,7 @@ parse_game_umpires <- function(dir_base) {
                         name_last = as.character(lapply(X = l_umpires, FUN = xml_attr, name = 'last')))
     return(gu_df)
 }
+# TODO: fix bug in missing coaches, switch to loop format
 parse_game_coaches <- function(dir_base) {
     dir_boxscore <- paste(dir_base, '/boxscore.xml', sep = '')
     raw_boxscore <- xml(x = dir_boxscore)
@@ -77,6 +78,10 @@ parse_game_coaches <- function(dir_base) {
     l_game <- xml_children(root_game)
     l_game <- l_game[names(l_game) == 'team']
     names(l_game) <- c('team1','team2')
+    
+    df_coaches <- data_frame()
+    
+    # TODO: switch function to loop approach
     
     # Team 1
     root_t1 <- xml_node(x = l_game[['team1']], xpath = '.')
@@ -349,9 +354,7 @@ parse_pitches <- function(dir_base) {
                                                   zone = as.character(lapply(X = l_pitches, FUN = xml_attr, name = 'zone')),
                                                   nasty = as.character(lapply(X = l_pitches, FUN = xml_attr, name = 'nasty')),
                                                   spin_dir = as.character(lapply(X = l_pitches, FUN = xml_attr, name = 'spin_dir')),
-                                                  spin_rate = as.character(lapply(X = l_pitches, FUN = xml_attr, name = 'spin_rate')),
-                                                  cc = as.character(lapply(X = l_pitches, FUN = xml_attr, name = 'cc')),
-                                                  mt = as.character(lapply(X = l_pitches, FUN = xml_attr, name = 'mt')))
+                                                  spin_rate = as.character(lapply(X = l_pitches, FUN = xml_attr, name = 'spin_rate')))
                         pitches_df <- bind_rows(pitches_df, new_pitches)
                     }
                 }
@@ -411,7 +414,7 @@ parse_game_runners <- function(dir_base) {
 
 
 # Get Directory Vectors
-dirs <- list.dirs(path = './data', recursive = TRUE, full.names = TRUE)
+dirs <- list.dirs(path = './month_10', recursive = TRUE, full.names = TRUE)
 split_dirs <- str_split(string = dirs, pattern = '/')
 dirs_gid <- data_frame(dirs = dirs,
                        last_dir = as.character(lapply(X = split_dirs, FUN = tail, n = 1))) %>%
@@ -428,16 +431,16 @@ dirs_gid <- rbind_all(alply(.data = dirs_gid$dirs, .margins = 1, .fun = check_fi
 
 
 # Make Tables
-df_game <- rbind_all(alply(.data = dirs_gid$dir_base, .margins = 1, .fun = parse_game))
-df_game_teams <- rbind_all(alply(.data = dirs_gid$dir_base, .margins = 1, .fun = parse_game_teams))
-df_game_umpires <- rbind_all(alply(.data = dirs_gid$dir_base, .margins = 1, .fun = parse_game_umpires))
-df_game_coaches <- rbind_all(alply(.data = dirs_gid$dir_base, .margins = 1, .fun = parse_game_coaches))
-df_game_players <- rbind_all(alply(.data = dirs_gid$dir_base, .margins = 1, .fun = parse_game_players))
-df_atbats <- rbind_all(alply(.data = dirs_gid$dir_base, .margins = 1, .fun = parse_atbats))
-df_game_actions <- rbind_all(alply(.data = dirs_gid$dir_base, .margins = 1, .fun = parse_game_actions))
-df_game_hits <- rbind_all(alply(.data = dirs_gid$dir_base, .margins = 1, .fun = parse_game_hits))
-df_pitches <- rbind_all(alply(.data = dirs_gid$dir_base, .margins = 1, .fun = parse_pitches))
-df_game_runners <- rbind_all(alply(.data = dirs_gid$dir_base, .margins = 1, .fun = parse_game_runners))
+df_game <- rbind_all(alply(.data = dirs_gid$dir_base, .margins = 1, .fun = parse_game, .progress = 'text'))
+df_game_teams <- rbind_all(alply(.data = dirs_gid$dir_base, .margins = 1, .fun = parse_game_teams, .progress = 'text'))
+df_game_umpires <- rbind_all(alply(.data = dirs_gid$dir_base, .margins = 1, .fun = parse_game_umpires, .progress = 'text'))
+df_game_coaches <- rbind_all(alply(.data = dirs_gid$dir_base, .margins = 1, .fun = parse_game_coaches, .progress = 'text'))
+df_game_players <- rbind_all(alply(.data = dirs_gid$dir_base, .margins = 1, .fun = parse_game_players, .progress = 'text'))
+df_atbats <- rbind_all(alply(.data = dirs_gid$dir_base, .margins = 1, .fun = parse_atbats, .progress = 'text'))
+df_game_actions <- rbind_all(alply(.data = dirs_gid$dir_base, .margins = 1, .fun = parse_game_actions, .progress = 'text'))
+df_game_hits <- rbind_all(alply(.data = dirs_gid$dir_base, .margins = 1, .fun = parse_game_hits, .progress = 'text'))
+df_pitches <- rbind_all(alply(.data = dirs_gid$dir_base, .margins = 1, .fun = parse_pitches, .progress = 'text'))
+df_game_runners <- rbind_all(alply(.data = dirs_gid$dir_base, .margins = 1, .fun = parse_game_runners, .progress = 'text'))
 
 
 
@@ -459,11 +462,13 @@ write.table(x = df_game_hits, file = './data_parsed/game_hits.csv',
 write.table(x = df_game_runners, file = './data_parsed/game_runners.csv', 
             sep = '|', row.names = FALSE, quote = FALSE)
 
+
 # Write Tables - Month Level
 write.table(x = df_atbats, file = './data_parsed/atbats.csv', 
             sep = '|', row.names = FALSE, quote = FALSE)
-write.table(x = df_pitches, file = './data_parsed/pitches.csv', 
+write.table(x = df_pitches, file = 'pitches_201310.csv', 
             sep = '|', row.names = FALSE, quote = FALSE)
+
 
 
 
