@@ -37,6 +37,8 @@ game_umpires <- read.table(file = './data_parsed/game_umpires_2014.csv',
 
 
 
+
+
 unique(pitches$pitch_des)
 
 # EDA Visuals

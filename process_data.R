@@ -473,7 +473,28 @@ write.table(x = df_pitches, file = 'pitches_201310.csv',
 
 
 
+# Combine Multi-Months
+ym <- c(201402:201410)
 
+atbats <- data_frame()
+for (i in (1:length(ym))) {
+  i_string <- as.character(ym[i])
+  i_file <- paste('./data_parsed/atbats_', i_string, '.csv', sep = '')
+  atbats_new <- tbl_df(read.table(file = i_file, header = TRUE, sep = '|', quote = ''))
+  atbats <- bind_rows(atbats, atbats_new)
+}
+write.table(x = atbats, file = './data_parsed/atbats_2013.csv',
+            sep = '|', row.names = FALSE, quote = FALSE)
+
+pitches <- data_frame()
+for (i in (1:length(ym))) {
+  i_string <- as.character(ym[i])
+  i_file <- paste('./data_parsed/pitches_', i_string, '.csv', sep = '')
+  pitches_new <- tbl_df(read.table(file = i_file, header = TRUE, sep = '|', quote = ''))
+  pitches <- bind_rows(pitches, pitches_new)
+}
+write.table(x = pitches, file = './data_parsed/pitches_2014.csv',
+            sep = '|', row.names = FALSE, quote = FALSE)
 
 
 
