@@ -29,3 +29,5 @@ backstop [float]: distance from home plate to backstop in meters
 latitude [float]: latitude component of the geo-location of the stadium
 
 longitude [float]: longitude component of the geo-location of the stadium
+
+elevation [int]: elevation from sea level in meters

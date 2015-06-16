@@ -3,11 +3,11 @@ library(ggplot2)
 library(RColorBrewer)
 
 # Trial Connect
-pitches <- tbl_df(read.table(file = './data_parsed/pitches_201408.csv',
+pitches <- tbl_df(read.table(file = './data_parsed/pitches_2014.csv',
                              header = TRUE, sep = '|', quote = ''))
-atbats <- tbl_df(read.table(file = './data_parsed/atbats_201408.csv',
-                            header = TRUE, sep = '|', quote = ''))
 
+atbats <- tbl_df(read.table(file = './data_parsed/atbats_2014.csv',
+                            header = TRUE, sep = '|', quote = ''))
 
 games <- read.table(file = './data_parsed/game_2014.csv',
                       header = TRUE, sep = '|', quote = '')

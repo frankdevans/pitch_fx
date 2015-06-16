@@ -11,4 +11,5 @@ Feature Engineering
 
 
 TODO: test game.game.game_pk for uniqueness across all games, or year only
+TODO: build filter for pre-season, regular season, post_season games
 XML Parsing Article: http://www.informit.com/articles/article.aspx?p=2215520
