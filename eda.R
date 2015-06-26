@@ -2,7 +2,8 @@ library(dplyr)
 library(ggplot2)
 library(RColorBrewer)
 
-# Trial Connect
+
+# Load Data
 pitches <- tbl_df(read.table(file = './data_parsed/pitches_2014.csv',
                              header = TRUE, sep = '|', quote = ''))
 

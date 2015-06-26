@@ -1,5 +1,6 @@
 library(stringr)
 library(dplyr)
+library(ggplot2)
 
 
 
@@ -18,6 +19,11 @@ game_teams <- tbl_df(read.table(file = './data_parsed/game_teams_2014.csv',
 dim_teams <- read.table(file = './data/dim_teams.csv',
                         header = TRUE,
                         sep = ',',
+                        stringsAsFactors = FALSE)
+
+bin_pitch <- read.table(file = './data/bin_pitch_des.csv',
+                        header = TRUE,
+                        sep = '|',
                         stringsAsFactors = FALSE)
 
 
@@ -54,26 +60,49 @@ pitches %>%
 
 
 # TODO: bin plate crossing bounds, determine other factors
+zone_bin_x <- data_frame(round_x = seq(from = -1.2, to = 1.2, by = 0.01))
+zone_bin_x$bin_x <- cut(x = zone_bin_x$round_x, breaks = 8)
+
+zone_bin_y <- data_frame(round_y = seq(from = 1.3, to = 4.0, by = 0.01))
+zone_bin_y$bin_y <- cut(x = zone_bin_y$round_y, breaks = 8)
 
 
-# TODO: bin pitch_des into play outcomes
+
+annotate('rect', xmin = -0.83, xmax = 0.83, ymin = 1.52, ymax = 3.42,
+         color = 'dark red', size = 0.75, alpha = 0) +
+
+
+
+
+
+# EDA
 unique(pitches$pitch_des)
-bin_pitch_des <- data_frame(pitch_des = unique(pitches$pitch_des),
-                            pitch_cat = '')
+
+pitches %>%
+    group_by(pitch_des) %>%
+    summarize(pitches = n()) %>%
+    inner_join(y = bin_pitch, by = 'pitch_des') %>%
+    ggplot(data = .) +
+    geom_bar(aes(x = pitch_des, y = pitches), stat = 'identity')
 
 
+pitches %>%
+    inner_join(y = bin_pitch, by = 'pitch_des') %>%
+    group_by(outcome_bin) %>%
+    summarize(pitches = n()) %>%
+    ggplot(data = .) +
+    geom_bar(aes(x = outcome_bin, y = pitches), stat = 'identity')
 
-
-
-
-
-
-
-
-
-
-
-
+pitches %>%
+    inner_join(y = bin_pitch, by = 'pitch_des') %>%
+    group_by(outcome_bin) %>%
+    summarize(pitches = n()) %>%
+    ungroup() %>%
+    arrange(desc(pitches)) %>%
+    group_by() %>%
+    mutate(total = sum(pitches)) %>%
+    ungroup() %>%
+    mutate(pct = pitches / total)
 
 
 
