@@ -75,34 +75,7 @@ annotate('rect', xmin = -0.83, xmax = 0.83, ymin = 1.52, ymax = 3.42,
 
 
 
-# EDA
-unique(pitches$pitch_des)
 
-pitches %>%
-    group_by(pitch_des) %>%
-    summarize(pitches = n()) %>%
-    inner_join(y = bin_pitch, by = 'pitch_des') %>%
-    ggplot(data = .) +
-    geom_bar(aes(x = pitch_des, y = pitches), stat = 'identity')
-
-
-pitches %>%
-    inner_join(y = bin_pitch, by = 'pitch_des') %>%
-    group_by(outcome_bin) %>%
-    summarize(pitches = n()) %>%
-    ggplot(data = .) +
-    geom_bar(aes(x = outcome_bin, y = pitches), stat = 'identity')
-
-pitches %>%
-    inner_join(y = bin_pitch, by = 'pitch_des') %>%
-    group_by(outcome_bin) %>%
-    summarize(pitches = n()) %>%
-    ungroup() %>%
-    arrange(desc(pitches)) %>%
-    group_by() %>%
-    mutate(total = sum(pitches)) %>%
-    ungroup() %>%
-    mutate(pct = pitches / total)
 
 
 
