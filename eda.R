@@ -36,9 +36,10 @@ bin_pitch <- read.table(file = './data/bin_pitch_des.csv',
                         sep = '|',
                         stringsAsFactors = FALSE)
 
+hit_weight <- data_frame(outcome_bin = c('Hit','Ball','Strike','Foul','Out'),
+                         hit_weight = c(1.0, 0.25, 0.0, 0.0, 0.0))
 
-
-
+outcome_onbase <- c('Single','Double','Triple','HomeRun')
 
 
 unique(pitches$pitch_des)
@@ -48,6 +49,17 @@ ggplot(data = pitches, aes(x = px, y = pz)) +
     geom_point(alpha = 0.05)
 
 
+ggplot() +
+    annotate('rect', xmin = -0.83, xmax = 0.83, ymin = 1.52, ymax = 3.42,
+             color = 'dark red', size = 0.75, alpha = 0) +
+    annotate('segment', x = -6, y = 0, xend = 6, yend = 0, size = 1.0, color = 'black') +
+    xlim(-6,6) + ylim(-2,6) +
+    theme_classic() +
+    theme(axis.text = element_blank(),
+          axis.title = element_blank(),
+          axis.line = element_blank(),
+          axis.ticks = element_blank())
+    ggsave(filename = './plots/blank_strikezone.png', width = 150, height = 100, units = 'mm', dpi = 500)
 
 
 ggplot(data = pitches, aes(x = px, y = pz)) +
@@ -202,13 +214,39 @@ pitches %>%
     ggplot(data = .) +
     geom_bar(aes(x = outcome_bin, y = pitches, fill = outcome_bin), stat = 'identity') +
     scale_fill_brewer(palette = 'Set1') +
-    geom_text(mapping = aes(x = outcome_bin, y = pitches - 10000, label = pct_friendly), fontface = 'bold')
+    geom_text(mapping = aes(x = outcome_bin, y = pitches - 10000, label = pct_friendly), fontface = 'bold') +
     theme(axis.text.y = element_blank(),
           axis.title.y = element_blank(),
           axis.line.y = element_blank(),
           axis.ticks.y = element_blank()) +
     labs(x = 'Outcome of Pitch')
-    ggsave(filename = './plots/bins_outcome_pct.png', width = 150, height = 100, units = 'mm', dpi = 500)
+ggsave(filename = './plots/bins_outcome_pct.png', width = 150, height = 100, units = 'mm', dpi = 500)
+
+
+pitches %>%
+    inner_join(y = bin_pitch, by = 'pitch_des') %>%
+    group_by(outcome_bin) %>%
+    summarize(pitches = n()) %>%
+    ungroup() %>%
+    arrange(desc(pitches)) %>%
+    group_by() %>%
+    mutate(total = sum(pitches)) %>%
+    ungroup() %>%
+    mutate(pct = pitches / total,
+           pct_friendly = paste(round(x = pct * 100, digits = 1), '%')) %>%
+    inner_join(y = hit_weight, by = 'outcome_bin') %>%
+    ggplot(data = .) +
+    geom_bar(aes(x = outcome_bin, y = pitches, fill = outcome_bin), stat = 'identity') +
+    scale_fill_brewer(palette = 'Set1') +
+    geom_text(mapping = aes(x = outcome_bin, y = pitches - 10000, label = pct_friendly), fontface = 'bold') +
+    geom_text(mapping = aes(x = outcome_bin, y = pitches - 25000, label = hit_weight), fontface = 'bold') +
+    theme(axis.text.y = element_blank(),
+          axis.title.y = element_blank(),
+          axis.line.y = element_blank(),
+          axis.ticks.y = element_blank()) +
+    labs(x = 'Outcome of Pitch')
+ggsave(filename = './plots/bins_outcome_pct_hw.png', width = 150, height = 100, units = 'mm', dpi = 500)
+
 
 
 
@@ -306,7 +344,9 @@ bind_rows(wl_logs %>%
              color = 'black', size = 1.5, linetype = 'longdash') +
     labs(x = 'Hits in Game',
          y = 'Probability of Winning Game')
-    ggsave(filename = './plots/prob_win_hits.png', width = 150, height = 100, units = 'mm', dpi = 500)
+ggsave(filename = './plots/prob_win_hits.png', width = 150, height = 100, units = 'mm', dpi = 500)
+
+
 
 
 bind_rows(wl_logs %>%
@@ -358,11 +398,26 @@ bind_rows(wl_logs %>%
           axis.line.x = element_blank(),
           axis.ticks.x = element_blank()) +
     labs(y = 'Win Record')
-    ggsave(filename = './plots/win_records.png', width = 150, height = 100, units = 'mm', dpi = 500)
+ggsave(filename = './plots/win_records.png', width = 150, height = 100, units = 'mm', dpi = 500)
     
 
-
-
+pitches %>%
+    inner_join(y = bin_pitch, by = 'pitch_des') %>%
+    inner_join(y = hit_weight, by = 'outcome_bin') %>%
+    select(game_pk, hit_weight) %>%
+    group_by(game_pk) %>%
+    summarise(hit_weight = sum(hit_weight)) %>%
+    inner_join(y = atbats %>%
+                   select(game_pk, outcome_event) %>%
+                   mutate(outcome_hit = (outcome_event %in% outcome_onbase)) %>%
+                   group_by(game_pk) %>%
+                   summarise(hits = abs(sum(outcome_hit) - 6)),
+               by = 'game_pk') %>%
+    ggplot(data = .) +
+    geom_density2d(mapping = aes(x = hit_weight, y = hits), color = 'darkred', size = 1.5) +
+    labs(x = 'Weighted Hits from On-Base Outcomes',
+         y = 'Hits in Game')
+ggsave(filename = './plots/dens_wh_hits.png', width = 150, height = 100, units = 'mm', dpi = 500)
 
 
 
