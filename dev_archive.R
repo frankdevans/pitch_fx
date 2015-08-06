@@ -178,6 +178,22 @@ ls_c <- xml_children(ls)
 ls_c[[1]]
 xml_attr(x = ls_c[[2]], name = 'home')
 
+# Probability Scouting Report EDA
+pitches %>%
+    filter(batter_id == 572761) %>%
+    select(game_pk, batter_id, pitch_des, speed_end) %>%
+    filter(!is.na(speed_end)) %>%
+    inner_join(y = bin_pitch, by = 'pitch_des') %>%
+    mutate(speed_bin = round(x = speed_end, digits = 0),
+           off_base_id = (outcome_bin == 'Hit')) %>%
+    group_by(speed_bin) %>%
+    summarise(off_base_pct = mean(off_base_id),
+              pitces = n()) %>%
+    ggplot(data = .) +
+    geom_line(mapping = aes(x = speed_bin, y = off_base_pct))
+
+
+
 
 
 
